@@ -1,12 +1,9 @@
 {
-  "total_yaml": 11,
+  "total_yaml": 12,
   "total_rats": 0,
   "total_trojans": 0,
-  "total_ransomware": 8,
-  "total_backdoors": 1,
-  "total_apt": 1,
-  "total_stealers": 1,
+  "total_ransomware": 0,
   "total_other": 0,
-  "total_mutexes": 12,
-  "last_updated": "2025-01-15 13:15:00 UTC"
+  "total_mutexes": 14,
+  "last_updated": "2025-07-11 21:51:33 UTC"
 }
