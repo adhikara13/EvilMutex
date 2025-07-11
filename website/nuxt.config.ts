@@ -173,6 +173,7 @@ export default defineNuxtConfig({
     routes: [
       '/',
       '/contributor'
+      // Dynamic routes are handled by nitro:config hook below
     ]
   },
 
