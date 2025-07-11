@@ -28,15 +28,12 @@ jobs:
           cd website
           npm ci
 
-      - name: Install YAML validator
-        run: npm install -g yaml-lint
-
       - name: Validate YAML files
         run: |
           echo "Validating YAML files..."
           find signatures/ -name "*.yml" -o -name "*.yaml" | while read file; do
             echo "Validating: $file"
-            yaml-lint "$file" || exit 1
+            npx yaml-lint "$file" || exit 1
           done
           echo "All YAML files are valid!"
 

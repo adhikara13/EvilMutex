@@ -29,17 +29,12 @@ jobs:
           cd website
           npm ci
 
-      - name: Install YAML tools
-        run: |
-          npm install -g yaml-lint
-          npm install -g ajv-cli
-
       - name: Validate YAML syntax
         run: |
           echo "Validating YAML syntax..."
           find signatures/ -name "*.yml" -o -name "*.yaml" | while read file; do
             echo "Validating syntax: $file"
-            yaml-lint "$file" || exit 1
+            npx yaml-lint "$file" || exit 1
           done
           echo "All YAML files have valid syntax!"
 
