@@ -1,0 +1,20 @@
+# SHELBY Backdoor Mutex Intelligence  
+# Analyst source file for SHELBY-related mutex data
+
+malware_info:
+  family: "SHELBY"
+  aliases: ["SHELBYLOADER", "SHELBYC2"]
+  description: "SHELBY is a sophisticated backdoor malware family that abuses GitHub for command-and-control operations. It consists of two main components: SHELBYLOADER and SHELBYC2. The malware employs advanced sandbox detection techniques, uses obfuscation with Obfuscar, and establishes persistence through Windows Registry. It targets telecommunications companies and airports, particularly in Iraq and UAE regions."
+  threat_actor: "REF8685"
+  first_seen: "2025"
+
+category: "backdoor"
+primary_tags: ["github_c2", "sandbox_evasion", "obfuscation", "persistence", "reflective_loading", "targeted_attack"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\GHS<UniqueID>'
+    references:
+      - "https://www.elastic.co/security-labs/the-shelby-strategy"
+    date_added: "2025-01-15"
+    analyst: "@adhikara13"

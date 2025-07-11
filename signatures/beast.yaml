@@ -1,0 +1,20 @@
+# Beast Ransomware Mutex Intelligence  
+# Analyst source file for Beast-related mutex data
+
+malware_info:
+  family: "Beast"
+  aliases: ["Monster", "Beast RaaS"]
+  description: "Beast is a Ransomware-as-a-Service (RaaS) platform active since 2022 that targets Windows, Linux, and ESXi systems. It uses a combination of Elliptic-curve and ChaCha20 encryption, written in C programming language. The malware includes capabilities for shadow copy deletion, service termination, SMB scanning for lateral movement, and multithreaded file encryption. It strategically avoids CIS countries (Russia, Belarus, Moldova) by checking system language settings and IP geolocation."
+  threat_actor: "Beast RaaS Group"
+  first_seen: "2022"
+
+category: "ransomware"
+primary_tags: ["raas", "file_encryption", "multi_platform", "smb_propagation", "shadow_copy_delete", "service_termination", "chacha20", "elliptic_curve"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "BEAST HERE?"
+    references:
+      - "https://www.cybereason.com/blog/threat-analysis-beast-ransomware"
+    date_added: "2025-01-15"
+    analyst: "@adhikara13"

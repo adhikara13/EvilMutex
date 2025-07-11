@@ -1,0 +1,21 @@
+# LoptikMod Malware Mutex Intelligence  
+# Analyst source file for LoptikMod malware used by DoNot APT group
+
+malware_info:
+  family: "LoptikMod"
+  aliases: ["loptik"]
+  description: "LoptikMod is malware used by the DoNot APT group that primarily targets South Asian countries including Pakistan, Bangladesh, and Sri Lanka to conduct cyber-espionage activities against government agencies, defense and military, diplomatic sector, and important business figures. The group has dual-platform attack capabilities for Windows and Android, often using PDF document decoys, malicious Office documents with macro code, and EXE files disguised as PDF documents. They employ sophisticated attack chains including phishing links, scheduled tasks for persistence, and AES encryption for data exfiltration."
+  threat_actor: ["DoNot APT group", "APT-Q-38", "APT-C-35", "Mint Tempest", "Origami Elephant", "SECTOR02", "Viceroy Tiger"]
+  first_seen: "2018"
+
+category: "apt"
+primary_tags: ["cyber_espionage", "south_asia", "pdf_decoy", "macro_malware", "scheduled_tasks", "persistence", "aes_encryption", "multi_stage"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "08808"
+    references:
+      - "https://ti.qianxin.com/blog/articles/analysis-of-the-attack-activity-of-the-apt-q-38-using-pdf-document-decoys-en/?utm_source=chatgpt.com"
+      - "https://www.trellix.com/blogs/research/from-click-to-compromise-unveiling-the-sophisticated-attack-of-donot-apt-group-on-southern-european-government-entities/"
+    date_added: "2025-01-15"
+    analyst: "@adhikara13"

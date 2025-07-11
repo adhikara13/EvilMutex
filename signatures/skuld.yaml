@@ -1,0 +1,22 @@
+# Skuld Stealer Mutex Intelligence  
+# Analyst source file for Skuld stealer related mutex data
+
+malware_info:
+  family: "Skuld"
+  aliases: ["Skuld Stealer"]
+  description: "Skuld is a customized stealer malware that specifically targets cryptocurrency wallets and sensitive data. It's delivered through sophisticated multi-stage attack campaigns that exploit hijacked Discord invite links and use the ClickFix phishing technique. The malware is part of a broader operation that combines time-based evasions and trusted cloud services (GitHub, Bitbucket, Pastebin, Discord) for payload delivery and data exfiltration to avoid detection by security tools."
+  threat_actor: "Unknown"
+  first_seen: "2025"
+
+category: "stealer"
+primary_tags: ["crypto_stealer", "discord_delivery", "multi_stage", "clickfix_phishing", "cloud_services", "evasion_techniques", "wallet_targeting"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "global\\3575651c-bb47-448e-a514-22865732bbc"
+    references:
+      - "https://research.checkpoint.com/2025/from-trust-to-threat-hijacked-discord-invites-used-for-multi-stage-malware-delivery/"
+      - "https://www.secureblink.com/cyber-security-news/discord-malware-hijacks-expired-invite-links-to-steal-crypto-wallets-in-2025"
+    date_added: "2025-01-15"
+    analyst: "@user"
+    notes: "Used to prevent multiple instances of Skuld stealer from running simultaneously during cryptocurrency wallet targeting operations" 

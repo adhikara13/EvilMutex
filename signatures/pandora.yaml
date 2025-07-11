@@ -1,0 +1,22 @@
+# Pandora Ransomware Mutex Intelligence  
+# Analyst source file for Pandora-related mutex data
+
+malware_info:
+  family: "Pandora"
+  aliases: ["Pandora Ransomware"]
+  description: "Pandora is a ransomware-as-a-service (RaaS) operation that emerged in 2022, targeting Windows and Linux systems. It uses custom encryption algorithms and is designed to evade detection while maximizing damage. The malware creates mutexes to prevent multiple instances from running simultaneously and uses sophisticated techniques to bypass security measures."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "ransom_demand", "windows", "linux", "raas", "multi_platform", "evasion"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "ThisisMutexa"
+    references:
+      - "https://www.avertium.com/resources/threat-reports/in-depth-pandora-ransomware"
+      - "https://www.fortinet.com/blog/threat-research/looking-inside-pandoras-box"
+      - "https://cyble.com/blog/deep-dive-analysis-pandora-ransomware/"
+    date_added: "2025-01-15"
+    analyst: "@user" 
