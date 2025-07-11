@@ -72,6 +72,16 @@ jobs:
           cd website
           npm run generate
 
+      - name: Generate IndexNow key file
+        run: |
+          echo "🔑 Generating IndexNow key file..."
+          INDEXNOW_KEY="${{ vars.INDEXNOW_KEY }}"
+          
+          # Create the key file in the dist directory
+          echo "$INDEXNOW_KEY" > "website/dist/${INDEXNOW_KEY}.txt"
+          
+          echo "✅ IndexNow key file generated: ${INDEXNOW_KEY}.txt"
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
@@ -79,6 +89,76 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME }}
           workingDirectory: website
+
+      - name: Submit URLs to IndexNow
+        run: |
+          echo "🔄 Submitting URLs to IndexNow..."
+          
+          # Use GitHub Actions variables
+          INDEXNOW_KEY="${{ vars.INDEXNOW_KEY }}"
+          DOMAIN="${{ vars.DOMAIN }}"
+          
+          # Base URLs that always get submitted
+          BASE_URLS=(
+            "https://${DOMAIN}/"
+            "https://${DOMAIN}/contributor"
+          )
+          
+          # Get dynamic malware URLs from generated sitemap
+          cd website
+          MALWARE_URLS=($(grep -oP '(?<=<loc>)[^<]*(?=</loc>)' dist/sitemap.xml | grep "/malware/" || true))
+          
+          # Combine all URLs
+          ALL_URLS=("${BASE_URLS[@]}" "${MALWARE_URLS[@]}")
+          
+          # Create JSON array of URLs
+          URL_JSON=$(printf '%s\n' "${ALL_URLS[@]}" | jq -R . | jq -s .)
+          
+          # Submit to IndexNow (Bing/Microsoft)
+          echo "📤 Submitting $(echo "$URL_JSON" | jq length) URLs to IndexNow..."
+          
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"host\": \"${DOMAIN}\",
+              \"key\": \"${INDEXNOW_KEY}\",
+              \"keyLocation\": \"https://${DOMAIN}/${INDEXNOW_KEY}.txt\",
+              \"urlList\": ${URL_JSON}
+            }")
+          
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          RESPONSE_BODY=$(echo "$RESPONSE" | head -n -1)
+          
+          if [ "$HTTP_CODE" = "200" ]; then
+            echo "✅ IndexNow submission successful!"
+            echo "Response: $RESPONSE_BODY"
+          else
+            echo "⚠️ IndexNow submission returned HTTP $HTTP_CODE"
+            echo "Response: $RESPONSE_BODY"
+          fi
+          
+          # Also submit to Yandex (alternative endpoint)
+          echo "📤 Submitting to Yandex IndexNow..."
+          
+          YANDEX_RESPONSE=$(curl -s -w "\n%{http_code}" -X POST "https://yandex.com/indexnow" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"host\": \"${DOMAIN}\",
+              \"key\": \"${INDEXNOW_KEY}\",
+              \"keyLocation\": \"https://${DOMAIN}/${INDEXNOW_KEY}.txt\",
+              \"urlList\": ${URL_JSON}
+            }")
+          
+          YANDEX_HTTP_CODE=$(echo "$YANDEX_RESPONSE" | tail -n1)
+          YANDEX_RESPONSE_BODY=$(echo "$YANDEX_RESPONSE" | head -n -1)
+          
+          if [ "$YANDEX_HTTP_CODE" = "200" ]; then
+            echo "✅ Yandex IndexNow submission successful!"
+          else
+            echo "⚠️ Yandex IndexNow submission returned HTTP $YANDEX_HTTP_CODE"
+          fi
+          
+          echo "🎯 IndexNow submissions completed!"
 
   notify:
     name: Notify Status
