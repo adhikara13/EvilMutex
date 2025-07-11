@@ -1,5 +1,15 @@
 # EvilMutex
 
+<!-- BADGES START -->
+![CI/CD Pipeline](https://github.com/adhikara13/EvilMutex/actions/workflows/ci-cd.yml/badge.svg) 
+![PR Validation](https://github.com/adhikara13/EvilMutex/actions/workflows/pr-validation.yml/badge.svg) 
+![Malware Families](https://img.shields.io/badge/Malware%20Families-1-red) 
+![Total Mutexes](https://img.shields.io/badge/Total%20Mutexes-2-blue) 
+![Hosted on Cloudflare](https://img.shields.io/badge/Hosted%20on-Cloudflare%20Pages-orange)
+
+**Last Updated:** 2025-07-11 05:33:22 UTC
+<!-- BADGES END -->
+
 **Malware Mutex Intelligence Platform**
 
 A comprehensive database of malware mutex signatures for threat intelligence, detection engineering, and cybersecurity research.
