@@ -3,11 +3,11 @@
 <!-- BADGES START -->
 ![CI/CD Pipeline](https://github.com/adhikara13/EvilMutex/actions/workflows/ci-cd.yml/badge.svg) 
 ![PR Validation](https://github.com/adhikara13/EvilMutex/actions/workflows/pr-validation.yml/badge.svg) 
-![Malware Families](https://img.shields.io/badge/Malware%20Families-6-red) 
-![Total Mutexes](https://img.shields.io/badge/Total%20Mutexes-7-blue) 
+![Malware Families](https://img.shields.io/badge/Malware%20Families-7-red) 
+![Total Mutexes](https://img.shields.io/badge/Total%20Mutexes-9-blue) 
 ![Hosted on Cloudflare](https://img.shields.io/badge/Hosted%20on-Cloudflare%20Pages-orange)
 
-**Last Updated:** 2025-07-11 20:20:29 UTC
+**Last Updated:** 2025-07-11 20:59:27 UTC
 <!-- BADGES END -->
 
 **Malware Mutex Intelligence Platform**
