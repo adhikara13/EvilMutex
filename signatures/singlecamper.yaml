@@ -18,3 +18,9 @@ mutexes:
       - "https://www.proofpoint.com/us/blog/threat-insight/10-things-i-hate-about-attribution-romcom-vs-transferloader"
     date_added: "2025‑01‑12"
     analyst: "@adhikara13"
+        
+  - name: "SnipMutex"
+    references:
+      - "https://unit42.paloaltonetworks.com/snipbot-romcom-malware-variant/"
+    date_added: "2025-01-22"
+    analyst: "@adhikara13"

@@ -1,0 +1,20 @@
+# WhiteSnake Stealer Mutex Intelligence  
+# Analyst source file for WhiteSnake-related mutex data
+
+malware_info:
+  family: "WhiteSnake"
+  aliases: ["WhiteSnake Stealer"]
+  description: "WhiteSnake is a new information stealer malware offered for sale via Malware-as-a-Service (MaaS) model. It is designed to steal sensitive information from infected systems including credentials, browser data, and other valuable information."
+  threat_actor: "Whitesnake"
+  first_seen: "2023"
+
+category: "stealer"
+primary_tags: ["information_stealer", "maas", "credentials_theft", "browser_theft", "mutex_protection"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "kwnmsgyyay"
+    references:
+      - "https://cyble.com/blog/new-whitesnake-stealer-offered-for-sale-via-maas-model/"
+    date_added: "2025-01-22"
+    analyst: "@adhikara13" 
