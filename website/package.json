@@ -14,19 +14,25 @@
     "lint:fix": "eslint . --fix",
     "dev:win": "nuxt dev",
     "start": "nuxt dev",
-    "build:prod": "cross-env NODE_ENV=production nuxt generate"
+    "build:prod": "cross-env NODE_ENV=production nuxt generate",
+    "test:console": "cross-env NODE_ENV=development node -e \"console.log('DEV console test'); process.env.NODE_ENV='production'; console.log('PROD console test (should be removed)');\""
   },
   "dependencies": {
+    "@nuxt/content": "^2.13.4",
     "@nuxt/ui": "^2.18.7",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@pinia/nuxt": "^0.5.5",
     "@vueuse/nuxt": "^11.2.0",
     "date-fns": "^4.1.0",
     "fuse.js": "^7.0.0",
+    "lucide-vue-next": "^0.468.0",
     "nuxt": "^3.13.2",
     "papaparse": "^5.4.1",
+    "prismjs": "^1.29.0",
     "vue": "^3.5.13",
     "vue-router": "^4.4.5",
+    "vue-toastification": "^2.0.0-rc.5",
+    "vue-tsc": "^2.2.12",
     "yaml": "^2.6.1"
   },
   "devDependencies": {
@@ -35,8 +41,10 @@
     "@nuxt/typescript": "^2.8.1",
     "@types/node": "^22.10.2",
     "@types/papaparse": "^5.3.15",
+    "@types/prismjs": "^1.26.5",
     "cross-env": "^7.0.3",
     "eslint": "^9.17.0",
+    "gh-pages": "^6.2.0",
     "prettier": "^3.4.2",
     "typescript": "^5.8.3"
   },
