@@ -1,0 +1,21 @@
+# Contacto Ransomware Mutex Intelligence  
+# Analyst source file for Contacto-related mutex data
+
+malware_info:
+  family: "Contacto"
+  aliases: []
+  description: "Contacto is a new ransomware strain that surfaced in early January 2025, featuring advanced evasion techniques to bypass conventional security measures. It uses sophisticated threading models for efficient file encryption and employs various privilege escalation methods to maximize system control."
+  threat_actor: "Unknown"
+  first_seen: "2025"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "privilege_escalation", "av_evasion", "threading_model", "mutex_protection"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\ContactoMutex'
+    references:
+      - "https://app.any.run/tasks/917a636f-aed8-4368-81a6-1ee2634c50ec"
+      - "https://gbhackers.com/new-contacto-ransomware-evades-av-detection"
+    date_added: "2025-01-22"
+    analyst: "@adhikara13" 
