@@ -1,0 +1,20 @@
+# AiLock Ransomware Mutex Intelligence  
+# Analyst source file for AiLock-related mutex data
+
+malware_info:
+  family: "AiLock"
+  aliases: ["AiLock Ransomware"]
+  description: "AiLock is a ransomware-as-a-service (RaaS) operation that encrypts victim files using ChaCha20 and NTRUEncrypt algorithms, appending the .AiLock extension. The malware creates a mutex named 'FAUST' to prevent duplicate execution and ensure only one instance runs on the infected system."
+  threat_actor: "Unknown"
+  first_seen: "2025"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "ransom_demand", "windows", "raas", "chacha20", "ntruencrypt"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "FAUST"
+    references:
+      - "https://medium.com/s2wblog/detailed-analysis-of-ailock-ransomware-1d3263beff15"
+    date_added: "2025-01-12"
+    analyst: "@adhikara13" 
