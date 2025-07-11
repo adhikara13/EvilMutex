@@ -8,7 +8,7 @@ malware_info:
   threat_actor: "UAT‑5647 (aka RomCom, Storm‑0978, Tropical Scorpius, Void Rabisu)"
   first_seen: "2023"
 
-category: "trojan"
+category: "backdoor"
 primary_tags: ["persistence", "windows", "single_instance", "mutex_based"]
 
 # Mutexes used by this malware family
