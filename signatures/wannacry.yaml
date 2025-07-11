@@ -1,0 +1,26 @@
+# WannaCry Ransomware Mutex Intelligence  
+# Analyst source file for WannaCry-related mutex data
+
+malware_info:
+  family: "WannaCry"
+  aliases: ["WannaCrypt", "WCry", "Wana Decrypt0r"]
+  description: "WannaCry is a ransomware cryptoworm that spread rapidly across computer networks in May 2017. It exploited the EternalBlue vulnerability in Microsoft Windows systems and was attributed to the Lazarus Group."
+  threat_actor: "Lazarus Group (North Korea)"
+  first_seen: "2017"
+
+category: "ransomware"
+primary_tags: ["cryptoworm", "self-propagating", "smb_exploit", "file_encryption", "kill_switch"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "MsWinZonesCacheCounterMutexA"
+    references:
+      - "https://www.group-ib.com/blog/echoes/"
+    date_added: "2025-01-09"
+    analyst: "@adhikara13"
+        
+  - name: "Global\\MsWinZonesCacheCounterMutexW"
+    references:
+      - "https://www.elastic.co/blog/wcrywanacry-ransomware-technical-analysis"
+    date_added: "2025-01-09"
+    analyst: "@adhikara13"

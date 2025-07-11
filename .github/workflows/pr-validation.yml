@@ -1,0 +1,176 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'signatures/**'
+      - 'tools/**'
+      - 'website/**'
+
+jobs:
+  validate-signatures:
+    name: Validate Malware Signatures
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: 'website/package-lock.json'
+
+      - name: Install dependencies
+        run: |
+          cd website
+          npm ci
+
+      - name: Install YAML tools
+        run: |
+          npm install -g yaml-lint
+          npm install -g ajv-cli
+
+      - name: Validate YAML syntax
+        run: |
+          echo "Validating YAML syntax..."
+          find signatures/ -name "*.yml" -o -name "*.yaml" | while read file; do
+            echo "Validating syntax: $file"
+            yaml-lint "$file" || exit 1
+          done
+          echo "All YAML files have valid syntax!"
+
+      - name: Check file structure
+        run: |
+          echo "Checking file structure..."
+          
+          # Check if signatures directory exists and has subdirectories
+          if [ ! -d "signatures" ]; then
+            echo "ERROR: signatures/ directory not found"
+            exit 1
+          fi
+          
+          # Check for expected subdirectories
+          expected_dirs="rats trojans ransomware other"
+          for dir in $expected_dirs; do
+            if [ ! -d "signatures/$dir" ]; then
+              echo "Warning: signatures/$dir directory not found"
+            fi
+          done
+          
+          # Count YAML files
+          yaml_count=$(find signatures/ -name "*.yml" -o -name "*.yaml" | wc -l)
+          echo "Found $yaml_count YAML files"
+          
+          if [ $yaml_count -eq 0 ]; then
+            echo "ERROR: No YAML files found in signatures/"
+            exit 1
+          fi
+
+      - name: Validate malware data structure
+        run: |
+          echo "Validating malware data structure..."
+          cd website
+          
+          # Try to build with integrated data processing
+          npm run generate
+          
+          # Check if JSON files were generated
+          if [ ! -f "public/data/malware.json" ]; then
+            echo "ERROR: Failed to generate malware.json"
+            exit 1
+          fi
+          
+          echo "All malware data structures are valid!"
+
+      - name: Check for required fields
+        run: |
+          echo "Checking for required fields in YAML files..."
+          
+          node -e "
+          const fs = require('fs');
+          const yaml = require('yaml');
+          const path = require('path');
+          
+          const requiredFields = ['malware_info', 'mutexes', 'category', 'primary_tags'];
+          const malwareInfoFields = ['family', 'aliases', 'first_seen', 'description'];
+          const mutexFields = ['name', 'analyst', 'date_added', 'references'];
+          
+          function checkFile(filepath) {
+            try {
+              const content = fs.readFileSync(filepath, 'utf-8');
+              const data = yaml.parse(content);
+              
+              // Check top-level required fields
+              for (const field of requiredFields) {
+                if (!data[field]) {
+                  throw new Error(\`Missing required field: \${field}\`);
+                }
+              }
+              
+              // Check malware_info fields
+              for (const field of malwareInfoFields) {
+                if (!data.malware_info[field]) {
+                  throw new Error(\`Missing malware_info field: \${field}\`);
+                }
+              }
+              
+              // Check mutexes array
+              if (!Array.isArray(data.mutexes) || data.mutexes.length === 0) {
+                throw new Error('mutexes must be a non-empty array');
+              }
+              
+              // Check each mutex
+              data.mutexes.forEach((mutex, index) => {
+                for (const field of mutexFields) {
+                  if (!mutex[field]) {
+                    throw new Error(\`Missing mutex field '\${field}' in mutex \${index}\`);
+                  }
+                }
+              });
+              
+              console.log(\`VALID: \${path.basename(filepath)} - Valid structure\`);
+              return true;
+            } catch (error) {
+              console.log(\`ERROR: \${path.basename(filepath)} - \${error.message}\`);
+              return false;
+            }
+          }
+          
+          const glob = require('glob');
+          const files = glob.sync('signatures/**/*.{yml,yaml}');
+          let allValid = true;
+          
+          files.forEach(file => {
+            if (!checkFile(file)) {
+              allValid = false;
+            }
+          });
+          
+          if (!allValid) {
+            process.exit(1);
+          }
+          
+          console.log('All YAML files have valid structure!');
+          "
+
+      - name: Generate PR summary
+        run: |
+          echo "## PR Validation Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Files Changed:" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          git diff --name-only origin/main HEAD | grep -E '\.(yml|yaml)$' | head -10 >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### YAML Files Summary:" >> $GITHUB_STEP_SUMMARY
+          echo "- Total YAML files: $(find signatures/ -name '*.yml' -o -name '*.yaml' | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "- RAT signatures: $(find signatures/rats/ -name '*.yml' -o -name '*.yaml' 2>/dev/null | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "- Trojan signatures: $(find signatures/trojans/ -name '*.yml' -o -name '*.yaml' 2>/dev/null | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "- Ransomware signatures: $(find signatures/ransomware/ -name '*.yml' -o -name '*.yaml' 2>/dev/null | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "- Other signatures: $(find signatures/other/ -name '*.yml' -o -name '*.yaml' 2>/dev/null | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "All validation checks passed!" 
