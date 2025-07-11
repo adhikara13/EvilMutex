@@ -1,0 +1,23 @@
+# VanHelsing Ransomware Mutex Intelligence  
+# Analyst source file for VanHelsing-related mutex data
+
+malware_info:
+  family: "VanHelsing"
+  aliases: ["VanHelsing Ransomware"]
+  description: "VanHelsing is a ransomware-as-a-service (RaaS) operation attributed to Russian cybercriminals. The ransomware encrypts victim files and demands payment for decryption, employing double extortion tactics. The threat actors prohibit targeting Commonwealth of Independent States (CIS) countries, a characteristic behavior of Russian cybercrime groups. The malware creates a global mutex to prevent multiple instances from running simultaneously."
+  threat_actor: "Unknown"
+  first_seen: "2025"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "ransom_demand", "windows", "raas", "double_extortion", "russian_cybercrime", "multi_platform"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\VanHelsing'
+    references:
+      - "https://www.fortinet.com/blog/threat-research/ransomware-roundup-vanhelsing"
+      - "https://www.cyfirma.com/research/vanhelsing-ransomware/"
+      - "https://www.tripwire.com/state-of-security/vanhelsing-ransomware-what-you-need-know"
+      - "https://www.bleepingcomputer.com/news/security/new-vanhelsing-ransomware-targets-windows-arm-esxi-systems/"
+    date_added: "2025-01-12"
+    analyst: "@adhikara13"

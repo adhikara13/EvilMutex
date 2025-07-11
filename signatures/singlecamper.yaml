@@ -1,0 +1,20 @@
+# SingleCamper Malware Mutex Intelligence  
+# Analyst source file for SingleCamper-related mutex data
+
+malware_info:
+  family: "SingleCamper"
+  aliases: ["SingleCamper", "RomCom 5.0", "SnipBot"]
+  description: "SingleCamper is a DLL-based RAT variant of RomCom, used by the UAT‑5647 threat group (also known as Russian‑speaking RomCom). It’s loaded from registry into memory via ShadyHammock, communicates over localhost, and prevents concurrent instances via a global mutex. It performs system recon, tunneling, and exfiltration."  
+  threat_actor: "UAT‑5647 (aka RomCom, Storm‑0978, Tropical Scorpius, Void Rabisu)"
+  first_seen: "2023"
+
+category: "trojan"
+primary_tags: ["persistence", "windows", "single_instance", "mutex_based"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\srvmutex'
+    references:
+      - "https://www.proofpoint.com/us/blog/threat-insight/10-things-i-hate-about-attribution-romcom-vs-transferloader"
+    date_added: "2025‑01‑12"
+    analyst: "@adhikara13"

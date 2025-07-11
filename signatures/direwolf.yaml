@@ -1,0 +1,21 @@
+# DireWolf Ransomware Mutex Intelligence  
+# Analyst source file for DireWolf-related mutex data
+
+malware_info:
+  family: "DireWolf"
+  aliases: ["Dire Wolf Ransomware", "DireWolf"]
+  description: "DireWolf (also known as Dire Wolf) is an emerging ransomware variant that employs double extortion tactics, encrypting victim files and threatening to publish stolen data. The ransomware group claims to be financially motivated with 'no morals, no political stance.' The malware creates a global mutex to prevent multiple instances from running simultaneously."
+  threat_actor: "DireWolf Ransomware Group"
+  first_seen: "2025"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "ransom_demand", "windows", "double_extortion", "emerging_threat"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\direwolfAppMutex'
+    references:
+      - "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/dire-wolf-strikes-new-ransomware-group-targeting-global-sectors"
+      - "https://zettawise.in/blog/article/new-ransomware-lsquo-dire-wolf-rsquo-ravages-tech-and-manufacturing-firms"
+    date_added: "2025-01-12"
+    analyst: "@adhikara13"
