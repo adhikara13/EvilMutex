@@ -227,4 +227,8 @@ Temporary Items
 .fuse_hidden*
 .directory
 .Trash-*
-.nfs* 
+.nfs*
+
+# Generated files that should not be committed
+website/public/sitemap.xml
+website/public/data/malware.json 
