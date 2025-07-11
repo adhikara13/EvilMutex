@@ -114,14 +114,15 @@ export default defineNuxtConfig({
 
   app: {
     baseURL: '/', // ✅ Correct for Cloudflare Pages
-    head: {
-      title: 'EvilMutex - Malware Mutex Intelligence',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Comprehensive database of malware mutex signatures for threat intelligence and detection' },
-        { name: 'keywords', content: 'malware, mutex, threat intelligence, cybersecurity, detection, sigma rules' },
-        { name: 'author', content: 'EvilMutex Team' },
+          head: {
+        title: 'EvilMutex - Malware Mutex Intelligence',
+        meta: [
+          { charset: 'utf-8' },
+          { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+          { name: 'description', content: 'Comprehensive database of malware mutex signatures for threat intelligence and detection' },
+          { name: 'keywords', content: 'malware, mutex, threat intelligence, cybersecurity, detection, sigma rules' },
+          { name: 'author', content: 'EvilMutex Team' },
+          { name: 'seznam-wmt', content: 'zNCSjjygAPUgu8bISSRgLXlOMJeLS9ek' },
         { property: 'og:title', content: 'EvilMutex - Malware Mutex Intelligence' },
         { property: 'og:description', content: 'Comprehensive database of malware mutex signatures for threat intelligence and detection' },
         { property: 'og:type', content: 'website' },
