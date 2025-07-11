@@ -55,7 +55,9 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@pinia/nuxt',
     '@vueuse/nuxt',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
   ],
 
   css: ['~/assets/css/main.css'],
@@ -118,6 +120,8 @@ export default defineNuxtConfig({
     }
   },
 
+
+
   generate: {
     routes: [
       '/',
@@ -141,11 +145,40 @@ export default defineNuxtConfig({
       if (process.env.NODE_ENV === 'development') {
         console.log('🚀 Dev server ready - data built automatically!')
       }
+    },
+
+    // Generate routes for all malware pages
+    'nitro:config': async (nitroConfig) => {
+      try {
+        const data = await buildMalwareData()
+        const malwareRoutes = data.malware.map(malware => 
+          `/malware/${malware.malware_info.family.toLowerCase().replace(/[^a-z0-9]/g, '-')}`
+        )
+        nitroConfig.prerender = nitroConfig.prerender || {}
+        nitroConfig.prerender.routes = [
+          ...(nitroConfig.prerender.routes || []),
+          ...malwareRoutes
+        ]
+      } catch (error) {
+        console.error('Error generating prerender routes:', error)
+      }
     }
   },
 
   nitro: {
-    preset: 'static' // ✅ Perfect for Cloudflare Pages
+    preset: 'cloudflare-pages', // ✅ Perfect for Cloudflare Pages
+    compressPublicAssets: true,
+    prerender: {
+      routes: [
+        '/',
+        '/contributor'
+      ]
+    }
+  },
+
+  // Performance optimizations
+  experimental: {
+    payloadExtraction: false
   },
 
   compatibilityDate: '2024-11-01'
