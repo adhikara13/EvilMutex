@@ -47,6 +47,54 @@ async function buildMalwareData() {
   }
 }
 
+async function generateStaticSitemap() {
+  console.log('🗺️ Generating static sitemap.xml...')
+  
+  try {
+    const data = await buildMalwareData()
+    const baseUrl = 'https://evilmutex.org'
+    const currentDate = new Date().toISOString()
+    
+    let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${baseUrl}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <lastmod>${currentDate}</lastmod>
+  </url>
+  <url>
+    <loc>${baseUrl}/contributor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>${currentDate}</lastmod>
+  </url>`
+
+    // Add malware pages
+    data.malware.forEach(malware => {
+      const slug = malware.malware_info.family.toLowerCase().replace(/[^a-z0-9]/g, '-')
+      sitemap += `
+  <url>
+    <loc>${baseUrl}/malware/${slug}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>${currentDate}</lastmod>
+  </url>`
+    })
+
+    sitemap += `
+</urlset>`
+
+    // Write sitemap to public directory
+    const publicDir = join(process.cwd(), 'public')
+    await fs.writeFile(join(publicDir, 'sitemap.xml'), sitemap)
+    
+    console.log(`✅ Generated sitemap.xml with ${data.malware.length + 2} URLs`)
+  } catch (error) {
+    console.error('❌ Error generating sitemap:', error)
+  }
+}
+
 export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: false,
@@ -56,7 +104,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/sitemap',
     '@nuxtjs/robots'
   ],
 
@@ -134,11 +181,13 @@ export default defineNuxtConfig({
     'build:before': async () => {
       console.log('🔒 Building EvilMutex - Malware Mutex Intelligence Platform...')
       await buildMalwareData()
+      await generateStaticSitemap()
     },
 
     'nitro:build:before': async () => {
       console.log('🔧 Preparing data for static generation...')
       await buildMalwareData()
+      await generateStaticSitemap()
     },
 
     'ready': async () => {
