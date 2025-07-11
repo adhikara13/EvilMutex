@@ -398,42 +398,7 @@ useSeoMeta({
   googleSiteVerification: '' // Add your Google Search Console verification code here
 })
 
-// Structured Data for Home Page
-useJsonld({
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: appConfig.app.fullName,
-  description: appConfig.app.description,
-  url: 'https://evilmutex.org',
-  author: {
-    '@type': 'Organization',
-    name: 'EvilMutex Team',
-    url: 'https://evilmutex.org'
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'EvilMutex',
-    url: 'https://evilmutex.org'
-  },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: 'https://evilmutex.org/?search={search_term_string}',
-    'query-input': 'required name=search_term_string'
-  },
-  mainEntity: {
-    '@type': 'Dataset',
-    name: 'Malware Mutex Database',
-    description: 'Comprehensive database of malware mutex signatures for cybersecurity research',
-    keywords: 'malware, mutex, cybersecurity, threat intelligence',
-    creator: {
-      '@type': 'Organization',
-      name: 'EvilMutex Team'
-    },
-    datePublished: '2024-01-01',
-    dateModified: new Date().toISOString(),
-    license: 'https://opensource.org/licenses/MIT'
-  }
-})
+// Note: Structured data can be added via SEO modules later if needed
 </script>
 
 <style scoped>

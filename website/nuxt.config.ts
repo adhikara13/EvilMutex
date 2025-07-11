@@ -103,8 +103,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@pinia/nuxt',
     '@vueuse/nuxt',
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/robots'
+    '@nuxtjs/tailwindcss'
   ],
 
   css: ['~/assets/css/main.css'],
@@ -223,6 +222,10 @@ export default defineNuxtConfig({
         '/',
         '/contributor'
       ]
+    },
+    // Fix middleware conflict warning
+    routeRules: {
+      '/robots.txt': { headers: { 'Content-Type': 'text/plain' } }
     }
   },
 
