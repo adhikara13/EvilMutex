@@ -1,0 +1,21 @@
+# RevengeRAT Mutex Intelligence
+# Analyst source file for RevengeRAT data
+
+malware_info:
+  family: "RevengeRAT"
+  aliases: ["Revenge-RAT"]
+  description: "RevengeRAT is a remote access trojan (RAT) that has been active since at least 2016. It is known for its wide range of capabilities, including remote control, keylogging, and file system manipulation. The malware is often distributed through phishing campaigns."
+  threat_actor: "Unknown"
+  first_seen: "2016"
+
+category: "rat"
+primary_tags: ["remote_access_trojan", "keylogging", "phishing"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "RV_MUTEX-<random>"
+    references:
+      - "https://any.run/malware-trends/revenge"
+      - "https://www.fortinet.com/blog/threat-research/malware-analysis-revenge-rat-sample"
+    date_added: "2025-07-12"
+    analyst: "@adhikara13" 
