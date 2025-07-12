@@ -1,0 +1,22 @@
+# Rhadamanthys Stealer Mutex Intelligence
+# Analyst source file for Rhadamanthys-related mutex data
+
+malware_info:
+  family: "Rhadamanthys"
+  aliases:
+    - "Rhadamanthys Stealer"
+  description: "Rhadamanthys is a C++ based information stealer that has been active since late 2022, often masquerading as legitimate software to gain an initial foothold."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "stealer"
+primary_tags: ["infostealer", "cpp"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "Global\\MSCTF.Asm.{digits}"
+    is_pattern: true
+    references:
+      - "https://elis531989.medium.com/dancing-with-shellcodes-analyzing-rhadamanthys-stealer-3c4986966a88"
+    date_added: "2024-05-22"
+    analyst: "@adhikara13" 
