@@ -1,0 +1,21 @@
+# DUSTTRAP Dropper Mutex Intelligence
+# Analyst source file for DUSTTRAP-related mutex data
+
+malware_info:
+  family: "DUSTTRAP"
+  aliases:
+    - "DUSTTRAP Dropper"
+  description: "DUSTTRAP is a dropper used by APT41 that decrypts and executes a malicious payload in memory to establish command and control."
+  threat_actor: "APT41"
+  first_seen: "2024"
+
+category: "dropper"
+primary_tags: ["in-memory_execution", "apt41"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "ICMzUEkdLNayBdWF"
+    references:
+      - "https://cloud.google.com/blog/topics/threat-intelligence/apt41-arisen-from-dust"
+    date_added: "2024-05-22"
+    analyst: "@adhikara13" 
