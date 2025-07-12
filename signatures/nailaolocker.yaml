@@ -1,0 +1,20 @@
+# NailaoLocker Ransomware Mutex Intelligence
+# Analyst source file for NailaoLocker ransomware data
+
+malware_info:
+  family: "NailaoLocker"
+  aliases: ["NailaoLocker Ransomware"]
+  description: "NailaoLocker is a ransomware strain distributed alongside the ShadowPad and PlugX backdoors, primarily targeting European organizations. It is suspected to be linked to Chinese-nexus threat actors."
+  threat_actor: ["Green Nailao"]
+  first_seen: "2023"
+
+category: "ransomware"
+primary_tags: ["shadowpad", "plugx", "dll_sideloading", "europe"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "Global\\lockv7"
+    references:
+      - "https://www.orangecyberdefense.com/global/blog/cert-news/meet-nailaolocker-a-ransomware-distributed-in-europe-by-shadowpad-and-plugx-backdoors"
+    date_added: "2025-07-12"
+    analyst: "@adhikara13" 
