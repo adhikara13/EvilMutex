@@ -1,0 +1,25 @@
+# AridGopher Backdoor Mutex Intelligence
+# Analyst source file for AridGopher backdoor data
+
+malware_info:
+  family: "AridGopher"
+  aliases: ["Micropsia"]
+  description: "AridGopher is a Golang-based backdoor and a variant of the Micropsia malware family, used by the Arid Viper APT group. It is known for its modular architecture and its use of DNS tunneling for C2 communication."
+  threat_actor: ["Arid Viper", "Desert Falcons", "APT-C-23"]
+  first_seen: "2023"
+
+category: "backdoor"
+primary_tags: ["apt", "golang", "dns_tunneling", "micropsia"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "ABCMedia"
+    references:
+      - "https://www.deepinstinct.com/blog/arid-gopher-the-newest-micropsia-malware-variant"
+    date_added: "2025-07-12"
+    analyst: "@adhikara13"
+  - name: "SoftTookkitPSA"
+    references:
+      - "https://www.deepinstinct.com/blog/arid-gopher-the-newest-micropsia-malware-variant"
+    date_added: "2025-07-12"
+    analyst: "@adhikara13" 
