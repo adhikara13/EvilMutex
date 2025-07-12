@@ -1,0 +1,21 @@
+# Embargo Ransomware Mutex Intelligence
+# Analyst source file for Embargo-related mutex data
+
+malware_info:
+  family: "Embargo"
+  aliases:
+    - "Embargo Ransomware"
+  description: "Embargo ransomware is a cross-platform ransomware written in Rust that uses double extortion techniques."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags: ["rust", "cross-platform", "double-extortion"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "LoadUpOnGunsBringYourFriends"
+    references:
+      - "https://cyble.com/blog/the-rust-revolution-new-embargo-ransomware-steps-in/"
+    date_added: "2024-05-22"
+    analyst: "@adhikara13" 
