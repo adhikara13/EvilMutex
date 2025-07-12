@@ -1,0 +1,21 @@
+# Big Head Ransomware Mutex Intelligence  
+# Analyst source file for Big Head ransomware data
+
+malware_info:
+  family: "Big Head"
+  aliases: ["Big Head Ransomware"]
+  description: "Big Head ransomware is a variant that uses a fake Windows Update screen to deceive users while it encrypts files in the background. It is known for its multiple variants and diverse tactics."
+  threat_actor: "Unknown"
+  first_seen: "2023"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "extortion", "fake_update"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "8bikfjjD4JpkkAqrz"
+    references:
+      - "https://www.trendmicro.com/en_us/research/23/g/tailing-big-head-ransomware-variants-tactics-and-impact.html"
+      - "https://www.tanium.com/blog/attacks-ransomware-payments-spike-in-2023-cyber-threat-intelligence-roundup/"
+    date_added: "2025-07-12"
+    analyst: "EvilMutex Project" 
