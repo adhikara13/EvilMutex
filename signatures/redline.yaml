@@ -1,0 +1,22 @@
+# RedLine Stealer Mutex Intelligence
+# Analyst source file for RedLine-related mutex data
+
+malware_info:
+  family: "RedLine"
+  aliases:
+    - "RedLine Stealer"
+  description: "RedLine Stealer is a popular information-stealing malware sold on underground forums, capable of exfiltrating credentials, credit card information, and cryptocurrency wallet data from web browsers and other applications."
+  threat_actor: "Unknown"
+  first_seen: "2020"
+
+category: "stealer"
+primary_tags: ["maas", "credential_theft", "infostealer"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "winter750"
+    references:
+      - "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/redline-stealer-a-novel-approach/"
+      - "https://www.securityhq.com/blog/april-2024-threat-advisory-top-5"
+    date_added: "2024-05-22"
+    analyst: "@adhikara13" 
