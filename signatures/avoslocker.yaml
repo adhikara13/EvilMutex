@@ -1,0 +1,22 @@
+# AvosLocker Ransomware Mutex Intelligence
+# Analyst source file for AvosLocker-related mutex data
+
+malware_info:
+  family: "AvosLocker"
+  aliases: ["avoslocker-ransomware"]
+  description: "AvosLocker is a Ransomware-as-a-Service (RaaS) affiliate program that has been actively targeting organizations and government institutions since July 2021."
+  threat_actor: "AvosLocker"
+  first_seen: "2021"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "RaaS", "double_extortion"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "ievah8eVki3Ho4oo"
+    references:
+      - "https://cyble.com/blog/deep-dive-analysis-avoslocker-ransomware/"
+      - "https://www.threatdown.com/blog/avoslocker-enters-the-ransomware-scene-asks-for-partners/"
+      - "https://hatching.io/blog/tt-2021-08-12/"
+    date_added: "2025-07-14"
+    analyst: "@adhikara13" 
