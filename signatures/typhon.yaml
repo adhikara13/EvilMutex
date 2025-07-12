@@ -1,0 +1,20 @@
+# Typhon Stealer Mutex Intelligence
+# Analyst source file for Typhon-related mutex data
+
+malware_info:
+  family: "Typhon"
+  aliases: ["typhon-stealer", "Typhon Stealer"]
+  description: "Typhon Stealer is an information-stealing malware spread through phishing sites. It is capable of stealing credentials, cookies, and other sensitive information from infected systems."
+  threat_actor: "Unknown"
+  first_seen: "2023"
+
+category: "stealer"
+primary_tags: ["infostealer", "credential_theft", "phishing"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "GOJJL2LPIZM04XC0NQ4I"
+    references:
+      - "https://cyble.com/blog/phishing-site-used-to-spread-typhon-stealer/"
+    date_added: "2025-07-15"
+    analyst: "@adhikara13" 
