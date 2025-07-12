@@ -1,0 +1,20 @@
+# HijackLoader Malware Mutex Intelligence
+# Analyst source file for HijackLoader-related mutex data
+
+malware_info:
+  family: "HijackLoader"
+  aliases: ["hijackloader loader"]
+  description: "HijackLoader is a modular malware loader that is used to load various malicious payloads onto a victim's system. It often employs advanced evasion techniques to avoid detection."
+  threat_actor: "Unknown"
+  first_seen: "2023"
+
+category: "loader"
+primary_tags: ["modular", "dropper"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "BOGLVGAU"
+    references:
+      - "https://app.any.run/tasks/7a48176e-b683-4472-98fd-b824935db29f"
+    date_added: "2025-07-16"
+    analyst: "@adhikara13" 
