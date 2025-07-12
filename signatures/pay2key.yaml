@@ -1,0 +1,20 @@
+# Pay2Key Ransomware Mutex Intelligence
+# Analyst source file for Pay2Key ransomware data
+
+malware_info:
+  family: "Pay2Key"
+  aliases: ["Pay2Key Ransomware"]
+  description: "Pay2Key is a ransomware variant that encrypts files and demands a ransom for their decryption."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "extortion"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "BooYYoYnYoooY"
+    references:
+      - "https://github.com/TheRavenFile/Daily-Hunt/blob/main/Pay2Key%20Ransomware"
+    date_added: "2025-07-12"
+    analyst: "@adhikara13" 
