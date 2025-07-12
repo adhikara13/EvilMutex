@@ -1,0 +1,22 @@
+# BunnyLoader Loader Mutex Intelligence
+# Analyst source file for BunnyLoader-related mutex data
+
+malware_info:
+  family: "BunnyLoader"
+  aliases:
+    - "BunnyLoader Loader"
+  description: "BunnyLoader is a Malware-as-a-Service (MaaS) used to drop other malware."
+  threat_actor: "Unknown"
+  first_seen: "2023"
+
+category: "loader"
+primary_tags: ["maas"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "BunnyLoader_MUTEXCONTROL"
+    references:
+      - "https://www.cyfirma.com/news/weekly-intelligence-report-06-oct-2023/"
+      - "https://www.zscaler.com/blogs/security-research/bunnyloader-newest-malware-service"
+    date_added: "2024-05-22"
+    analyst: "@adhikara13" 
