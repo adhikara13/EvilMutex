@@ -16,8 +16,6 @@ primary_tags: ["raas"]
 mutexes:
   - name: "Pysa"
     references:
-      - "https://www.cynet.com/attack-techniques-hands-on/cynet-ransomware-report-mespinoza/"
-      - "https://sapphirex00.medium.com/mespinoza-analysis-new-ransomware-variant-targets-france-d4f82cbee86c"
-      - "https://www.cert.ssi.gouv.fr/uploads/CERTFR-2020-CTI-003.pdf"
+      - "https://www.acronis.com/en-us/blog/posts/pysa-ransomware/"
     date_added: "2024-05-22"
     analyst: "@adhikara13" 
