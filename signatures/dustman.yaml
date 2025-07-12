@@ -6,8 +6,8 @@ malware_info:
   aliases:
     - "Dustman Wiper"
   description: "Dustman is a wiper malware that overwrites data on logical drives with politically motivated messages."
-  threat_actor: "Unknown"
-  first_seen: "2019-02"
+  threat_actor: ["OilRig", "APT 34"]
+  first_seen: "2019"
 
 category: "wiper"
 primary_tags: ["data_destruction", "political_motive"]
