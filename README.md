@@ -14,15 +14,15 @@
 
 A comprehensive database of malware mutex signatures for threat intelligence, detection engineering, and cybersecurity research.
 
-## 🎯 What is EvilMutex?
+## What is EvilMutex?
 
 Mutexes (mutual exclusion objects) are used by malware to prevent multiple instances from running simultaneously. Each malware family typically uses unique mutex names, making them excellent fingerprints for threat identification and detection.
 
-## 🚀 Quick Start
+## Quick Start
 
 Visit the live platform: **[evilmutex.org](https://evilmutex.org)**
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
@@ -31,7 +31,7 @@ Visit the live platform: **[evilmutex.org](https://evilmutex.org)**
 5. Push to the branch (`git push origin feature/amazing-feature`)
 6. Open a Pull Request
 
-## 🔗 Links
+## Links
 
 - **Website:** [evilmutex.org](https://evilmutex.org)
 - **GitHub:** [github.com/adhikara13/evilmutex](https://github.com/adhikara13/evilmutex)
