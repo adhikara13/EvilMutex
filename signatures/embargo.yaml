@@ -18,4 +18,9 @@ mutexes:
     references:
       - "https://cyble.com/blog/the-rust-revolution-new-embargo-ransomware-steps-in/"
     date_added: "2024-05-22"
+    analyst: "@adhikara13"
+  - name: "IntoTheFloodAgainSameOldTrip"
+    references:
+      - "https://www.welivesecurity.com/en/eset-research/embargo-ransomware-rocknrust/"
+    date_added: "2025-07-16"
     analyst: "@adhikara13" 
