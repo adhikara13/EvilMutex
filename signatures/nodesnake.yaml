@@ -1,0 +1,21 @@
+# NodeSnake RAT Mutex Intelligence
+# Analyst source file for NodeSnake-related mutex data
+
+malware_info:
+  family: "NodeSnake"
+  aliases:
+    - "NodeSnake RAT"
+  description: "NodeSnake is a Remote Access Trojan (RAT) written in Golang, used by the Interlock ransomware group to maintain persistence in compromised networks."
+  threat_actor: "Interlock"
+  first_seen: "2024"
+
+category: "rat"
+primary_tags: ["golang", "persistence"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\NodeSnakeMutex'
+    references:
+      - "https://cyberpress.org/interlock-ransomware-deploys-nodesnake-rat"
+    date_added: "2024-05-22"
+    analyst: "@adhikara13" 
