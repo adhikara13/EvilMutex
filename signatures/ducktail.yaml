@@ -6,7 +6,7 @@ malware_info:
   aliases:
     - "DuckTail Stealer"
   description: "Ducktail is a stealer malware that targets professionals on LinkedIn to steal browser credentials and session data, ultimately to hijack Facebook Business accounts."
-  threat_actor: "Unknown"
+  threat_actor: "cluster25"
   first_seen: "2023-10"
 
 category: "stealer"

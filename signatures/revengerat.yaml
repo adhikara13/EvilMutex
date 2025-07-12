@@ -15,7 +15,6 @@ primary_tags: ["remote_access_trojan", "keylogging", "phishing"]
 mutexes:
   - name: "RV_MUTEX-<random>"
     references:
-      - "https://any.run/malware-trends/revenge"
       - "https://www.fortinet.com/blog/threat-research/malware-analysis-revenge-rat-sample"
     date_added: "2025-07-12"
     analyst: "@adhikara13" 

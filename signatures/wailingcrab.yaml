@@ -3,7 +3,7 @@
 
 malware_info:
   family: "WailingCrab"
-  aliases: ["WailingCrab Backdoor"]
+  aliases: ["WailingCrab Backdoor", "WikiLoader"]
   description: "WailingCrab is a backdoor that uses the MQTT messaging protocol for command and control (C2) communication. This allows it to blend in with legitimate IoT traffic and evade detection."
   threat_actor: "Unknown"
   first_seen: "2020"
