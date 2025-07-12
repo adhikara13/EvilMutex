@@ -1,0 +1,14 @@
+malware_info:
+  family: "Money Message"
+  description: "Money Message is a ransomware strain that encrypts network shares and has targeted high-profile organizations. It is known to demand large ransoms."
+  first_seen: "2023"
+
+category: "ransomware"
+primary_tags: ["ransomware", "network_shares", "data_exfiltration"]
+
+mutexes:
+  - name: "12345-12345-12235-12354"
+    references:
+      - "https://cyble.com/blog/demystifying-money-message-ransomware"
+    date_added: "2025-07-16"
+    analyst: "@adhikara13" 
