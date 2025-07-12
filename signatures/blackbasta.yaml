@@ -1,0 +1,22 @@
+# Black Basta Ransomware Mutex Intelligence
+# Analyst source file for Black Basta ransomware data
+
+malware_info:
+  family: "Black Basta"
+  aliases: ["BlackBasta"]
+  description: "Black Basta is a ransomware-as-a-service (RaaS) that emerged in early 2022. It is known for its high-profile attacks and is suspected to have links to the Conti ransomware group. The ransomware is written in C++ and uses a combination of ChaCha20 and RSA-4096 for encryption."
+  threat_actor: "FIN7"
+  first_seen: "2022"
+
+category: "ransomware"
+primary_tags: ["raas", "file_encryption", "extortion", "conti_link"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "dsajdhas.0"
+    references:
+      - "https://unit42.paloaltonetworks.com/threat-assessment-black-basta-ransomware/"
+      - "https://www.zscaler.com/blogs/security-research/back-black-basta"
+      - "https://www.deepinstinct.com/blog/black-basta-ransomware-threat-emergence"
+    date_added: "2025-07-12"
+    analyst: "@adhikara13" 
