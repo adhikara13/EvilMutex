@@ -1,4 +1,4 @@
-![Evil Mutex Banner](assets/banner.png)
+![Evil Mutex Banner](assets/evilmutex.png)
 
 # EvilMutex
 
