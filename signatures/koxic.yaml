@@ -1,0 +1,20 @@
+# Koxic Ransomware Mutex Intelligence
+# Analyst source file for Koxic-related mutex data
+
+malware_info:
+  family: "Koxic"
+  aliases: ["koxic-ransomwar"]
+  description: "Koxic ransomware is a malware that encrypts files on a victim's machine and demands a ransom for the decryption key."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "ransomware"
+primary_tags: ["file_encryption"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "_atus_"
+    references:
+      - "https://cyble.com/blog/koxic-ransomware-deep-diveanalysis/"
+    date_added: "2025-07-15"
+    analyst: "@adhikara13" 
