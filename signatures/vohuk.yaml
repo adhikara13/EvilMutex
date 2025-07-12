@@ -1,8 +1,13 @@
-name: Vohuk
-author: ahm
-description: "Vohuk is a ransomware."
-mutex:
-  - "Global\\VohukMutex"
-references:
-  - https://www.tanium.com/blog/qbot-malware-in-svg-files-cyber-threat-intelligence-roundup
-version: 1.0 
+malware_info:
+  family: "Vohuk"
+  description: "Vohuk is a ransomware that has been observed using Qakbot for initial access."
+
+category: "ransomware"
+primary_tags: ["qakbot", "ransomware"]
+
+mutexes:
+  - name: 'Global\VohukMutex'
+    references:
+      - "https://www.tanium.com/blog/qbot-malware-in-svg-files-cyber-threat-intelligence-roundup"
+    date_added: "2025-07-16"
+    analyst: "@adhikara13" 

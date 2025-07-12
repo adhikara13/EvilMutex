@@ -1,8 +1,13 @@
-name: Nitrogen
-author: ahm
-description: "Nitrogen is a ransomware."
-mutex:
-  - "nvxkjcv7yxctvgsdfjhv6esdvsx"
-references:
-  - https://any.run/cybersecurity-blog/nitrogen-ransomware-report/
-version: 1.0 
+malware_info:
+  family: "Nitrogen"
+  description: "Nitrogen is a ransomware that has been observed targeting the financial sector."
+
+category: "ransomware"
+primary_tags: ["ransomware", "financial"]
+
+mutexes:
+  - name: "nvxkjcv7yxctvgsdfjhv6esdvsx"
+    references:
+      - "https://any.run/cybersecurity-blog/nitrogen-ransomware-report/"
+    date_added: "2025-07-16"
+    analyst: "@adhikara13" 
