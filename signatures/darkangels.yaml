@@ -3,7 +3,7 @@
 
 malware_info:
   family: "DarkAngels"
-  aliases: ["DarkAngels Ransomware", "Babuk"]
+  aliases: ["DarkAngels Ransomware"]
   description: "DarkAngels is a ransomware believed to be a rebrand of Babuk. It performs targeted attacks, encrypts files with the .crypt extension, and can spread through network shares."
   threat_actor: "DarkAngels"
   first_seen: "2022"

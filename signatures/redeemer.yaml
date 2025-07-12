@@ -16,5 +16,6 @@ mutexes:
   - name: "RedeemerMutex"
     references:
       - "https://cyble.com/blog/redeemer-ransomware-back-action/"
+      - "https://www.cloudsek.com/blog/what-is-redeemer-ransomware-and-how-does-it-spread-a-technical-analysis"
     date_added: "2025-07-15"
     analyst: "@adhikara13" 
