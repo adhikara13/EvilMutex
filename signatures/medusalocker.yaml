@@ -1,0 +1,15 @@
+malware_info:
+  family: "MedusaLocker"
+  description: "MedusaLocker is a ransomware that has been in operation since 2019. It operates as a Ransomware-as-a-Service (RaaS) and primarily gains access to victim networks through vulnerable Remote Desktop Protocol (RDP) configurations."
+  first_seen: "2019"
+  threat_actor: "Unknown"
+
+category: "ransomware"
+primary_tags: ["raas", "windows", "rdp"]
+
+mutexes:
+  - name: "8761ABBD-7F85-42EE-B272-A76179687C63"
+    references:
+      - "https://www.cisa.gov/sites/default/files/publications/AA22-181A_stopransomware_medusalocker.pdf"
+    date_added: "2025-07-16"
+    analyst: "@adhikara13" 
