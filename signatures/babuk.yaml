@@ -1,0 +1,14 @@
+malware_info:
+  family: "Babuk"
+  description: "Babuk is a ransomware that targets both Windows and Linux systems. It has been used in high-profile attacks, such as against the Washington D.C. Police Department."
+  first_seen: "2021"
+
+category: "ransomware"
+primary_tags: ["ransomware", "windows", "linux", "data_exfiltration"]
+
+mutexes:
+  - name: "DoYouWantToHaveSexWithCuongDong"
+    references:
+      - "https://www.acronis.com/en-us/blog/posts/babuk-ransomware/"
+    date_added: "2025-07-16"
+    analyst: "@adhikara13" 
