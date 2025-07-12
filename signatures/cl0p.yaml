@@ -1,0 +1,15 @@
+malware_info:
+  family: "Cl0p"
+  aliases: ["TA505", "FIN11"]
+  description: "Cl0p is a ransomware that has been active since 2019, operating as a Ransomware-as-a-Service (RaaS). It targets both Windows and Linux systems and is associated with the Russian-speaking cybercriminal group TA505."
+  first_seen: "2019"
+
+category: "ransomware"
+primary_tags: ["raas", "windows", "linux", "data_exfiltration"]
+
+mutexes:
+  - name: "')(%QU#jimf0932ijrkpo32jr3lfwe"
+    references:
+      - "https://cyble.com/blog/cl0p-ransomware-active-threat-plaguing-businesses-worldwide/"
+    date_added: "2025-07-16"
+    analyst: "@adhikara13" 
