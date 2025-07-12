@@ -1,0 +1,20 @@
+# CryptoFortress Ransomware Mutex Intelligence
+# Analyst source file for CryptoFortress-related mutex data
+
+malware_info:
+  family: "CryptoFortress"
+  aliases: ["CryptoFortress ransomware"]
+  description: "CryptoFortress is a ransomware that encrypts files on a victim's machine and demands a ransom for the decryption key."
+  threat_actor: "Unknown"
+  first_seen: "2015"
+
+category: "ransomware"
+primary_tags: ["file_encryption"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "Catawba!"
+    references:
+      - "https://app.any.run/tasks/bda9ff74-d070-4c46-be17-add51e71fe21/"
+    date_added: "2025-07-16"
+    analyst: "@adhikara13" 
