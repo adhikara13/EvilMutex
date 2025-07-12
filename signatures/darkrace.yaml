@@ -1,0 +1,14 @@
+malware_info:
+  family: "Darkrace"
+  description: "Darkrace is a ransomware that shares similarities with LockBit and employs a double-extortion strategy by exfiltrating data before encryption."
+  first_seen: "2023"
+
+category: "ransomware"
+primary_tags: ["ransomware", "lockbit_variant", "double-extortion", "data_exfiltration"]
+
+mutexes:
+  - name: "CheckMutex"
+    references:
+      - "https://cyble.com/blog/unmasking-the-darkrace-ransomware-gang"
+    date_added: "2025-07-16"
+    analyst: "@adhikara13" 
