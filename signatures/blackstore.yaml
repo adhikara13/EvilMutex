@@ -1,0 +1,15 @@
+malware_info:
+  family: "BlackStore"
+  aliases: ["Proxima"]
+  description: "BlackStore is a ransomware variant from the Proxima family. It encrypts files, adds the .BlackStore extension, and is suspected of targeting Russian organizations."
+  first_seen: "2023"
+
+category: "ransomware"
+primary_tags: ["ransomware", "proxima_family"]
+
+mutexes:
+  - name: "Global\\FSWiper"
+    references:
+      - "https://buaq.net/go-185382.html"
+    date_added: "2025-07-16"
+    analyst: "@adhikara13" 
