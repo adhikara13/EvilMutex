@@ -1,0 +1,22 @@
+# DarkBit Ransomware Mutex Intelligence
+# Analyst source file for DarkBit-related mutex data
+
+malware_info:
+  family: "DarkBit"
+  aliases:
+    - "DarkBit Ransomware"
+  description: "DarkBit is a politically motivated ransomware that has targeted organizations in Israel. It encrypts files and appends the .Darkbit extension."
+  threat_actor: "DarkBit"
+  first_seen: "2023"
+
+category: "ransomware"
+primary_tags: ["political_motive", "hacktivism"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\dbdbdbdb'
+    references:
+      - "https://cyble.com/blog/uncovering-the-dark-side-of-darkbit-ransomware/"
+      - "https://blogs.blackberry.com/en/2023/02/darkbit-ransomware-targets-israel"
+    date_added: "2024-05-22"
+    analyst: "@adhikara13" 
