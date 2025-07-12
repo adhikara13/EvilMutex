@@ -10,6 +10,6 @@ primary_tags: ["raas", "windows", "rdp"]
 mutexes:
   - name: "8761ABBD-7F85-42EE-B272-A76179687C63"
     references:
-      - "https://www.cisa.gov/sites/default/files/publications/AA22-181A_stopransomware_medusalocker.pdf"
+      - "https://cyble.com/blog/unmasking-medusalocker-ransomware/"
     date_added: "2025-07-16"
     analyst: "@adhikara13" 

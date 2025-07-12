@@ -359,7 +359,8 @@ function generateMonthlyGrowth(malwareList: MalwareData[]): Array<{ month: strin
             const date = new Date(mutex.date_added)
 
             if (isNaN(date.getTime())) {
-              console.warn('Invalid date format:', mutex.date_added)
+              // The validator should prevent this, but as a safeguard:
+              console.warn('Skipping invalid date for monthly growth calculation:', mutex.date_added)
               return
             }
 
@@ -421,7 +422,11 @@ export function validateYamlStructure(yamlContent: string): { valid: boolean; er
       data.mutexes.forEach((mutex, index) => {
         if (!mutex.name) errors.push(`Missing mutex[${index}].name`)
         if (!mutex.analyst) errors.push(`Missing mutex[${index}].analyst`)
-        if (!mutex.date_added) errors.push(`Missing mutex[${index}].date_added`)
+        if (!mutex.date_added) {
+          errors.push(`Missing mutex[${index}].date_added`)
+        } else if (!/^\d{4}-\d{2}-\d{2}$/.test(mutex.date_added)) {
+          errors.push(`Invalid date format for mutex[${index}].date_added. Expected YYYY-MM-DD.`)
+        }
       })
     }
 
