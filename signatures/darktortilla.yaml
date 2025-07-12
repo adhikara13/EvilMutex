@@ -1,0 +1,20 @@
+# DarkTortilla Malware Mutex Intelligence
+# Analyst source file for DarkTortilla-related mutex data
+
+malware_info:
+  family: "DarkTortilla"
+  aliases: ["DarkTortilla Crypter"]
+  description: "DarkTortilla is a sophisticated .NET-based crypter used to deliver various malicious payloads, including information stealers, RATs, and ransomware, often distributed via phishing campaigns."
+  threat_actor: "Unknown"
+  first_seen: "2015"
+
+category: "loader"
+primary_tags: ["crypter", "phishing"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "NUkiklN<yjUKNj"
+    references:
+      - "https://cyble.com/blog/sophisticated-darktortilla-malware-spreading-via-phishing-sites/"
+    date_added: "2025-07-16"
+    analyst: "@adhikara13" 
