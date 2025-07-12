@@ -5,7 +5,7 @@ malware_info:
   family: "Karma"
   aliases: ["Karma"]
   description: "Karma ransomware is a malicious software that encrypts files on a victim's computer and demands a ransom payment in exchange for the decryption key."
-  threat_actor: "Unknown"
+  threat_actor: "Karma"
   first_seen: "2021"
 
 category: "ransomware"
@@ -15,7 +15,6 @@ primary_tags: ["file_encryption"]
 mutexes:
   - name: "KARMA"
     references:
-      - "https://github.com/PMC-Cyber/Malware_Famly"
-      - "https://www.threatminer.org/mutex.php?q=UVhVXmJpX2Ax"
+      - "https://cyble.com/blog/a-deep-dive-analysis-of-karma-ransomware"
     date_added: "2025-01-12"
     analyst: "@adhikara13" 
