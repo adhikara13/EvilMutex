@@ -4,7 +4,7 @@
     <header class="p-6 bg-transparent">
       <div class="container mx-auto px-12">
         <div class="text-center mb-6 bg-transparent">
-          
+          <h1 class="text-xl font-bold mb-2 text-green-400">[ MALWARE MUTEX INTELLIGENCE DATABASE ]</h1>
           <pre class="ascii-art text-lg md:text-xl mb-4 opacity-90 text-green-400 bg-transparent">
 ███████╗██╗   ██╗██╗██╗         ███╗   ███╗██╗   ██╗████████╗███████╗██╗  ██╗
 ██╔════╝██║   ██║██║██║         ████╗ ████║██║   ██║╚══██╔══╝██╔════╝╚██╗██╔╝
@@ -15,7 +15,7 @@
           </pre>
 
           <div class="text-center">
-            <h1 class="text-xl font-bold mb-2 text-green-400">[ MALWARE MUTEX INTELLIGENCE DATABASE ]</h1>
+            
             <p class="text-sm text-gray-400">Advanced Malware Analysis & Threat Intelligence</p>
           </div>
         </div>
