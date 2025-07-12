@@ -1,0 +1,20 @@
+# Trinity Ransomware Mutex Intelligence
+# Analyst source file for Trinity-related mutex data
+
+malware_info:
+  family: "Trinity"
+  aliases: ["Trinity Ransomware", "2023Lock", "Venus"]
+  description: "Trinity is a ransomware variant that exhibits similarities with other ransomware like 2023Lock and Venus. It employs a double extortion strategy."
+  threat_actor: "Trinity"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "double_extortion"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "48065934119990121"
+    references:
+      - "https://cyble.com/blog/in-the-shadow-of-venus-trinity-ransomwares-covert-ties"
+    date_added: "2025-07-12"
+    analyst: "@adhikara13" 
