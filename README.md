@@ -1,3 +1,5 @@
+![Evil Mutex Banner](assets/banner.png)
+
 # EvilMutex
 
 <!-- BADGES START -->
