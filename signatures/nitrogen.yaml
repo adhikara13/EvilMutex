@@ -1,6 +1,7 @@
 malware_info:
   family: "Nitrogen"
   description: "Nitrogen is a ransomware that has been observed targeting the financial sector."
+  threat_actor: "Unknown"
 
 category: "ransomware"
 primary_tags: ["ransomware", "financial"]

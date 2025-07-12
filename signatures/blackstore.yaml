@@ -2,6 +2,7 @@ malware_info:
   family: "BlackStore"
   aliases: ["Proxima"]
   description: "BlackStore is a ransomware variant from the Proxima family. It encrypts files, adds the .BlackStore extension, and is suspected of targeting Russian organizations."
+  threat_actor: "Proxima"
   first_seen: "2023"
 
 category: "ransomware"

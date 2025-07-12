@@ -1,6 +1,7 @@
 malware_info:
   family: "Babuk"
   description: "Babuk is a ransomware that targets both Windows and Linux systems. It has been used in high-profile attacks, such as against the Washington D.C. Police Department."
+  threat_actor: "Babuk Gang"
   first_seen: "2021"
 
 category: "ransomware"

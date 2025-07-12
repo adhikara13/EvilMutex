@@ -1,6 +1,7 @@
 malware_info:
   family: "Vohuk"
   description: "Vohuk is a ransomware that has been observed using Qakbot for initial access."
+  threat_actor: "Unknown"
 
 category: "ransomware"
 primary_tags: ["qakbot", "ransomware"]

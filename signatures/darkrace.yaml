@@ -1,6 +1,7 @@
 malware_info:
   family: "Darkrace"
   description: "Darkrace is a ransomware that shares similarities with LockBit and employs a double-extortion strategy by exfiltrating data before encryption."
+  threat_actor: "Unknown"
   first_seen: "2023"
 
 category: "ransomware"

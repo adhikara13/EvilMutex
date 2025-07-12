@@ -2,6 +2,7 @@ malware_info:
   family: "RA World"
   aliases: ["RA Group"]
   description: "RA World, formerly known as RA Group, is a ransomware group that uses a multi-extortion scheme, exfiltrating data before encryption. The group is known to use a variant of the Babuk ransomware."
+  threat_actor: "RA Group"
   first_seen: "2023"
 
 category: "ransomware"
