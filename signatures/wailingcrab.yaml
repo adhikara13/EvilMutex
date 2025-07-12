@@ -1,0 +1,20 @@
+# WailingCrab Backdoor Mutex Intelligence
+# Analyst source file for WailingCrab backdoor data
+
+malware_info:
+  family: "WailingCrab"
+  aliases: ["WailingCrab Backdoor"]
+  description: "WailingCrab is a backdoor that uses the MQTT messaging protocol for command and control (C2) communication. This allows it to blend in with legitimate IoT traffic and evade detection."
+  threat_actor: "Unknown"
+  first_seen: "2020"
+
+category: "backdoor"
+primary_tags: ["c2_protocol", "mqtt", "iot_traffic"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "823264"
+    references:
+      - "https://www.ibm.com/think/x-force/wailingcrab-malware-misues-mqtt-messaging-protocol"
+    date_added: "2025-07-12"
+    analyst: "@adhikara13" 
