@@ -1,15 +1,20 @@
+# Babuk Ransomware Mutex Intelligence
+# Analyst source file for Babuk-related mutex data
+
 malware_info:
   family: "Babuk"
-  description: "Babuk is a ransomware that targets both Windows and Linux systems. It has been used in high-profile attacks, such as against the Washington D.C. Police Department."
-  threat_actor: "Babuk Gang"
+  aliases: ["babuk-ransomware", "Babyk"]
+  description: "Babuk is a ransomware family that emerged in 2021. Its source code and builder were leaked, which could lead to an increase in attacks using its variants."
+  threat_actor: "Babuk"
   first_seen: "2021"
 
 category: "ransomware"
-primary_tags: ["ransomware", "windows", "linux", "data_exfiltration"]
+primary_tags: ["file_encryption", "RaaS"]
 
+# Mutexes used by this malware family
 mutexes:
   - name: "DoYouWantToHaveSexWithCuongDong"
     references:
-      - "https://www.acronis.com/en-us/blog/posts/babuk-ransomware/"
-    date_added: "2025-07-16"
+      - "https://cyble.com/blog/deep-dive-into-builder-of-notorious-babuk-ransomware/"
+    date_added: "2025-07-15"
     analyst: "@adhikara13" 
