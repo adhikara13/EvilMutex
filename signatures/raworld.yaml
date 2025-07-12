@@ -1,0 +1,16 @@
+malware_info:
+  family: "RA World"
+  aliases: ["RA Group"]
+  description: "RA World, formerly known as RA Group, is a ransomware group that uses a multi-extortion scheme, exfiltrating data before encryption. The group is known to use a variant of the Babuk ransomware."
+  first_seen: "2023"
+
+category: "ransomware"
+primary_tags: ["ransomware", "babuk_variant", "multi-extortion", "data_exfiltration"]
+
+mutexes:
+  - name: "For whom the bell tolls, it tolls for thee"
+    references:
+      - "https://unit42.paloaltonetworks.com/ra-world-ransomware-group-updates-tool-set/"
+      - "https://www.trendmicro.com/en_us/research/24/c/multistage-ra-world-ransomware.html"
+    date_added: "2025-07-16"
+    analyst: "@adhikara13" 
