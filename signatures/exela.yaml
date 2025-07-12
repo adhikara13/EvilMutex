@@ -1,0 +1,20 @@
+# Exela Stealer Mutex Intelligence
+# Analyst source file for Exela-related mutex data
+
+malware_info:
+  family: "Exela"
+  aliases: ["Exela Stealer"]
+  description: "Exela Stealer is a malware that targets social media giants and is capable of stealing sensitive information such as credentials and session data."
+  threat_actor: "Unknown"
+  first_seen: "2023"
+
+category: "stealer"
+primary_tags: ["infostealer", "credential_theft"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "Exela | Stealer | on | Top"
+    references:
+      - "https://cyble.com/blog/exela-stealer-spotted-targeting-social-media-giants/"
+    date_added: "2025-07-16"
+    analyst: "@adhikara13" 
