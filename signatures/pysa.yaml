@@ -1,0 +1,23 @@
+# PYSA Ransomware Mutex Intelligence
+# Analyst source file for PYSA-related mutex data
+
+malware_info:
+  family: "PYSA"
+  aliases:
+    - "Mespinoza"
+  description: "PYSA (also known as Mespinoza) is a ransomware family observed since late 2019, targeting various sectors including government and education. It encrypts files and appends the .pysa extension."
+  threat_actor: "Unknown"
+  first_seen: "2019"
+
+category: "ransomware"
+primary_tags: ["raas"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "Pysa"
+    references:
+      - "https://www.cynet.com/attack-techniques-hands-on/cynet-ransomware-report-mespinoza/"
+      - "https://sapphirex00.medium.com/mespinoza-analysis-new-ransomware-variant-targets-france-d4f82cbee86c"
+      - "https://www.cert.ssi.gouv.fr/uploads/CERTFR-2020-CTI-003.pdf"
+    date_added: "2024-05-22"
+    analyst: "@adhikara13" 
