@@ -1,0 +1,20 @@
+# Redeemer Ransomware Mutex Intelligence
+# Analyst source file for Redeemer-related mutex data
+
+malware_info:
+  family: "Redeemer"
+  aliases: ["redeemer-ransomware", "Redeemer 2.0"]
+  description: "Redeemer is a ransomware whose builder was distributed on underground cybercrime forums, potentially leading to its use by various affiliates."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "ransomware"
+primary_tags: ["file_encryption"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "RedeemerMutex"
+    references:
+      - "https://cyble.com/blog/redeemer-ransomware-back-action/"
+    date_added: "2025-07-15"
+    analyst: "@adhikara13" 
