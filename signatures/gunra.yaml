@@ -1,0 +1,20 @@
+# Gunra Ransomware Mutex Intelligence
+# Analyst source file for Gunra ransomware data
+
+malware_info:
+  family: "Gunra"
+  aliases: ["Gunra Ransomware"]
+  description: "Gunra is a ransomware variant that encrypts files and demands a ransom for their decryption."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "extortion"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "kjsidugiaadf99439"
+    references:
+      - "https://github.com/TheRavenFile/Daily-Hunt/blob/main/Gunra%20Ransomware"
+    date_added: "2025-07-12"
+    analyst: "@adhikara13" 
