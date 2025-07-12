@@ -1,0 +1,22 @@
+# Cylance Ransomware Mutex Intelligence
+# Analyst source file for Cylance-related mutex data
+
+malware_info:
+  family: "Cylance"
+  aliases:
+    - "ShellLocker"
+    - "Cylance Ransomware"
+  description: "Cylance is a cross-platform ransomware written in Go that targets both Windows and Linux systems."
+  threat_actor: "Unknown"
+  first_seen: "2023"
+
+category: "ransomware"
+primary_tags: ["cross-platform", "golang"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "CylanceMutex"
+    references:
+      - "https://www.broadcom.com/support/security-center/protection-bulletin/cylance-ransomware-targets-both-windows-and-linux"
+    date_added: "2024-05-22"
+    analyst: "@adhikara13" 
