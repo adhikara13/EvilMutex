@@ -1,0 +1,21 @@
+# Dustman Wiper Mutex Intelligence
+# Analyst source file for Dustman-related mutex data
+
+malware_info:
+  family: "Dustman"
+  aliases:
+    - "Dustman Wiper"
+  description: "Dustman is a wiper malware that overwrites data on logical drives with politically motivated messages."
+  threat_actor: "Unknown"
+  first_seen: "2019-02"
+
+category: "wiper"
+primary_tags: ["data_destruction", "political_motive"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "Down With Bin Salman"
+    references:
+      - "https://www.sonicwall.com/blog/dustman-malware-overwrites-logical-drives-data-with-down-with-saudi-kingdom-down-with-bin-salman"
+    date_added: "2024-05-22"
+    analyst: "@adhikara13" 
