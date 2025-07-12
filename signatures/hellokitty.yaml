@@ -1,0 +1,21 @@
+# HelloKitty Ransomware Mutex Intelligence
+# Analyst source file for HelloKitty ransomware data
+
+malware_info:
+  family: "HelloKitty"
+  aliases: ["HelloKitty Ransomware", "FiveHands"]
+  description: "HelloKitty is a ransomware variant known for targeting large corporations and was famously used in the attack against CD Projekt Red. It is often associated with the FiveHands ransomware due to shared infrastructure and tactics."
+  threat_actor: "UNC2447"
+  first_seen: "2020"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "extortion", "cd_projekt_red"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "HELLOKITTYMutex"
+    references:
+      - "https://www.sentinelone.com/anthology/hello-kitty/"
+      - "https://cloud.google.com/blog/topics/threat-intelligence/unc2447-sombrat-and-fivehands-ransomware-sophisticated-financial-threat"
+    date_added: "2025-07-12"
+    analyst: "@adhikara13" 
