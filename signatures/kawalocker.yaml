@@ -1,0 +1,20 @@
+# KawaLocker Ransomware Mutex Intelligence  
+# Analyst source file for KawaLocker ransomware data
+
+malware_info:
+  family: "KawaLocker"
+  aliases: ["Kawa Ransomware"]
+  description: "KawaLocker is a ransomware variant that encrypts files and demands a ransom for their decryption."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "extortion"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "SAY_HI_2025"
+    references:
+      - "https://github.com/TheRavenFile/Daily-Hunt/blob/main/Kawa%20Ransomware"
+    date_added: "2025-07-12"
+    analyst: "EvilMutex Project" 
