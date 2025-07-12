@@ -1,0 +1,22 @@
+# Ducktail Stealer Mutex Intelligence
+# Analyst source file for Ducktail-related mutex data
+
+malware_info:
+  family: "Ducktail"
+  aliases:
+    - "DuckTail Stealer"
+  description: "Ducktail is a stealer malware that targets professionals on LinkedIn to steal browser credentials and session data, ultimately to hijack Facebook Business accounts."
+  threat_actor: "Unknown"
+  first_seen: "2023-10"
+
+category: "stealer"
+primary_tags: ["linkedin", "facebook_business", "credential_theft", "session_hijacking"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "ICollectVASD"
+    references:
+      - "https://www.duskrise.com/2023/10/25/the-duck-is-hiring-in-italy-ducktail-spread-via-compromised-linkedin-profiles/"
+      - "https://www.appgate.com/blog/vietnamese-information-stealer-campaigns-target-professionals-on-linkedin"
+    date_added: "2024-05-22"
+    analyst: "@adhikara13" 
