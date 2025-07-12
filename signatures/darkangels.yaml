@@ -1,0 +1,20 @@
+# DarkAngels Ransomware Mutex Intelligence
+# Analyst source file for DarkAngels-related mutex data
+
+malware_info:
+  family: "DarkAngels"
+  aliases: ["DarkAngels Ransomware", "Babuk"]
+  description: "DarkAngels is a ransomware believed to be a rebrand of Babuk. It performs targeted attacks, encrypts files with the .crypt extension, and can spread through network shares."
+  threat_actor: "DarkAngels"
+  first_seen: "2022"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "targeted_attack"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "DarkAngels"
+    references:
+      - "https://cyble.com/blog/rebranded-babuk-ransomware-in-action-darkangels-ransomware-performs-targeted-attack/"
+    date_added: "2025-07-15"
+    analyst: "@adhikara13" 
