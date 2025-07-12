@@ -1,0 +1,20 @@
+# XLoader Malware Mutex Intelligence
+# Analyst source file for XLoader-related mutex data
+
+malware_info:
+  family: "XLoader"
+  aliases: ["XLoader Infostealer"]
+  description: "XLoader is a stealer malware that is a successor to Formbook. It is often distributed via phishing campaigns and is capable of stealing credentials from various applications."
+  threat_actor: "Unknown"
+  first_seen: "2020"
+
+category: "stealer"
+primary_tags: ["infostealer", "credential_theft"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "fBEQVtAy"
+    references:
+      - "https://cyble.com/blog/xloader-returns-with-new-infection-technique/"
+    date_added: "2025-07-13"
+    analyst: "@adhikara13" 

@@ -1,0 +1,20 @@
+# BlackMatter Ransomware Mutex Intelligence
+# Analyst source file for BlackMatter-related mutex data
+
+malware_info:
+  family: "BlackMatter"
+  aliases: ["BlackMatter Ransomware"]
+  description: "BlackMatter is a ransomware-as-a-service (RaaS) tool that emerged in July 2021, and is believed to be a rebrand of the DarkSide ransomware group."
+  threat_actor: "BlackMatter"
+  first_seen: "2021"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "RaaS"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "0d216858b68c0bcae655c2eaffeee2ad"
+    references:
+      - "https://cyble.com/blog/dissecting-blackmatter-ransomware/"
+    date_added: "2025-07-13"
+    analyst: "@adhikara13" 
