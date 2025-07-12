@@ -1,0 +1,20 @@
+# Keyzetsu Clipper Malware Mutex Intelligence
+# Analyst source file for Keyzetsu Clipper-related mutex data
+
+malware_info:
+  family: "Keyzetsu Clipper"
+  aliases: ["KeyzetsuClipper"]
+  description: "Keyzetsu Clipper is a malware that steals cryptocurrency by monitoring the clipboard for cryptocurrency wallet addresses and replacing them with the attacker's address."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "clipper"
+primary_tags: ["cryptocurrency_stealer", "clipboard_hijacking"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "2ILdX2JpexVZieT6mPv2i6Jp3HNFPlby"
+    references:
+      - "https://cyble.com/blog/multiple-new-clipper-malware-variants-discovered-in-the-wild/"
+    date_added: "2025-07-14"
+    analyst: "@adhikara13" 
