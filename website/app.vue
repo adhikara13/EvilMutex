@@ -33,6 +33,9 @@
             <NuxtLink to="/contributor" class="interactive text-green-400 hover:text-green-300 font-mono">
               <span class="text-red-400">[</span>CONTRIBUTOR<span class="text-red-400">]</span>
             </NuxtLink>
+            <a :href="appConfig.links.github.main" target="_blank" class="interactive text-green-400 hover:text-green-300 font-mono">
+              <span class="text-red-400">[</span>⭐ Star on GitHub<span class="text-red-400">]</span>
+            </a>
           </div>
                       <div class="flex items-center space-x-4">
               <span class="text-muted font-mono text-sm">{{ formattedTime }}</span>
