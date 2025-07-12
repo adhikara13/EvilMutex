@@ -14,8 +14,7 @@ primary_tags: ["infostealer", "cpp"]
 
 # Mutexes used by this malware family
 mutexes:
-  - name: "Global\\MSCTF.Asm.{digits}"
-    is_pattern: true
+  - name: 'Global\MSCTF.Asm.{digits}'
     references:
       - "https://elis531989.medium.com/dancing-with-shellcodes-analyzing-rhadamanthys-stealer-3c4986966a88"
     date_added: "2024-05-22"
