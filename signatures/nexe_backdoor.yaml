@@ -1,0 +1,20 @@
+# Nexe Backdoor Mutex Intelligence
+# Analyst source file for Nexe Backdoor-related mutex data
+
+malware_info:
+  family: "Nexe"
+  aliases: ["Nexe Backdoor"]
+  description: "Nexe Backdoor is a sophisticated malware used by the Patchwork APT group, known for its advanced evasion techniques."
+  threat_actor: "Patchwork"
+  first_seen: "2024"
+
+category: "backdoor"
+primary_tags: ["APT", "espionage"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "dsds"
+    references:
+      - "https://cyble.com/blog/nexe-backdoor-unleashed-patchwork-apt-groups-sophisticated-evasion-of-defenses/"
+    date_added: "2025-07-14"
+    analyst: "@adhikara13" 
