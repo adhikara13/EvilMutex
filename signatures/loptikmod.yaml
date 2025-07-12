@@ -8,7 +8,7 @@ malware_info:
   threat_actor: ["DoNot APT group", "APT-Q-38", "APT-C-35", "Mint Tempest", "Origami Elephant", "SECTOR02", "Viceroy Tiger"]
   first_seen: "2018"
 
-category: "apt"
+category: "backdoor"
 primary_tags: ["cyber_espionage", "south_asia", "pdf_decoy", "macro_malware", "scheduled_tasks", "persistence", "aes_encryption", "multi_stage"]
 
 # Mutexes used by this malware family

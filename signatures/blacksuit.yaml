@@ -1,0 +1,21 @@
+# BlackSuit Ransomware Mutex Intelligence  
+# Analyst source file for BlackSuit ransomware data
+
+malware_info:
+  family: "BlackSuit"
+  aliases: ["BlackSuit Ransomware"]
+  description: "BlackSuit is a ransomware-as-a-service (RaaS) operation that emerged in May 2023 as a rebrand of Royal ransomware. Operated by the Ignoble Scorpius group, it targets organizations globally with a focus on construction, manufacturing, and education sectors. The group operates a dark web leak site for extortion and typically demands ransoms equal to about 1.6% of the victim organization's annual revenue. BlackSuit uses various initial access methods including phishing, SEO poisoning, legitimate VPN credentials, and supply chain attacks."
+  threat_actor: ["Ignoble Scorpius"]
+  first_seen: "2023"
+
+category: "ransomware"
+primary_tags: ["raas", "file_encryption", "extortion", "leak_site", "royal_rebrand", "construction", "manufacturing", "education", "double_extortion"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\WLm87eV1oNRx6P3E4Cy9'
+    references:
+      - "https://unit42.paloaltonetworks.com/threat-assessment-blacksuit-ransomware-ignoble-scorpius/"
+      - "https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/ransom.win32.blacksuit.ypdjb"
+    date_added: "2025-01-15"
+    analyst: "@adhikara13"

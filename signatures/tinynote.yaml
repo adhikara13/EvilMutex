@@ -1,0 +1,20 @@
+# TinyNote Backdoor Mutex Intelligence  
+# Analyst source file for TinyNote backdoor used by Camaro Dragon APT group
+
+malware_info:
+  family: "TinyNote"
+  aliases: ["TinyNote Backdoor"]
+  description: "TinyNote is a Go-based backdoor developed by Camaro Dragon APT group, associated with Chinese state-sponsored threat actors including Mustang Panda. The malware targets European foreign affairs entities linked to Southeast and East Asia, particularly Myanmar and Indonesia. It features SmadAV antivirus evasion capabilities, uses XOR encryption with the key 'NASA', and employs deceptive folder icons with diplomatic-themed naming conventions. The backdoor focuses on redundancy for persistence, including multiple C&C servers and different command execution methods through PowerShell and Goroutines."
+  threat_actor: ["Camaro Dragon", "Mustang Panda"]
+  first_seen: "2023"
+
+category: "backdoor"
+primary_tags: ["apt", "china", "diplomacy_targeting", "golang", "smadav_evasion", "xor_encryption", "foreign_affairs", "southeast_asia", "persistence", "multi_c2"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "NASA&USA"
+    references:
+      - "https://research.checkpoint.com/2023/malware-spotlight-camaro-dragons-tinynote-backdoor"
+    date_added: "2025-01-15"
+    analyst: "@adhikara13"
