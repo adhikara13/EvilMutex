@@ -1,0 +1,20 @@
+# CryptoLuck Ransomware Mutex Intelligence
+# Analyst source file for CryptoLuck-related mutex data
+
+malware_info:
+  family: "CryptoLuck"
+  aliases: ["RANSOM_CRYPTOLUCK.A"]
+  description: "CryptoLuck is a ransomware that encrypts files and demands a ransom for the decryption key. It is known to drop a file named WARNING_FILES_ARE_ENCRYPTED.txt."
+  threat_actor: "Unknown"
+  first_seen: "2016"
+
+category: "ransomware"
+primary_tags: ["file_encryption"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "CryptoLuck_Instance"
+    references:
+      - "https://www.trendmicro.com/vinfo/au/threat-encyclopedia/malware/ransom_cryptoluck.a"
+    date_added: "2025-07-15"
+    analyst: "@adhikara13" 
