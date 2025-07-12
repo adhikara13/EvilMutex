@@ -15,7 +15,9 @@ primary_tags: ["file_encryption", "ransom_demand", "windows", "double_extortion"
 mutexes:
   - name: 'Global\direwolfAppMutex'
     references:
-      - "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/dire-wolf-strikes-new-ransomware-group-targeting-global-sectors"
-      - "https://zettawise.in/blog/article/new-ransomware-lsquo-dire-wolf-rsquo-ravages-tech-and-manufacturing-firms"
-    date_added: "2025-01-12"
+      - "https://www.crowdstrike.com/blog/direwolf-malware-analysis-and-indicators-of-compromise/"
+      - "https://www.cynet.com/attack-techniques-hands-on/direwolf-malware-analysis-and-iocs-revealed"
+    date_added: "2025-07-16"
     analyst: "@adhikara13"
+  
+  - name: "Global\\Direwolf"

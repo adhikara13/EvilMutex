@@ -16,5 +16,5 @@ mutexes:
   - name: "FAUST"
     references:
       - "https://medium.com/s2wblog/detailed-analysis-of-ailock-ransomware-1d3263beff15"
-    date_added: "2025-01-12"
+    date_added: "2025-07-16"
     analyst: "@adhikara13" 

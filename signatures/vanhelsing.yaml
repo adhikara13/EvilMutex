@@ -19,5 +19,5 @@ mutexes:
       - "https://www.cyfirma.com/research/vanhelsing-ransomware/"
       - "https://www.tripwire.com/state-of-security/vanhelsing-ransomware-what-you-need-know"
       - "https://www.bleepingcomputer.com/news/security/new-vanhelsing-ransomware-targets-windows-arm-esxi-systems/"
-    date_added: "2025-01-12"
+    date_added: "2025-07-16"
     analyst: "@adhikara13"
