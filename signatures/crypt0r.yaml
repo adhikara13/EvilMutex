@@ -1,0 +1,20 @@
+# Crypt0r Ransomware Mutex Intelligence
+# Analyst source file for Crypt0r-related mutex data
+
+malware_info:
+  family: "Crypt0r"
+  aliases: ["GusCrypter"]
+  description: "Crypt0r is a ransomware that encrypts user files with AES and demands a ransom. It is considered a descendant of the GusCrypter ransomware."
+  threat_actor: "Unknown"
+  first_seen: "2018"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "windows"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'crypt0r-mutex'
+    references:
+      - "https://id-ransomware.blogspot.com/2019/01/crypt0r-ransomware_10.html"
+    date_added: "2025-07-13"
+    analyst: "@adhikara13" 

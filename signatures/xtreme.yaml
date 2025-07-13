@@ -1,0 +1,26 @@
+# Xtreme RAT Mutex Intelligence
+# Analyst source file for Xtreme RAT-related mutex data
+
+malware_info:
+  family: "Xtreme"
+  aliases:
+    - "Xtreme RAT"
+  description: "Xtreme RAT is a long-standing Remote Access Trojan (RAT) that provides attackers with extensive capabilities to control a compromised machine, including keylogging, file management, and remote desktop access."
+  threat_actor: "Unknown"
+  first_seen: "2010" # Xtreme RAT has been active for a very long time, with reports dating back to at least 2010.
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "keylogging"
+  - "infostealer"
+  - "c2"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'XTREMEUPDATE'
+    references:
+      - "https://blog.talosintelligence.com/threat-roundup-0221-0228/"
+      - "https://tria.ge/201109-zfdsa4p7qe/behavioral2/analog?main_event=Mutex&q=xtreme"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

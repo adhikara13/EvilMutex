@@ -1,0 +1,21 @@
+# ChiChi Ransomware Mutex Intelligence
+# Analyst source file for ChiChi-related mutex data
+
+malware_info:
+  family: "ChiChi"
+  aliases: []
+  description: "ChiChi is a ransomware that encrypts user data using AES-128 + RSA-2048 and demands a ransom to restore the files. It is considered a variant of the Babuk ransomware and may be linked to the Lazarus Group."
+  threat_actor: "Lazarus Group"
+  first_seen: "2021"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "windows", "babuk_variant"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'chichigotmanagedyou'
+    references:
+      - "https://id-ransomware.blogspot.com/2021/11/chichi-ransomware.html"
+      - "https://x.com/demonslay335/status/1461020406052274178"
+    date_added: "2025-07-13"
+    analyst: "@adhikara13" 

@@ -1,0 +1,25 @@
+# GarrantyDecrypt Ransomware Mutex Intelligence
+# Analyst source file for GarrantyDecrypt-related mutex data
+
+malware_info:
+  family: "GarrantyDecrypt"
+  aliases:
+    - "GarrantyDecrypt Ransomware"
+    - "GarrantyDecrypt NextGen Ransomware"
+    - "DecryptGarranty"
+  description: "GarrantyDecrypt is a ransomware family first seen in 2018, known for its numerous variants. It encrypts files and demands a ransom for a decryption key."
+  threat_actor: "Unknown"
+  first_seen: "2018"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "RDP_bruteforce"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: '666_nop_nop_nop_nop'
+    references:
+      - "https://id-ransomware.blogspot.com/2018/10/garrantydecrypt-ransomware.html"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

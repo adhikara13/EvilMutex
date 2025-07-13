@@ -1,0 +1,21 @@
+# Makop Ransomware Mutex Intelligence
+# Analyst source file for Makop-related mutex data
+
+malware_info:
+  family: "Makop"
+  aliases: ["Makop Ransomware"]
+  description: "Makop ransomware encrypts user’s files and expects a ransom for the decryption key. It uses an AES256 key to decrypt important strings at runtime including a RSA public key. The process creates a mutex to ensure that it avoids infecting the system more than once and uses an entry under the Run key to establish persistence on the host."
+  threat_actor: "Unknown"
+  first_seen: "2020"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "persistence", "windows"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'm23071644'
+    references:
+      - "https://cybergeeks.tech/makop-ransomware/"
+      - "https://x.com/darb0ng/status/1270539362942386176"
+    date_added: "2025-07-13"
+    analyst: "@adhikara13" 

@@ -1,0 +1,26 @@
+# Borat RAT Mutex Intelligence
+# Analyst source file for Borat RAT-related mutex data
+
+malware_info:
+  family: "Borat"
+  aliases:
+    - "Borat-RAT"
+  description: "Borat is a Remote Access Trojan (RAT) that combines multiple malicious capabilities, including keylogging, DDoS attacks, UAC bypass, and a ransomware module. It provides a comprehensive toolset for attackers to control and monetize compromised systems."
+  threat_actor: "Unknown"
+  first_seen: "2022" # Approximate based on public reporting, though the sample is from a later date.
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "keylogging"
+  - "ddos"
+  - "ransomware_module"
+  - "infostealer"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'boratratmutex_sa8xofh1budx'
+    references:
+      - "https://app.any.run/tasks/4dd0d438-f35d-489b-964a-ddf851becea3/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

@@ -20,3 +20,8 @@ mutexes:
       - "https://www.deepinstinct.com/blog/black-basta-ransomware-threat-emergence"
     date_added: "2025-07-12"
     analyst: "@adhikara13" 
+  - name: "ofijweiuhuewhcsaxs.mutex"
+    references:
+      - "https://www.zscaler.com/blogs/security-research/back-black-basta"
+    date_added: "2025-07-13"
+    analyst: "@adhikara13" 

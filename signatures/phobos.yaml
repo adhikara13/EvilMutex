@@ -1,0 +1,27 @@
+# Phobos Ransomware Mutex Intelligence
+# Analyst source file for Phobos-related mutex data
+
+malware_info:
+  family: "Phobos"
+  aliases: ["Phobos Ransomware"]
+  description: "Phobos is a Ransomware-as-a-Service (RaaS) first seen in 2019, and is a variant of the Dharma (CrySiS) ransomware family. It is often distributed through exposed RDP connections. It creates a global mutex to prevent multiple instances of the malware from running."
+  threat_actor: "Unknown"
+  first_seen: "2019"
+
+category: "ransomware"
+primary_tags: ["raas", "rdp", "windows", "dharma_variant"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\<<BID>>300AF62D00000001'
+    references:
+      - "https://tria.ge/250705-gy63gstydt/behavioral2/analog?&main_event=Mutex"
+    date_added: "2025-07-05"
+    analyst: "@adhikara13"
+    notes: "The <<BID>> part of the mutex name is a 16-character hexadecimal unique ID."
+  - name: 'Global\<<BID>>C4BA364700000001'
+    references:
+      - "https://app.any.run/tasks/4145f893-dccf-4f5c-964d-634b2951365c/"
+    date_added: "2025-07-05"
+    analyst: "@adhikara13"
+    notes: "The <<BID>> part of the mutex name is a 16-character hexadecimal unique ID." 

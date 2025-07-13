@@ -1,0 +1,23 @@
+# Hamster Ransomware Mutex Intelligence
+# Analyst source file for Hamster-related mutex data
+
+malware_info:
+  family: "Hamster"
+  aliases:
+    - "Hamster Ransomware"
+  description: "Hamster Ransomware is a variant of Babuk ransomware observed in late 2021. It encrypts files and appends the .hamster extension."
+  threat_actor: "Unknown"
+  first_seen: "2021"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "data_exfiltration"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'HamsterLiveHere'
+    references:
+      - "https://id-ransomware.blogspot.com/2021/11/hamster-ransomware.html"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"

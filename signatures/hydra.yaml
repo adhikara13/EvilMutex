@@ -1,0 +1,20 @@
+# Hydra Ransomware Mutex Intelligence
+# Analyst source file for Hydra-related mutex data
+
+malware_info:
+  family: "Hydra"
+  aliases: ["Flamingo"]
+  description: "Hydra is a variant of the Flamingo ransomware family. It encrypts user files with AES+RSA and demands a ransom. The threat actors behind this family call themselves 'King Of Ransom'."
+  threat_actor: "King Of Ransom"
+  first_seen: "2020"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "windows"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Local\$hYdr4Rans$'
+    references:
+      - "https://id-ransomware.blogspot.com/2020/09/flamingo-ransomware.html"
+    date_added: "2025-07-13"
+    analyst: "@adhikara13" 

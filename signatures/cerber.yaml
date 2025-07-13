@@ -1,0 +1,20 @@
+# Cerber Ransomware Mutex Intelligence
+# Analyst source file for Cerber-related mutex data
+
+malware_info:
+  family: "Cerber"
+  aliases: ["Cerber Ransomware"]
+  description: "Cerber is a Ransomware-as-a-Service (RaaS) that appeared in 2016, known for its file encryption, offline capabilities, and sophisticated evasion techniques. It creates a mutex to avoid reinfecting the same machine."
+  threat_actor: "Unknown"
+  first_seen: "2016"
+
+category: "ransomware"
+primary_tags: ["raas", "file_encryption", "windows", "evasion"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'SHELL.{<uuid>}'
+    references:
+      - "https://any.run/malware-trends/cerber/"
+    date_added: "2025-07-13"
+    analyst: "@adhikara13"

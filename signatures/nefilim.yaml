@@ -1,0 +1,25 @@
+# Nefilim Ransomware Mutex Intelligence
+# Analyst source file for Nefilim-related mutex data
+
+malware_info:
+  family: "Nefilim"
+  aliases:
+    - "Nefilim-Ransomware"
+    - "RANSOM.WIN32.NEFILIM.G"
+  description: "Nefilim is a ransomware family that emerged around March 2020. It is known for its double extortion tactics, exfiltrating sensitive data from victims and threatening to publish it if the ransom is not paid."
+  threat_actor: "Unknown"
+  first_seen: "2020"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "data_exfiltration"
+  - "double_extortion"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'ONA MOYA ROZA I YA EE LUBLUUUUUUUU, ONA MOYA DOZA - SEGODNYA ZATYANU'
+    references:
+      - "https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/ransom.win32.nefilim.g"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

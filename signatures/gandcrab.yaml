@@ -1,0 +1,27 @@
+# GandCrab Ransomware Mutex Intelligence
+# Analyst source file for GandCrab-related mutex data
+
+malware_info:
+  family: "GandCrab"
+  aliases:
+    - "gandcrab-ransomware"
+  description: "GandCrab was a highly prolific Ransomware-as-a-Service (RaaS) that operated from early 2018 to mid-2019. It was distributed through various methods, including exploit kits and spam email campaigns, before its operators announced their retirement."
+  threat_actor: "GandCrab"
+  first_seen: "2018"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "RaaS"
+  - "exploit_kit"
+  - "spam"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\pc_group=<Pc_Group>&ransom_id=<Victim_id>'
+    references:
+      - "https://www.acronis.com/en-sg/blog/posts/gandcrab/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<Pc_Group>' and '<Victim_id>' parts are placeholders for the specific infection details." 

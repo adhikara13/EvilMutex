@@ -1,0 +1,25 @@
+# Hermes Ransomware Mutex Intelligence
+# Analyst source file for Hermes-related mutex data
+
+malware_info:
+  family: "Hermes"
+  aliases:
+    - "Hermes Ransomware"
+    - "Hermes 2.1"
+  description: "Hermes is a ransomware family that has been distributed through various means, including malvertising campaigns and zero-day exploits. The 2.1 variant was notably spread via a Flash zero-day targeting South Korean users."
+  threat_actor: "Unknown"
+  first_seen: "2017"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "zero-day"
+  - "malvertising"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'tech'
+    references:
+      - "https://www.malwarebytes.com/blog/news/2018/03/hermes-ransomware-distributed-to-south-koreans-via-recent-flash-zero-day"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

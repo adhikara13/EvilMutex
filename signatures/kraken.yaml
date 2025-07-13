@@ -1,0 +1,24 @@
+# Kraken Ransomware Mutex Intelligence
+# Analyst source file for Kraken-related mutex data
+
+malware_info:
+  family: "Kraken"
+  aliases:
+    - "Kraken Ransomware"
+  description: "Kraken is a ransomware variant that utilizes obfuscation and various evasion techniques. It is known for its dynamic mutex generation, which incorporates the victim's computer name."
+  threat_actor: "Unknown"
+  first_seen: "2018" # Based on the publication date of the referenced research paper.
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "obfuscation"
+  - "dynamic_mutex"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Microsoft-Kraken-<ComputerName>'
+    references:
+      - "https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/ise2.12004"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"

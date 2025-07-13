@@ -1,0 +1,21 @@
+# Noblis Ransomware Mutex Intelligence
+# Analyst source file for Noblis-related mutex data
+
+malware_info:
+  family: "Noblis"
+  aliases: ["Noblis Ransomware"]
+  description: "Noblis is a ransomware that encrypts files on a victim's system and demands a ransom. It creates a mutex to ensure only a single instance of the malware runs on the infected machine."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "windows"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'mutex_rr_windows'
+    references:
+      - "https://app.any.run/tasks/e2f4531f-e73b-4a14-99da-48f13dddf5ac/"
+      - "https://cyble.com/blog/threat-actor-targets-russian-gaming-community-with-wannacry-imitator/"
+    date_added: "2024-05-18"
+    analyst: "@adhikara13" 

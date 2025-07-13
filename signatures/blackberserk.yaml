@@ -1,0 +1,26 @@
+# BlackBerserk Ransomware Mutex Intelligence
+# Analyst source file for BlackBerserk-related mutex data
+
+malware_info:
+  family: "BlackBerserk"
+  aliases:
+    - "BlackBerserk-Ransomware"
+  description: "BlackBerserk is a ransomware family that emerged in mid-2023. It is known to target both Windows and Linux systems, including ESXi servers, following a double extortion model."
+  threat_actor: "Unknown"
+  first_seen: "2023"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "data_exfiltration"
+  - "linux"
+  - "esxi"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\BlackMutex'
+    references:
+      - "https://tria.ge/230728-cqg16sah59/behavioral1/analog?main_event=Mutex&q=BlackMutex"
+      - "https://id-ransomware.blogspot.com/2023/07/blackberserk-ransomware.html"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

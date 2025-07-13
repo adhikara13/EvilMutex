@@ -1,0 +1,21 @@
+# Scarabey Ransomware Mutex Intelligence
+# Analyst source file for Scarabey-related mutex data
+
+malware_info:
+  family: "Scarabey"
+  aliases: ["Scarab"]
+  description: "Scarabey is a variant of the Scarab ransomware that was discovered in December 2017. It is written in Delphi and was found targeting Russian users, being distributed via RDP/manual dropping on servers and systems."
+  threat_actor: "Unknown"
+  first_seen: "2017"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "windows", "rdp", "delphi"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'STOPSCARABSTOPSCARABSTOPSCARABSTOPSCARABSTOPSCARAB'
+    references:
+      - "https://www.malwarebytes.com/blog/news/2018/01/scarab-ransomware-new-variant-changes-tactics"
+      - "https://id-ransomware.blogspot.com/2017/12/scarabey-ransomware.html"
+    date_added: "2017-12-19"
+    analyst: "@adhikara13" 

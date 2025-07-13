@@ -1,0 +1,26 @@
+# EKANS Ransomware Mutex Intelligence
+# Analyst source file for EKANS-related mutex data
+
+malware_info:
+  family: "EKANS"
+  aliases:
+    - "Snake"
+    - "Snake-Ekans"
+  description: "EKANS, also known as Snake, is a ransomware written in Go that has been observed targeting Industrial Control Systems (ICS) environments."
+  threat_actor: "Unknown"
+  first_seen: "2019"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "ICS"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'EKANS'
+    references:
+      - "https://id-ransomware.blogspot.com/2020/01/ekans-snake-ransomware.html"
+      - "https://www.dragos.com/blog/industry-news/ekans-ransomware-and-ics-operations/"
+      - "https://www.acronis.com/en-sg/blog/posts/snakeekans-ransomware-attacks-industrial-control-systems-acronis-stops-it/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

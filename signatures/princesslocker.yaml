@@ -1,0 +1,24 @@
+# PrincessLocker Ransomware Mutex Intelligence
+# Analyst source file for PrincessLocker-related mutex data
+
+malware_info:
+  family: "PrincessLocker"
+  aliases:
+    - "Princeslocker"
+    - "princessevolution"
+  description: "PrincessLocker is a ransomware family first observed in 2016 that encrypts files on a compromised system and demands a ransom payment for their decryption."
+  threat_actor: "Unknown"
+  first_seen: "2016"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'hoJUpcvgHA'
+    references:
+      - "https://x.com/ValthekOn/status/1029566037589729280"
+      - "https://www.trendmicro.com/vinfo/tw/threat-encyclopedia/malware/ransom_princesslocker.b"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

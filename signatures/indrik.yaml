@@ -1,0 +1,23 @@
+# Indrik Ransomware Mutex Intelligence
+# Analyst source file for Indrik-related mutex data
+
+malware_info:
+  family: "Indrik"
+  aliases:
+    - "indrik-ransomware"
+  description: "Indrik is a ransomware family that appeared in early 2019 and is believed to be a predecessor to Desync ransomware."
+  threat_actor: "Unknown"
+  first_seen: "2019"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "corporate_network"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\Indrik'
+    references:
+      - "https://id-ransomware.blogspot.com/2019/01/unnamed-desync-ransomware.html"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
