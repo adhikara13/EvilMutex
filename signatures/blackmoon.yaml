@@ -1,0 +1,25 @@
+# Blackmoon Botnet Mutex Intelligence
+# Analyst source file for Blackmoon-related mutex data
+
+malware_info:
+  family: "Blackmoon"
+  aliases:
+    - "Blackmoon Botnet"
+    - "W32/Kryptik.G.gen!Eldorado"
+  description: "Blackmoon is a banking trojan and botnet that has been active since at least 2014. It uses man-in-the-browser techniques to steal banking credentials and other sensitive information."
+  threat_actor: "Unknown"
+  first_seen: "2014"
+
+category: "botnet"
+primary_tags:
+  - "banking_trojan"
+  - "infostealer"
+  - "man-in-the-browser"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'kongxin1123'
+    references:
+      - "https://www.secrss.com/articles/40299"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

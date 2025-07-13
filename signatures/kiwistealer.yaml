@@ -1,0 +1,23 @@
+# KiwiStealer Mutex Intelligence
+# Analyst source file for KiwiStealer-related mutex data
+
+malware_info:
+  family: "KiwiStealer"
+  aliases:
+    - "Kiwi-Stealer"
+  description: "KiwiStealer is an information stealer designed to exfiltrate sensitive data from compromised systems, such as credentials, cookies, and cryptocurrency wallets."
+  threat_actor: ["APT-C-08", "Manlinghua"]
+  first_seen: "2023"
+
+category: "stealer"
+primary_tags:
+  - "infostealer"
+  - "credential_theft"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'rabadaisunique'
+    references:
+      - "https://www.ctfiot.com/219079.html"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 
