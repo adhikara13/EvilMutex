@@ -1,0 +1,21 @@
+# Ryuk Ransomware Mutex Intelligence
+# Analyst source file for Ryuk-related mutex data
+
+malware_info:
+  family: "Ryuk"
+  aliases: ["Ransom.Ryuk"]
+  description: "Ryuk is ransomware known for targeting large organizations and asking for rather large ransom payments to recover the encrypted files. The infection has been associated with emails that contain malicious attachments that first deliver Emotet, which is used to deliver modular payloads such as Ryuk. Ryuk encrypts a user's files using AES-256 + RSA2048 encryption algorithms."
+  threat_actor: "Wizard Spider"
+  first_seen: "2018"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "targeted_attack", "emotet"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "rykmutex"
+    references:
+      - "https://blog.talosintelligence.com/threat-roundup-0602-0609-23/"
+      - "https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/ransom.win64.ryuk.smb"
+    date_added: "2023-06-09"
+    analyst: "@adhikara13" 

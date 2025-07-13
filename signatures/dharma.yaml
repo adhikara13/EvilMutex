@@ -1,0 +1,21 @@
+# Dharma Ransomware Mutex Intelligence
+# Analyst source file for Dharma-related mutex data
+
+malware_info:
+  family: "Dharma"
+  aliases: ["CrySiS"]
+  description: "Dharma is a ransomware family that has been active since 2016. It operates as a Ransomware-as-a-Service (RaaS) and new variants are continuously released. This variant uses a mutex to ensure only one instance runs on the system."
+  threat_actor: "Unknown"
+  first_seen: "2016"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "raas", "windows"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\syncronize_<uniqueid>'
+    references:
+      - "https://cymulate.com/blog/immediate-threat-analysis-new-dharma-ransomware/"
+      - "https://www.threatdown.com/blog/a-deep-dive-into-phobos-ransomware/"
+    date_added: "2025-01-05"
+    analyst: "@adhikara13" 

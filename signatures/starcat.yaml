@@ -1,0 +1,20 @@
+# StarCat Ransomware Mutex Intelligence
+# Analyst source file for StarCat-related mutex data
+
+malware_info:
+  family: "StarCat"
+  aliases: ["StarCat Ransomware"]
+  description: "StarCat is a ransomware that encrypts files on a victim's computer and demands a ransom payment for the decryption key."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "windows"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "start_cat_encrypt"
+    references:
+      - "https://tria.ge/241215-jkxb8szkhq/behavioral2/analog?main_event=Mutex&q=start_cat_encrypt"
+    date_added: "2024-12-15"
+    analyst: "@adhikara13" 
