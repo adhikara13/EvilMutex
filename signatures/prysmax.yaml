@@ -1,0 +1,24 @@
+# Prysmax Stealer Mutex Intelligence
+# Analyst source file for Prysmax-related mutex data
+
+malware_info:
+  family: "Prysmax"
+  aliases:
+    - "Prysmax Stealer"
+  description: "Prysmax is an information stealer designed to exfiltrate sensitive data from compromised systems, such as browser credentials, system information, and cryptocurrency wallets."
+  threat_actor: "Unknown"
+  first_seen: "2023" # Based on the date of the provided sample analysis.
+
+category: "stealer"
+primary_tags:
+  - "infostealer"
+  - "credential_theft"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\PrysmaxSingleInstanceMutex'
+    references:
+      - "https://tria.ge/250523-p83f2sdq2x/behavioral1/analog?main_event=Mutex&q=PrysmaxSingleInstanceMutex"
+      - "https://app.any.run/tasks/79a8e967-de3b-41ff-bc8d-0d50cce834fa/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

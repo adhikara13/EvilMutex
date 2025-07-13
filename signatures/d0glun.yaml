@@ -1,0 +1,23 @@
+# d0glun Ransomware Mutex Intelligence
+# Analyst source file for d0glun-related mutex data
+
+malware_info:
+  family: "d0glun"
+  aliases:
+    - "doglun"
+    - "d0glun Ransomware"
+  description: "d0glun is a ransomware variant that encrypts files on a victim's system and demands a ransom for their decryption."
+  threat_actor: "Unknown"
+  first_seen: "2024" # Based on the date of the provided sample analysis.
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'dawdhahdaw'
+    references:
+      - "https://app.any.run/tasks/24679d01-a0c3-4b91-adc1-db5937e6e651/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

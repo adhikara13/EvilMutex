@@ -1,0 +1,34 @@
+# Xeno RAT Mutex Intelligence
+# Analyst source file for Xeno-related mutex data
+
+malware_info:
+  family: "Xeno"
+  aliases:
+    - "Xeno RAT"
+    - "XenoRAT"
+  description: "Xeno RAT is a commodity Remote Access Trojan written in C# that provides a range of capabilities for controlling and stealing information from compromised systems."
+  threat_actor: "Unknown"
+  first_seen: "2024" # Based on the date of the provided sample analysis.
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "infostealer"
+  - "c2"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'xeno_rat_nd<5 Alphanumeric Characters>'
+    references:
+      - "https://app.any.run/tasks/b1aee0cb-c267-447f-a996-a991fcb0dee7/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<5 Alphanumeric Characters>' part is a placeholder for a randomly generated string."
+  - name: 'xeno_rat_nd<5 Alphanumeric Characters>-admin'
+    references:
+      - "https://tria.ge/250630-d62aeszkw5/behavioral2/analog?main_event=Mutex&mutant=Xeno_rat_nd8912d-admin"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<5 Alphanumeric Characters>' part is a placeholder for a randomly generated string. The '-admin' suffix may indicate a specific variant or configuration." 

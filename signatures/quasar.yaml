@@ -1,0 +1,29 @@
+# Quasar RAT Mutex Intelligence
+# Analyst source file for Quasar-related mutex data
+
+malware_info:
+  family: "Quasar"
+  aliases:
+    - "Quasar RAT"
+    - "CinaRAT"
+    - "Yggdrasil"
+  description: "Quasar is a popular open-source Remote Access Trojan (RAT) for Windows, written in C#. Its features and public availability have made it a common tool for various threat actors."
+  threat_actor: "Unknown"
+  first_seen: "2015"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "open_source"
+  - "infostealer"
+  - "c2"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'QSR_MUTEX_<uniqueid>'
+    references:
+      - "https://daniyyell.com/threat%20hunting/tools/malware%20analysis/Using-Velociraptor-to-Detect-and-Hunt-for-Affected-Systems-Unknown-Malware-Analysis/#20-velocirator-selected-artifacts"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<uniqueid>' part is a placeholder, often representing a hardware ID or another unique identifier for the compromised system." 

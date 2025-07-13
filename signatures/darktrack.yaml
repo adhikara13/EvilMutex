@@ -1,0 +1,26 @@
+# DarkTrack RAT Mutex Intelligence
+# Analyst source file for DarkTrack-related mutex data
+
+malware_info:
+  family: "DarkTrack"
+  aliases:
+    - "DarkTrack RAT"
+  description: "DarkTrack is a commodity Remote Access Trojan (RAT) that provides a wide range of features for controlling and monitoring compromised systems. It has been used by various threat actors since its release."
+  threat_actor: "Unknown"
+  first_seen: "2015"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "infostealer"
+  - "c2"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'I_AM_DT<uniqueid>'
+    references:
+      - "https://app.any.run/tasks/720cbf18-903d-4a55-9ea1-4e8a92b4ee4d/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<uniqueid>' part is a placeholder, often representing a unique identifier such as a hash of the machine's GUID." 

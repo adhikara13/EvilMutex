@@ -1,0 +1,26 @@
+# Kivars Backdoor Mutex Intelligence
+# Analyst source file for Kivars-related mutex data
+
+malware_info:
+  family: "Kivars"
+  aliases:
+    - "Kivars Backdoor"
+  description: "Kivars is a backdoor used by the Kimsuky APT group. It establishes persistence and allows attackers to execute commands on a compromised system."
+  threat_actor: "Kimsuky"
+  first_seen: "2024"
+
+category: "backdoor"
+primary_tags:
+  - "c2"
+  - "persistence"
+  - "apt"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'uni-web-<uniqueid>'
+    references:
+      - "https://x.com/rst_cloud/status/1896196308873969727"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<uniqueid>' part is a placeholder for a unique identifier." 

@@ -1,0 +1,26 @@
+# Meduza Stealer Mutex Intelligence
+# Analyst source file for Meduza-related mutex data
+
+malware_info:
+  family: "Meduza"
+  aliases:
+    - "Meduza Stealer"
+  description: "Meduza is an information stealer designed to exfiltrate sensitive data from compromised systems, such as browser credentials, system information, and cryptocurrency wallets."
+  threat_actor: "Unknown"
+  first_seen: "2023" # Based on the date of the provided sample analysis.
+
+category: "stealer"
+primary_tags:
+  - "infostealer"
+  - "credential_theft"
+  - "c2"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'mmm-<uniqueid>'
+    references:
+      - "https://app.any.run/tasks/6aa87dc7-0625-462e-a8b3-41776473a28f/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<uniqueid>' part is a placeholder for a unique identifier." 

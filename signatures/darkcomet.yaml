@@ -1,0 +1,47 @@
+# DarkComet RAT Mutex Intelligence
+# Analyst source file for DarkComet-related mutex data
+
+malware_info:
+  family: "DarkComet"
+  aliases:
+    - "DarkComet RAT"
+    - "darkkomet"
+  description: "DarkComet is a long-standing and feature-rich Remote Access Trojan (RAT) that has been used by various threat actors for years. It provides extensive capabilities for remote control, surveillance, and data theft."
+  threat_actor: "Unknown"
+  first_seen: "2008"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "commodity_RAT"
+  - "keylogging"
+  - "infostealer"
+  - "c2"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'DC_MUTEX-<7 Alphanumeric Characters>'
+    references:
+      - "https://blog.talosintelligence.com/ding-your-rat-has-been-delivered/"
+      - "https://any.run/cybersecurity-blog/darkcomet-rat-technical-analysis/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<7 Alphanumeric Characters>' part is a placeholder for a randomly generated string."
+  - name: 'DCMIN_MUTEX-<7 Alphanumeric Characters>'
+    references:
+      - "https://blog.talosintelligence.com/threat-roundup-0122/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<7 Alphanumeric Characters>' part is a placeholder for a randomly generated string."
+  - name: 'DCMUTEX'
+    references:
+      - "https://blog.talosintelligence.com/threat-roundup-0122/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+  - name: 'DCPERSFWBP'
+    references:
+      - "https://tria.ge/240426-n1ymfsba99/behavioral2/analog?q=DCPERSFWBP&main_event=Mutex"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

@@ -1,0 +1,25 @@
+# BADNEWS RAT Mutex Intelligence
+# Analyst source file for BADNEWS RAT-related mutex data
+
+malware_info:
+  family: "BADNEWS"
+  aliases:
+    - "BADNEWS RAT"
+  description: "BADNEWS is a Remote Access Trojan (RAT) that has been used by the White Elephant APT group (also known as Patchwork or APT-C-35) in various espionage campaigns."
+  threat_actor: "White Elephant"
+  first_seen: "2013"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "infostealer"
+  - "c2"
+  - "apt"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'rendumm'
+    references:
+      - "https://www.antiy.cn/research/notice&report/research_report/20221027.html"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

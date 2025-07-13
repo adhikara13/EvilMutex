@@ -1,0 +1,26 @@
+# Jason RAT Mutex Intelligence
+# Analyst source file for Jason-related mutex data
+
+malware_info:
+  family: "Jason"
+  aliases:
+    - "Jason RAT"
+  description: "Jason RAT is a Remote Access Trojan used to gain unauthorized access and control over a victim's computer."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "infostealer"
+  - "c2"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'jason_<uniqueid>'
+    references:
+      - "https://app.any.run/tasks/2852bf84-8870-47b7-828e-8233e55aee54/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<uniqueid>' part is a placeholder for a unique identifier." 

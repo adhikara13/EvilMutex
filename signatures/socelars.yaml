@@ -1,0 +1,25 @@
+# Socelars Stealer Mutex Intelligence
+# Analyst source file for Socelars-related mutex data
+
+malware_info:
+  family: "Socelars"
+  aliases:
+    - "Socelars Stealer"
+    - "TROJANSPY.WIN32.SOCELARS.D"
+  description: "Socelars is an information stealer that primarily targets login credentials for social media and other online accounts by monitoring browser activity."
+  threat_actor: "Unknown"
+  first_seen: "2013"
+
+category: "stealer"
+primary_tags:
+  - "infostealer"
+  - "credential_theft"
+  - "social_media"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'patatoes'
+    references:
+      - "https://www.trendmicro.com/vinfo/jp/threat-encyclopedia/malware/trojanspy.win32.socelars.d"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

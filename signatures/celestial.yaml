@@ -1,0 +1,26 @@
+# Celestial RAT Mutex Intelligence
+# Analyst source file for Celestial-related mutex data
+
+malware_info:
+  family: "Celestial"
+  aliases:
+    - "Celestial RAT"
+  description: "Celestial is a Remote Access Trojan (RAT) used to gain unauthorized access and control over a victim's computer."
+  threat_actor: "Unknown"
+  first_seen: "2024" # Based on the date of the provided sample analysis.
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "infostealer"
+  - "c2"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'celestial_<uniqueid>'
+    references:
+      - "https://app.any.run/tasks/14d1c3db-c5c9-464d-95be-232cd8703aa6/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<uniqueid>' part is a placeholder for a unique identifier." 
