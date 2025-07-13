@@ -1,0 +1,53 @@
+# REMCOS RAT Mutex Intelligence
+# Analyst source file for REMCOS RAT-related mutex data
+
+malware_info:
+  family: "REMCOS"
+  aliases:
+    - "REMCOS RAT"
+    - "Backdoor:Win32/Remcos"
+  description: "REMCOS is a commercial Remote Access Trojan (RAT) that has been sold since 2016. While marketed as a legitimate tool for remote administration, it is widely used by malicious actors for surveillance and unauthorized control of compromised systems."
+  threat_actor: "Unknown"
+  first_seen: "2016"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "commercial_RAT"
+  - "keylogging"
+  - "infostealer"
+  - "c2"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'MARE_IS_BEAUTIFUL_EX'
+    references:
+      - "https://www.elastic.co/security-labs/dissecting-remcos-rat-part-two"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+  - name: 'Rmc-<uniqueid>'
+    references:
+      - "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/the-stealthy-stalker-remcos-rat/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<uniqueid>' part is a placeholder for a unique identifier generated on the compromised machine."
+  - name: 'Remcos_Mutex_Inj'
+    references:
+      - "https://www.splunk.com/en_us/blog/security/splunk-fin7-tool-detections-remcos.html"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+  - name: 'remcos_<uniqueid>'
+    references:
+      - "https://www.trendmicro.com/en_us/research/19/h/analysis-new-remcos-rat-arrives-via-phishing-email.html"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<uniqueid>' part is a placeholder for a unique identifier generated on the compromised machine."
+  - name: 'Remcos-<uniqueid>'
+    references:
+      - "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Backdoor:Win32/Remcos"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<uniqueid>' part is a placeholder for a unique identifier generated on the compromised machine." 

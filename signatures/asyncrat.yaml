@@ -1,0 +1,28 @@
+# AsyncRAT Mutex Intelligence
+# Analyst source file for AsyncRAT-related mutex data
+
+malware_info:
+  family: "AsyncRAT"
+  aliases:
+    - "Async-RAT"
+  description: "AsyncRAT is an open-source Remote Access Trojan (RAT) for Windows written in C#. Its accessibility has led to widespread use by various threat actors for data theft, surveillance, and controlling compromised systems."
+  threat_actor: "Unknown"
+  first_seen: "2019"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "open_source"
+  - "infostealer"
+  - "c2"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'AsyncMutex_<uniqueid>'
+    references:
+      - "https://blog.talosintelligence.com/nanocore-netwire-and-asyncrat-spreading/"
+      - "https://blog.qualys.com/vulnerabilities-threat-research/2022/08/16/asyncrat-c2-framework-overview-technical-analysis-and-detection"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<uniqueid>' part is a placeholder for a unique identifier, often a randomly generated string or a hash." 
