@@ -23,5 +23,5 @@ mutexes:
       - "https://www.acronis.com/en-sg/blog/posts/gandcrab/"
     date_added: "2024-08-01"
     analyst: "@adhikara13"
-    notes:
+    notes:  
       - "The mutex name is dynamic. The '<Pc_Group>' and '<Victim_id>' parts are placeholders for the specific infection details." 
