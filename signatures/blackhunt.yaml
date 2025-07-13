@@ -1,0 +1,30 @@
+# BlackHunt Ransomware Mutex Intelligence
+# Analyst source file for BlackHunt-related mutex data
+
+malware_info:
+  family: "BlackHunt"
+  aliases:
+    - "BlackHunt Ransomware"
+  description: "BlackHunt is a ransomware written in Go, first observed in early 2024. It is often deployed by threat actors after exploiting vulnerable remote access services."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "Go"
+  - "remote_access_exploitation"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'BlackKeys'
+    references:
+      - "https://x.com/malwrhunterteam/status/1744499157442666907"
+      - "https://www.rapid7.com/blog/post/2024/02/05/exploring-the-not-so-secret-code-of-blackhunt-ransomware-2/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+  - name: 'BLACK_HUNT_MUTEX'
+    references:
+      - "https://www.trendmicro.com/vinfo/ae/threat-encyclopedia/malware/ransom.win32.blackhunt.thlbhbb"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

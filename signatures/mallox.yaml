@@ -1,0 +1,25 @@
+# Mallox Ransomware Mutex Intelligence
+# Analyst source file for Mallox-related mutex data
+
+malware_info:
+  family: "Mallox"
+  aliases:
+    - "Mallox Ransomware"
+    - "TargetCompany"
+  description: "Mallox is a ransomware family that has been active since at least mid-2021. It is known for targeting insecure MS-SQL servers, exfiltrating data, and then encrypting the victim's files."
+  threat_actor: "Unknown"
+  first_seen: "2021"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "mssql_bruteforce"
+  - "data_exfiltration"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: '89A72EF01'
+    references:
+      - "https://www.sangfor.com/farsight-labs-threat-intelligence/cybersecurity/new-mallox-ransomware-variant-discovered-wild"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

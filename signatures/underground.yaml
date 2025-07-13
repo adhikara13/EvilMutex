@@ -1,0 +1,22 @@
+# Underground Ransomware Mutex Intelligence
+# Analyst source file for Underground-related mutex data
+
+malware_info:
+  family: "Underground"
+  aliases:
+    - "Underground Ransomware"
+  description: "Underground is a ransomware family observed in the wild that encrypts files and holds them for ransom."
+  threat_actor: "Unknown"
+  first_seen: "2022" # Based on the date of the provided sample analysis.
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: '8DC1F7B9D2F4EA58'
+    references:
+      - "https://app.any.run/tasks/4f71bbd3-4e7b-41ac-bf4b-1817442ea5bf/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

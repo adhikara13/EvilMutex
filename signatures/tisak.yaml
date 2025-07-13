@@ -1,0 +1,23 @@
+# Tisak Ransomware Mutex Intelligence
+# Analyst source file for Tisak-related mutex data
+
+malware_info:
+  family: "Tisak"
+  aliases:
+    - "Tisak-Ransomware"
+    - "RANSOM.WIN32.CELANCYC.SMYXDJA"
+  description: "Tisak is a ransomware family that encrypts a victim's files and demands a ransom for their recovery. It is known to create a specific mutex to ensure only one instance of the malware runs at a time."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\TisakMutex'
+    references:
+      - "https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/ransom.win32.celancyc.smyxdja"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 

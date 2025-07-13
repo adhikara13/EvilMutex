@@ -1,0 +1,44 @@
+# TeslaCrypt Ransomware Mutex Intelligence
+# Analyst source file for TeslaCrypt-related mutex data
+
+malware_info:
+  family: "TeslaCrypt"
+  aliases:
+    - "Tescrypt"
+  description: "TeslaCrypt is a now-defunct ransomware family that was active between 2015 and 2016. Initially targeting gamers by encrypting game-related files, it later broadened its scope. The operators eventually released the master decryption key."
+  threat_actor: "TeslaCrypt"
+  first_seen: "2015"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "gamers"
+  - "defunct"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: '8765-123rvr4'
+    references:
+      - "https://blog.checkpoint.com/wp-content/uploads/2016/05/Tesla-crypt-whitepaper_V3.pdf"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+  - name: '2134-1234-1324-2134-1324-2134'
+    references:
+      - "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/new-teslacrypt-ransomware-arrives-via-spam/"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+  - name: 'System1230123'
+    references:
+      - "https://www.secureworks.com/research/teslacrypt-ransomware-threat-analysis"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+  - name: 'dslhufdks3'
+    references:
+      - "https://www.secureworks.com/research/teslacrypt-ransomware-threat-analysis"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13"
+  - name: '9_9_9_9'
+    references:
+      - "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Ransom:Win32/Tescrypt.R"
+    date_added: "2024-08-01"
+    analyst: "@adhikara13" 
