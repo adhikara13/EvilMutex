@@ -1,10 +1,9 @@
 <template>
-  <div class="bg-darker min-h-screen text-green-400 font-mono">
-    
-    <div class="container mx-auto px-12 py-8">
-      
+  <div class="bg-darker text-green-400 font-mono">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-12 py-8">
+      <!-- Search Interface -->
       <div class="mb-8">
-        <h2 class="text-xl font-bold text-green-400 mb-4">
+        <h2 class="text-lg md:text-xl font-bold text-green-400 mb-4">
           <span class="text-red-400">[</span>SEARCH_INTERFACE<span class="text-red-400">]</span>
         </h2>
         <div class="bg-dark border border-gray-600 p-4">
@@ -18,17 +17,11 @@
                 @keyup.enter="performSearch"
               />
             </div>
-            <div class="flex gap-2">
-              <button
-                @click="performSearch"
-                class="btn btn-primary px-6"
-              >
+            <div class="flex gap-2 justify-end md:justify-start">
+              <button @click="performSearch" class="btn btn-primary px-6">
                 SEARCH
               </button>
-              <button
-                @click="clearSearch"
-                class="btn btn-secondary px-6"
-              >
+              <button @click="clearSearch" class="btn btn-secondary px-6">
                 CLEAR
               </button>
             </div>
@@ -36,23 +29,21 @@
         </div>
       </div>
 
-      
+      <!-- Loading and Error States -->
       <div v-if="malwareStore.loading" class="mb-8 p-4 bg-dark border border-gray-600 text-center">
         <div class="text-green-400 text-sm">Loading malware database...</div>
         <div class="loading-spinner w-6 h-6 mx-auto mt-2"></div>
       </div>
-
-      
       <div v-else-if="malwareStore.error" class="mb-8 p-4 bg-dark border border-red-600 text-center">
         <div class="text-red-400 text-sm mb-2">Failed to load database: {{ malwareStore.error }}</div>
         <button @click="retryLoading" class="btn btn-primary text-xs">RETRY</button>
       </div>
 
-      
+      <!-- Main Content -->
       <div v-else>
-        
+        <!-- Category Filters -->
         <div class="mb-8" v-if="safeArray(malwareStore.categories).length > 0">
-          <h2 class="text-xl font-bold text-green-400 mb-4">
+          <h2 class="text-lg md:text-xl font-bold text-green-400 mb-4">
             <span class="text-red-400">[</span>FILTER_BY_CATEGORY<span class="text-red-400">]</span>
           </h2>
           <div class="flex flex-wrap gap-2">
@@ -65,44 +56,64 @@
             >
               {{ category.toUpperCase() }}
             </button>
-            <button
-              @click="clearCategory"
-              class="btn btn-outline text-xs text-muted"
-            >
+            <button @click="clearCategory" class="btn btn-outline text-xs text-muted">
               CLEAR_FILTER
             </button>
           </div>
         </div>
 
-        
+        <!-- Malware Database -->
         <div class="mb-8">
-          <h2 class="text-xl font-bold text-green-400 mb-4">
+          <h2 class="text-lg md:text-xl font-bold text-green-400 mb-4">
             <span class="text-red-400">[</span>MALWARE_DATABASE<span class="text-red-400">]</span>
           </h2>
           <div class="bg-dark border border-gray-600">
-            
-            <div class="border-b border-gray-600 p-4 bg-darker">
-              <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm font-bold text-green-400">
-                <div>FAMILY_NAME</div>
-                <div>CATEGORY</div>
-                <div>MUTEX_COUNT</div>
-                <div>ACTIONS</div>
-              </div>
+            <!-- Table Header -->
+            <div class="hidden md:grid grid-cols-4 gap-4 text-sm font-bold text-green-400 p-4 bg-darker border-b border-gray-600">
+              <div>FAMILY_NAME</div>
+              <div>CATEGORY</div>
+              <div>MUTEX_COUNT</div>
+              <div>ACTIONS</div>
             </div>
 
-            
+            <!-- Table Body / Cards -->
             <div class="max-h-96 overflow-y-auto">
               <div v-if="safeArray(filteredMalware).length === 0" class="p-4 text-center text-muted">
                 <div class="text-red-400 mb-2">[NO_DATA_FOUND]</div>
                 <div class="text-xs">No malware entries match your search criteria</div>
               </div>
 
-              <div
-                v-for="malware in safeArray(filteredMalware)"
-                :key="malware?.malware_info?.family || 'unknown'"
-                class="border-b border-gray-600 p-4 hover:bg-darker transition-colors"
-              >
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+              <div v-for="malware in safeArray(filteredMalware)" :key="malware?.malware_info?.family || 'unknown'">
+                <!-- Card View for Mobile -->
+                <div class="md:hidden p-4 border-b border-gray-600">
+                   <div class="flex justify-between items-start">
+                    <div>
+                      <div class="font-bold text-green-400">{{ safeValue(malware?.malware_info?.family, 'Unknown') }}</div>
+                      <div class="text-muted text-xs">
+                        {{ safeArray(malware?.malware_info?.aliases).slice(0, 2).join(', ') }}
+                        <span v-if="safeArray(malware?.malware_info?.aliases).length > 2">...</span>
+                      </div>
+                    </div>
+                     <span class="badge badge-red">{{ safeValue(malware?.category, 'unknown') }}</span>
+                   </div>
+                  <div class="flex justify-between items-center mt-4">
+                    <div class="text-sm">
+                        <span class="text-muted">Mutexes: </span>
+                        <span class="text-warning">{{ safeArray(malware?.mutexes).length }}</span>
+                    </div>
+                     <div class="flex gap-2">
+                      <NuxtLink :to="`/malware/${(malware?.malware_info?.family || 'unknown').toLowerCase().replace(/\s+/g, '-')}`" class="btn btn-outline text-xs">
+                        VIEW
+                      </NuxtLink>
+                      <button @click="copyMutexes(malware)" class="btn btn-outline text-xs" :disabled="!malware || !malware.mutexes">
+                        COPY
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Table Row for Desktop -->
+                <div class="hidden md:grid grid-cols-4 gap-4 text-sm p-4 border-b border-gray-600 hover:bg-darker transition-colors">
                   <div>
                     <div class="font-bold text-green-400">{{ safeValue(malware?.malware_info?.family, 'Unknown') }}</div>
                     <div class="text-muted text-xs">
@@ -117,17 +128,10 @@
                     {{ safeArray(malware?.mutexes).length }}
                   </div>
                   <div class="flex gap-2">
-                    <NuxtLink
-                      :to="`/malware/${(malware?.malware_info?.family || 'unknown').toLowerCase().replace(/\s+/g, '-')}`"
-                      class="btn btn-outline text-xs"
-                    >
+                    <NuxtLink :to="`/malware/${(malware?.malware_info?.family || 'unknown').toLowerCase().replace(/\s+/g, '-')}`" class="btn btn-outline text-xs">
                       VIEW
                     </NuxtLink>
-                    <button
-                      @click="copyMutexes(malware)"
-                      class="btn btn-outline text-xs"
-                      :disabled="!malware || !malware.mutexes"
-                    >
+                    <button @click="copyMutexes(malware)" class="btn btn-outline text-xs" :disabled="!malware || !malware.mutexes">
                       COPY
                     </button>
                   </div>
@@ -137,12 +141,12 @@
           </div>
         </div>
 
-        
+        <!-- Export Options -->
         <div class="mb-8">
-          <h2 class="text-xl font-bold text-green-400 mb-4">
+          <h2 class="text-lg md:text-xl font-bold text-green-400 mb-4">
             <span class="text-red-400">[</span>EXPORT_OPTIONS<span class="text-red-400">]</span>
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             <button
               @click="exportJSON"
               class="btn btn-primary p-4"
@@ -188,7 +192,7 @@
           </div>
         </div>
 
-        
+        <!-- What are Malware Mutexes? -->
         <div class="border-t border-gray-600 pt-4">
           <div class="text-sm text-muted">
             <strong>What are Malware Mutexes?</strong><br>
@@ -402,49 +406,4 @@ useSeoMeta({
 </script>
 
 <style scoped>
-
-.hover\\:bg-darker:hover {
-  background-color: var(--bg-secondary);
-}
-
-.interactive {
-  transition: all 0.2s ease;
-}
-
-.interactive:hover {
-  text-shadow: 0 0 5px currentColor;
-}
-
-.form-input:focus {
-  box-shadow: 0 0 0 2px var(--glow-color);
-}
-
-.badge {
-  transition: all 0.2s ease;
-}
-
-.badge:hover {
-  transform: scale(1.05);
-}
-
-.btn:hover {
-  box-shadow: 0 0 0 1px currentColor;
-}
-
-.max-h-96::-webkit-scrollbar {
-  width: 8px;
-}
-
-.max-h-96::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
-}
-
-.max-h-96::-webkit-scrollbar-thumb {
-  background: var(--bg-accent);
-  border: 1px solid var(--border-color);
-}
-
-.max-h-96::-webkit-scrollbar-thumb:hover {
-  background: var(--border-active);
-}
 </style>

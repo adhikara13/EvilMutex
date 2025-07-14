@@ -1,66 +1,83 @@
 <template>
-      <div id="app" class="min-h-screen bg-darker text-green-400">
-    
-    <header class="p-6 bg-transparent">
-      <div class="container mx-auto px-12">
-        <div class="text-center mb-6 bg-transparent">
-          <h1 class="text-xl font-bold mb-2 text-green-400">[ MALWARE MUTEX INTELLIGENCE DATABASE ]</h1>
-          <pre class="ascii-art font-mono mx-auto text-lg md:text-xl mb-4 opacity-90 text-green-400 bg-transparent" style="width: fit-content;">
- ███████╗██╗   ██╗██╗██╗         ███╗   ███╗██╗   ██╗████████╗███████╗██╗  ██╗
- ██╔════╝██║   ██║██║██║         ████╗ ████║██║   ██║╚══██╔══╝██╔════╝╚██╗██╔╝
+  <div id="app" class="min-h-screen bg-darker text-green-400 flex flex-col">
+    <header class="p-4 md:p-6 bg-transparent">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="text-center mb-4 md:mb-6 bg-transparent">
+          <h1 class="text-lg md:text-xl font-bold mb-2 text-green-400">[ MALWARE MUTEX INTELLIGENCE DATABASE ]</h1>
+            <NuxtLink to="/" class="block mb-4">
+              <pre class="ascii-art font-mono opacity-90 text-green-400 bg-transparent cursor-pointer">
+███████╗██╗   ██╗██╗██╗         ███╗   ███╗██╗   ██╗████████╗███████╗██╗  ██╗
+██╔════╝██║   ██║██║██║         ████╗ ████║██║   ██║╚══██╔══╝██╔════╝╚██╗██╔╝
 █████╗  ██║   ██║██║██║         ██╔████╔██║██║   ██║   ██║   █████╗   ╚███╔╝
 ██╔══╝  ╚██╗ ██╔╝██║██║         ██║╚██╔╝██║██║   ██║   ██║   ██╔══╝   ██╔██╗
- ███████╗ ╚████╔╝ ██║███████╗    ██║ ╚═╝ ██║╚██████╔╝   ██║   ███████╗██╔╝ ██╗
- ╚══════╝  ╚═══╝  ╚═╝╚══════╝    ╚═╝     ╚═╝ ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
-          </pre>
+███████╗ ╚████╔╝ ██║███████╗    ██║ ╚═╝ ██║╚██████╔╝   ██║   ███████╗██╔╝ ██╗
+╚══════╝  ╚═══╝  ╚═╝╚══════╝    ╚═╝     ╚═╝ ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+              </pre>
+            </NuxtLink>
 
           <div class="text-center">
-            <div class="flex justify-center items-center space-x-4">
-              <p class="text-sm text-gray-400">Advanced Malware Analysis & Threat Intelligence</p>
-              <span class="text-muted font-mono text-sm">{{ formattedTime }}</span>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4">
+              <p class="text-xs sm:text-sm text-gray-400">Advanced Malware Analysis & Threat Intelligence</p>
+              <span class="text-muted font-mono text-xs sm:text-sm">{{ formattedTime }}</span>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    
     <nav class="bg-dark border-b border-gray-600 py-4">
-      <div class="container mx-auto px-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-12">
         <div class="flex items-center justify-between">
-            <div class="flex-1"></div>
-            <div class="flex flex-1 items-center justify-center space-x-8">
-              <NuxtLink to="/" class="interactive text-green-400 hover:text-green-300 font-mono">
-                <span class="text-red-400">[</span>HOME<span class="text-red-400">]</span>
-              </NuxtLink>
-              <NuxtLink to="/contributor" class="interactive text-green-400 hover:text-green-300 font-mono">
-                <span class="text-red-400">[</span>CONTRIBUTOR<span class="text-red-400">]</span>
-              </NuxtLink>
-              <a :href="appConfig.links.github.main" target="_blank" class="interactive text-green-400 hover:text-green-300 font-mono">
-                <span class="text-red-400">[</span>⭐ Star on GitHub<span class="text-red-400">]</span>
-              </a>
-            </div>
-            <div class="flex flex-1 justify-end">
-              <button
-                  @click="toggleTheme"
-                  class="interactive font-mono transition-colors"
-                  :style="{ color: themeColor }"
-                >
-                  <span class="text-red-400">[</span>{{ currentThemeName }}<span class="text-red-400">]</span>
-                </button>
-            </div>
+          <div class="flex items-center md:hidden">
+            <button @click="menuOpen = !menuOpen" class="interactive text-green-400 hover:text-green-300">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path v-if="!menuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden md:flex flex-1 items-center justify-center space-x-8">
+            <NuxtLink to="/" class="interactive text-green-400 hover:text-green-300 font-mono">
+              <span class="text-red-400">[</span>HOME<span class="text-red-400">]</span>
+            </NuxtLink>
+            <NuxtLink to="/contributor" class="interactive text-green-400 hover:text-green-300 font-mono">
+              <span class="text-red-400">[</span>CONTRIBUTOR<span class="text-red-400">]</span>
+            </NuxtLink>
+            <a :href="appConfig.links.github.main" target="_blank" class="interactive text-green-400 hover:text-green-300 font-mono">
+              <span class="text-red-400">[</span>⭐ Star on GitHub<span class="text-red-400">]</span>
+            </a>
+          </div>
+          <div class="hidden md:flex flex-1 justify-end">
+            <button @click="toggleTheme" class="interactive font-mono transition-colors" :style="{ color: themeColor }">
+              <span class="text-red-400">[</span>{{ currentThemeName }}<span class="text-red-400">]</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div v-if="menuOpen" class="md:hidden mt-4">
+        <div class="flex flex-col items-center space-y-4">
+            <NuxtLink to="/" class="interactive text-green-400 hover:text-green-300 font-mono" @click="menuOpen = false">
+              <span class="text-red-400">[</span>HOME<span class="text-red-400">]</span>
+            </NuxtLink>
+            <NuxtLink to="/contributor" class="interactive text-green-400 hover:text-green-300 font-mono" @click="menuOpen = false">
+              <span class="text-red-400">[</span>CONTRIBUTOR<span class="text-red-400">]</span>
+            </NuxtLink>
+            <a :href="appConfig.links.github.main" target="_blank" class="interactive text-green-400 hover:text-green-300 font-mono" @click="menuOpen = false">
+              <span class="text-red-400">[</span>⭐ Star on GitHub<span class="text-red-400">]</span>
+            </a>
+            <button @click="toggleTheme" class="interactive font-mono transition-colors" :style="{ color: themeColor }">
+              <span class="text-red-400">[</span>{{ currentThemeName }}<span class="text-red-400">]</span>
+            </button>
         </div>
       </div>
     </nav>
 
-    
-    <main class="flex-1 bg-darker min-h-screen">
+    <main class="flex-1 bg-darker">
       <NuxtPage />
     </main>
 
-    
     <footer class="border-t border-green-400 py-6 bg-darker">
-      <div class="container mx-auto px-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-12">
         <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div class="text-center md:text-left">
             <p class="text-green-400 font-mono text-sm">
@@ -85,7 +102,6 @@
       </div>
     </footer>
 
-    
     <div id="notifications" class="fixed top-4 right-4 z-50 space-y-2"></div>
   </div>
 </template>
@@ -97,6 +113,7 @@ import { appConfig } from '~/config/app.config'
 
 const malwareStore = useMalwareStore()
 const currentTime = ref(new Date())
+const menuOpen = ref(false)
 
 const themes = appConfig.themes
 
@@ -205,24 +222,13 @@ useHead({
 </script>
 
 <style scoped>
-
 .ascii-art {
-  font-size: 10px;
+  font-size: clamp(0.1rem, 1.1vw, 0.875rem);
   line-height: 1;
-  overflow-x: auto;
   white-space: pre;
-}
-
-@media (min-width: 768px) {
-  .ascii-art {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .ascii-art {
-    font-size: 14px;
-  }
+  border: none;
+  padding: 0;
+  text-align: center;
 }
 
 .interactive {
@@ -243,7 +249,7 @@ useHead({
   height: 1px;
   background: currentColor;
   transform: scaleX(0);
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 .interactive:hover::before {
