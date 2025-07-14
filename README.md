@@ -24,14 +24,15 @@ Mutexes (mutual exclusion objects) are used by malware to prevent multiple insta
 
 Visit the live platform: **[evilmutex.org](https://evilmutex.org)**
 
+## License
+
+The code for the website is licensed under the MIT License.
+
+The signature data in the `/signatures` directory and any generated Sigma rules are licensed under the **Detection Rule License (DRL) 1.1**. See the [LICENSE](LICENSE) file for more details.
+
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Add your malware signatures in YAML format
-4. Commit your changes (`git commit -m 'Add some amazing feature'`)
-5. Push to the branch (`git push origin feature/amazing-feature`)
-6. Open a Pull Request
+We welcome contributions to the EvilMutex project! Please see our [Contributing Guidelines](docs/CONTRIBUTING.md) for more information on how to add new mutexes, improve existing data, or enhance the website.
 
 ## Links
 

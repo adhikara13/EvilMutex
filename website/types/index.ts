@@ -57,6 +57,7 @@ export interface SigmaRule {
   id: string
   status: string
   description: string
+  license: string
   references: string[]
   author: string
   date: string

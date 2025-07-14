@@ -116,16 +116,18 @@ export function generateDetailedCsvExport(
 export function generateSigmaRule(malware: MalwareData): SigmaRule {
   const mutexNames = malware.mutexes.map(m => m.name)
   const currentDate = format(new Date(), 'yyyy/MM/dd')
+  const analysts = [...new Set(malware.mutexes.map(m => m.analyst || 'uncredited'))].sort().join(' & ')
 
   return {
     title: `${malware.malware_info.family} Mutex Detection`,
     id: `evil-mutex-${malware.malware_info.family.toLowerCase().replace(/\s+/g, '-')}-${Date.now()}`,
     status: 'experimental',
-    description: `Detects mutex names associated with ${malware.malware_info.family} malware family`,
+    description: `Detects mutexes associated with ${malware.malware_info.family} malware family`,
+    license: 'Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE',
     references: [
       ...new Set(malware.mutexes.flatMap(m => m.references))
     ],
-    author: 'EvilMutex Project',
+    author: analysts,
     date: currentDate,
     tags: [
       'attack.defense_evasion',
