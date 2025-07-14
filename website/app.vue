@@ -5,18 +5,20 @@
       <div class="container mx-auto px-12">
         <div class="text-center mb-6 bg-transparent">
           <h1 class="text-xl font-bold mb-2 text-green-400">[ MALWARE MUTEX INTELLIGENCE DATABASE ]</h1>
-          <pre class="ascii-art text-lg md:text-xl mb-4 opacity-90 text-green-400 bg-transparent">
-███████╗██╗   ██╗██╗██╗         ███╗   ███╗██╗   ██╗████████╗███████╗██╗  ██╗
-██╔════╝██║   ██║██║██║         ████╗ ████║██║   ██║╚══██╔══╝██╔════╝╚██╗██╔╝
+          <pre class="ascii-art font-mono mx-auto text-lg md:text-xl mb-4 opacity-90 text-green-400 bg-transparent" style="width: fit-content;">
+ ███████╗██╗   ██╗██╗██╗         ███╗   ███╗██╗   ██╗████████╗███████╗██╗  ██╗
+ ██╔════╝██║   ██║██║██║         ████╗ ████║██║   ██║╚══██╔══╝██╔════╝╚██╗██╔╝
 █████╗  ██║   ██║██║██║         ██╔████╔██║██║   ██║   ██║   █████╗   ╚███╔╝
 ██╔══╝  ╚██╗ ██╔╝██║██║         ██║╚██╔╝██║██║   ██║   ██║   ██╔══╝   ██╔██╗
-███████╗ ╚████╔╝ ██║███████╗    ██║ ╚═╝ ██║╚██████╔╝   ██║   ███████╗██╔╝ ██╗
-╚══════╝  ╚═══╝  ╚═╝╚══════╝    ╚═╝     ╚═╝ ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+ ███████╗ ╚████╔╝ ██║███████╗    ██║ ╚═╝ ██║╚██████╔╝   ██║   ███████╗██╔╝ ██╗
+ ╚══════╝  ╚═══╝  ╚═╝╚══════╝    ╚═╝     ╚═╝ ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
           </pre>
 
           <div class="text-center">
-            
-            <p class="text-sm text-gray-400">Advanced Malware Analysis & Threat Intelligence</p>
+            <div class="flex justify-center items-center space-x-4">
+              <p class="text-sm text-gray-400">Advanced Malware Analysis & Threat Intelligence</p>
+              <span class="text-muted font-mono text-sm">{{ formattedTime }}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -26,26 +28,26 @@
     <nav class="bg-dark border-b border-gray-600 py-4">
       <div class="container mx-auto px-12">
         <div class="flex items-center justify-between">
-          <div class="flex items-center space-x-8">
-            <NuxtLink to="/" class="interactive text-green-400 hover:text-green-300 font-mono">
-              <span class="text-red-400">[</span>HOME<span class="text-red-400">]</span>
-            </NuxtLink>
-            <NuxtLink to="/contributor" class="interactive text-green-400 hover:text-green-300 font-mono">
-              <span class="text-red-400">[</span>CONTRIBUTOR<span class="text-red-400">]</span>
-            </NuxtLink>
-            <a :href="appConfig.links.github.main" target="_blank" class="interactive text-green-400 hover:text-green-300 font-mono">
-              <span class="text-red-400">[</span>⭐ Star on GitHub<span class="text-red-400">]</span>
-            </a>
-          </div>
-                      <div class="flex items-center space-x-4">
-              <span class="text-muted font-mono text-sm">{{ formattedTime }}</span>
+            <div class="flex-1"></div>
+            <div class="flex flex-1 items-center justify-center space-x-8">
+              <NuxtLink to="/" class="interactive text-green-400 hover:text-green-300 font-mono">
+                <span class="text-red-400">[</span>HOME<span class="text-red-400">]</span>
+              </NuxtLink>
+              <NuxtLink to="/contributor" class="interactive text-green-400 hover:text-green-300 font-mono">
+                <span class="text-red-400">[</span>CONTRIBUTOR<span class="text-red-400">]</span>
+              </NuxtLink>
+              <a :href="appConfig.links.github.main" target="_blank" class="interactive text-green-400 hover:text-green-300 font-mono">
+                <span class="text-red-400">[</span>⭐ Star on GitHub<span class="text-red-400">]</span>
+              </a>
+            </div>
+            <div class="flex flex-1 justify-end">
               <button
-                @click="toggleTheme"
-                class="interactive font-mono transition-colors"
-                :style="{ color: themeColor }"
-              >
-                <span class="text-red-400">[</span>{{ currentThemeName }}<span class="text-red-400">]</span>
-              </button>
+                  @click="toggleTheme"
+                  class="interactive font-mono transition-colors"
+                  :style="{ color: themeColor }"
+                >
+                  <span class="text-red-400">[</span>{{ currentThemeName }}<span class="text-red-400">]</span>
+                </button>
             </div>
         </div>
       </div>
