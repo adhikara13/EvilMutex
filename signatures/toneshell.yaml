@@ -1,0 +1,24 @@
+# Toneshell Backdoor Mutex Intelligence
+# Analyst source file for Toneshell-related mutex data
+
+malware_info:
+  family: "Toneshell"
+  aliases:
+    - "Toneshell Backdoor"
+  description: "Toneshell is a backdoor malware that has been observed in targeted attacks against organizations in the US, Philippines, Pakistan, and Taiwan. The malware is designed to provide remote access to compromised systems and is associated with the Hive0154 threat group."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "backdoor"
+primary_tags:
+  - "remote_access"
+  - "targeted_attack"
+  - "persistence"
+  - "hive0154"
+
+mutexes:
+  - name: 'Fool87012900137'
+    references:
+      - "https://www.ibm.com/think/x-force/hive0154-targeting-us-philippines-pakistan-taiwan"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

@@ -1,0 +1,61 @@
+# Claimloader Mutex Intelligence
+# Analyst source file for Claimloader-related mutex data
+
+malware_info:
+  family: "Claimloader"
+  aliases:
+    - "Claimloader"
+  description: "Claimloader is a loader malware associated with the Hive0154 threat group and Mustang Panda. It is designed to download and execute additional payloads on compromised systems and has been observed in targeted attacks against organizations in the US, Philippines, Pakistan, and Taiwan."
+  threat_actor: ["Hive0154", "Mustang Panda"]
+  first_seen: "2024"
+
+category: "loader"
+primary_tags:
+  - "payload_delivery"
+  - "targeted_attack"
+  - "multi_stage"
+  - "hive0154"
+  - "mustang_panda"
+
+mutexes:
+  - name: 'TB<yearmonthdate>'
+    references:
+      - "https://www.ibm.com/think/x-force/hive0154-targeting-us-philippines-pakistan-taiwan"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<yearmonthdate>' part is a placeholder for a date format."
+  - name: 'MTM<yearmonthdate>'
+    references:
+      - "https://www.ibm.com/think/x-force/hive0154-targeting-us-philippines-pakistan-taiwan"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<yearmonthdate>' part is a placeholder for a date format."
+  - name: 'CATM<yearmonthdate>'
+    references:
+      - "https://www.ibm.com/think/x-force/hive0154-targeting-us-philippines-pakistan-taiwan"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<yearmonthdate>' part is a placeholder for a date format. Example: CATM20252003"
+  - name: 'GameBoxABC'
+    references:
+      - "https://www.ibm.com/think/x-force/hive0154-targeting-us-philippines-pakistan-taiwan"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'GameGpu0428'
+    references:
+      - "https://www.ibm.com/think/x-force/hive0154-targeting-us-philippines-pakistan-taiwan"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'GameFind057'
+    references:
+      - "https://www.ibm.com/think/x-force/hive0154-targeting-us-philippines-pakistan-taiwan"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'GameBoxTV59'
+    references:
+      - "https://www.ibm.com/think/x-force/hive0154-targeting-us-philippines-pakistan-taiwan"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

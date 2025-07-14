@@ -1,0 +1,51 @@
+# Cybergate RAT Mutex Intelligence
+# Analyst source file for Cybergate-related mutex data
+
+malware_info:
+  family: "Cybergate"
+  aliases:
+    - "Cybergate RAT"
+    - "SpyNet RAT"
+  description: "Cybergate is a Remote Access Trojan (RAT) that provides attackers with extensive control over compromised systems. It is capable of keylogging, screen capture, file manipulation, and other surveillance activities. The malware uses multiple mutexes to coordinate different components and prevent multiple infections."
+  threat_actor: "Unknown"
+  first_seen: "2015"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "keylogger"
+  - "surveillance"
+  - "file_manipulation"
+  - "screen_capture"
+
+mutexes:
+  - name: '***MUTEX***_SAIR'
+    references:
+      - "https://blog.talosintelligence.com/threat-roundup-0414-0421/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'SPY_NET_RATMUTEX'
+    references:
+      - "https://blog.cyber5w.com/cybergate-malware-analysis"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: '_x_X_PASSWORDLIST_X_x_'
+    references:
+      - "https://blog.cyber5w.com/cybergate-malware-analysis"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: '_x_X_BLOCKMOUSE_X_x_'
+    references:
+      - "https://blog.cyber5w.com/cybergate-malware-analysis"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'xX_PROXY_SERVER_Xx'
+    references:
+      - "https://blog.cyber5w.com/cybergate-malware-analysis"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: '_x_X_UPDATE_X_x_'
+    references:
+      - "https://blog.cyber5w.com/cybergate-malware-analysis"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

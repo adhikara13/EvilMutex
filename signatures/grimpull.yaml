@@ -1,0 +1,24 @@
+# GRIMPULL Loader Mutex Intelligence
+# Analyst source file for GRIMPULL-related mutex data
+
+malware_info:
+  family: "GRIMPULL"
+  aliases:
+    - "GRIMPULL Loader"
+  description: "GRIMPULL is a loader malware that has been observed being distributed through fake AI websites. The malware is designed to download and execute additional payloads on compromised systems and is part of broader cybercriminal campaigns that weaponize fake AI platforms for malware distribution."
+  threat_actor: "UNC6032"
+  first_seen: "2024"
+
+category: "loader"
+primary_tags:
+  - "payload_delivery"
+  - "fake_ai_websites"
+  - "cybercriminal"
+  - "multi_stage"
+
+mutexes:
+  - name: 'aff391c406ebc4c3'
+    references:
+      - "https://cloud.google.com/blog/topics/threat-intelligence/cybercriminals-weaponize-fake-ai-websites"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

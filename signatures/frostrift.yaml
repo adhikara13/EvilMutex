@@ -1,0 +1,24 @@
+# FROSTRIFT Backdoor Mutex Intelligence
+# Analyst source file for FROSTRIFT-related mutex data
+
+malware_info:
+  family: "FROSTRIFT"
+  aliases:
+    - "FROSTRIFT Backdoor"
+  description: "FROSTRIFT is a backdoor malware that has been observed being distributed through fake AI websites. The malware is designed to provide remote access to compromised systems and is part of broader cybercriminal campaigns that weaponize fake AI platforms for malware distribution."
+  threat_actor: "UNC6032"
+  first_seen: "2024"
+
+category: "backdoor"
+primary_tags:
+  - "remote_access"
+  - "fake_ai_websites"
+  - "cybercriminal"
+  - "persistence"
+
+mutexes:
+  - name: '7d9196467986'
+    references:
+      - "https://cloud.google.com/blog/topics/threat-intelligence/cybercriminals-weaponize-fake-ai-websites"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

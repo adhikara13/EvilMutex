@@ -1,0 +1,31 @@
+# Latrodectus Loader Mutex Intelligence
+# Analyst source file for Latrodectus-related mutex data
+
+malware_info:
+  family: "Latrodectus"
+  aliases:
+    - "Latrodectus Loader"
+    - "BlackWidow"
+  description: "Latrodectus is a sophisticated loader malware, considered a successor to IcedID, used to deliver additional payloads and establish persistence on infected systems. It employs advanced evasion techniques, creates a mutex to prevent reinfection, and is distributed primarily via phishing campaigns."
+  threat_actor: "Unknown"
+  first_seen: "2023"
+
+category: "loader"
+primary_tags:
+  - "loader"
+  - "phishing"
+  - "evasion"
+  - "persistence"
+  - "dll"
+  - "msi"
+
+mutexes:
+  - name: 'runnung'
+    references:
+      - "https://www.elastic.co/security-labs/spring-cleaning-with-latrodectus"
+      - "https://www.proofpoint.com/us/blog/threat-insight/latrodectus-spider-bytes-ice"
+      - "https://www.vmray.com/latrodectus-a-year-in-the-making/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name 'runnung' is a consistent typo used by all observed Latrodectus samples to prevent multiple infections." 

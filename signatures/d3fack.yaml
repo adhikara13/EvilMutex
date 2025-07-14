@@ -1,0 +1,26 @@
+# D3F@ck Loader Mutex Intelligence
+# Analyst source file for D3F@ck-related mutex data
+
+malware_info:
+  family: "D3F@ck"
+  aliases:
+    - "D3F@ck Loader"
+    - "defack"
+    - "defuck"
+  description: "D3F@ck is a loader malware that has been observed in various cybercriminal campaigns. The malware is designed to download and execute additional payloads on compromised systems and is known for its evasion techniques and multi-stage attack capabilities."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "loader"
+primary_tags:
+  - "payload_delivery"
+  - "multi_stage"
+  - "evasion_techniques"
+  - "cybercriminal"
+
+mutexes:
+  - name: 'Little further'
+    references:
+      - "https://app.any.run/tasks/bc01e10a-8d7b-4641-bb42-22c5fe8ff579"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

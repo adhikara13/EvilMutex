@@ -1,0 +1,25 @@
+# MasonRAT Mutex Intelligence
+# Analyst source file for MasonRAT-related mutex data
+
+malware_info:
+  family: "MasonRAT"
+  aliases:
+    - "MasonRAT"
+  description: "MasonRAT is a Remote Access Trojan (RAT) that has been observed in targeted attacks against Windows Server environments. The malware is designed to provide remote access to compromised systems and has been detected using Elastic SIEM for threat hunting and analysis."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "windows_server"
+  - "c2"
+  - "threat_hunting"
+  - "elastic_siem"
+
+mutexes:
+  - name: 'rmldKj40qW2UTlEe'
+    references:
+      - "https://daniyyell.com/threat%20hunting/tools/malware%20analysis/Threat-Hunting-on-Windows-Server-2016-Uncovering-Hidden-C2-Malware-Using-Elastic-SIEM/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

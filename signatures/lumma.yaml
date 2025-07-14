@@ -1,0 +1,25 @@
+# Lumma Stealer Mutex Intelligence
+# Analyst source file for Lumma-related mutex data
+
+malware_info:
+  family: "Lumma"
+  aliases:
+    - "Lumma Stealer"
+  description: "Lumma Stealer is an information-stealing malware that has been observed being distributed through Telegram channels. The malware is designed to steal sensitive information from compromised systems including credentials, browser data, and other valuable information. It is part of a broader trend of malware proliferation through social media platforms."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "stealer"
+primary_tags:
+  - "information_stealer"
+  - "credential_theft"
+  - "browser_theft"
+  - "telegram_distribution"
+  - "social_media_malware"
+
+mutexes:
+  - name: 'sodfksdkfalksdasgpkprgasdgrrkgwhrterheegwsdfwef'
+    references:
+      - "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/lumma-stealer-on-the-rise-how-telegram-channels-are-fueling-malware-proliferation/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

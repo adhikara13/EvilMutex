@@ -1,0 +1,30 @@
+# VipersoftX Stealer Mutex Intelligence
+# Analyst source file for VipersoftX-related mutex data
+
+malware_info:
+  family: "VipersoftX"
+  aliases:
+    - "VipersoftX Stealer"
+  description: "VipersoftX is an information-stealing malware that has been active since 2025. The malware is designed to steal sensitive information from compromised systems including credentials, browser data, and other valuable information. It employs sophisticated techniques to evade detection and establish persistence on infected systems."
+  threat_actor: "Unknown"
+  first_seen: "2025"
+
+category: "stealer"
+primary_tags:
+  - "information_stealer"
+  - "credential_theft"
+  - "browser_theft"
+  - "evasion_techniques"
+  - "persistence"
+
+mutexes:
+  - name: 'acb2f45f62c34c94bbd6e86734eb01a1'
+    references:
+      - "https://labs.k7computing.com/index.php/in-depth-analysis-of-a-2025-vipersoftx-variant/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: '8cda13f8-a407-4a48-8284-411709e090'
+    references:
+      - "https://labs.k7computing.com/index.php/in-depth-analysis-of-a-2025-vipersoftx-variant/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

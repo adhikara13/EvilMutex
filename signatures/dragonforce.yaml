@@ -1,0 +1,23 @@
+# DragonForce Ransomware Mutex Intelligence
+# Analyst source file for DragonForce-related mutex data
+
+malware_info:
+  family: "DragonForce"
+  aliases:
+    - "DragonForce Ransomware"
+  description: "DragonForce is a ransomware family that encrypts files on victim systems and appends a unique extension. It is known for its double extortion tactics and for targeting organizations globally. The malware creates a mutex to prevent multiple infections on the same system."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "double_extortion"
+  - "windows"
+
+mutexes:
+  - name: 'dragonforce_encrypted_system'
+    references:
+      - "https://www.group-ib.com/blog/dragonforce-ransomware/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 
