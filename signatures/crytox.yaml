@@ -1,0 +1,35 @@
+# Crytox Ransomware Mutex Intelligence
+# Analyst source file for Crytox-related mutex data
+
+malware_info:
+  family: "Crytox"
+  aliases:
+    - "Crytox Ransomware"
+  description: "Crytox is a ransomware family that has been observed in various cybercriminal campaigns. The malware is designed to encrypt files on victim systems and demand payment for decryption. It employs sophisticated encryption techniques and has been analyzed for its chaotic encryption patterns and multi-stage attack capabilities."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "extortion"
+  - "cybercriminal"
+  - "chaotic_encryption"
+  - "multi_stage"
+
+mutexes:
+  - name: 'itkd<4_characters_generated_based_on_targetPID>'
+    references:
+      - "https://labs.k7computing.com/index.php/encrypted-chaos-analysis-of-crytox-ransomware/"
+      - "https://www.trendmicro.com/vinfo/jp/threat-encyclopedia/malware/ransom.win64.crytox.a"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<4_characters_generated_based_on_targetPID>' part is a placeholder for 4 characters generated based on the target process ID."
+  - name: 'CSWS<4_characters_generated_based_on_targetPID>'
+    references:
+      - "https://www.zscaler.com/blogs/security-research/technical-analysis-crytox-ransomware"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<4_characters_generated_based_on_targetPID>' part is a placeholder for 4 characters generated based on the target process ID." 

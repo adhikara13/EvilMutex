@@ -1,0 +1,27 @@
+# Allcome Clipper Mutex Intelligence
+# Analyst source file for Allcome-related mutex data
+
+malware_info:
+  family: "Allcome"
+  aliases:
+    - "Allcome Clipper"
+    - "Allcome Clipbanker"
+  description: "Allcome is a cryptocurrency clipper malware that has emerged as a newcomer in malware underground forums. The malware is designed to intercept and modify cryptocurrency addresses in the clipboard, redirecting funds to attacker-controlled wallets. It targets cryptocurrency transactions and employs sophisticated techniques to evade detection."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "clipper"
+primary_tags:
+  - "cryptocurrency"
+  - "clipboard_hijacking"
+  - "address_manipulation"
+  - "wallet_targeting"
+  - "crypto_theft"
+  - "underground_forums"
+
+mutexes:
+  - name: '08841d-18c7-4e2d-f7e29d'
+    references:
+      - "https://www.gdatasoftware.com/blog/2022/02/37239-allcome-clipbanker-is-a-newcomer-in-malware-underground-forums"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

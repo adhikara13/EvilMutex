@@ -1,0 +1,26 @@
+# Netdooka RAT Mutex Intelligence
+# Analyst source file for Netdooka-related mutex data
+
+malware_info:
+  family: "Netdooka"
+  aliases:
+    - "Netdooka RAT"
+  description: "Netdooka is a Remote Access Trojan (RAT) framework that has been observed being distributed via PrivateLoader PPI (Pay-Per-Install) services. The malware is designed to provide remote access to compromised systems and has been analyzed for its sophisticated evasion techniques and multi-stage attack capabilities."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "framework"
+  - "privateloader"
+  - "ppi"
+  - "multi_stage"
+  - "evasion_techniques"
+
+mutexes:
+  - name: '3f0d73e2-4b8e-4539-90fd-812330bb39c8'
+    references:
+      - "https://www.trendmicro.com/en_se/research/22/e/netdooka-framework-distributed-via-privateloader-ppi.html"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

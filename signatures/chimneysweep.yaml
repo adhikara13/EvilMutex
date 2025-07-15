@@ -1,0 +1,55 @@
+# CHIMNEYSWEEP Backdoor Mutex Intelligence
+# Analyst source file for CHIMNEYSWEEP-related mutex data
+
+malware_info:
+  family: "CHIMNEYSWEEP"
+  aliases:
+    - "CHIMNEYSWEEP Backdoor"
+  description: "CHIMNEYSWEEP is a backdoor malware that has been associated with likely Iranian threat actors conducting politically motivated disruptive activities. The malware is designed to provide remote access to compromised systems and has been observed using multiple mutexes to coordinate different components and prevent multiple infections on the same system."
+  threat_actor: ["HomeLand Justice","HEXANE","Red Sandstorm","Banished Kitten"]
+  first_seen: "2024"
+
+category: "backdoor"
+primary_tags:
+  - "remote_access"
+  - "iranian_threat_actor"
+  - "politically_motivated"
+  - "disruptive_activity"
+  - "persistence"
+
+mutexes:
+  - name: 'rerunadmn'
+    references:
+      - "https://cloud.google.com/blog/topics/threat-intelligence/likely-iranian-threat-actor-conducts-politically-motivated-disruptive-activity-against/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'subttoadmn'
+    references:
+      - "https://cloud.google.com/blog/topics/threat-intelligence/likely-iranian-threat-actor-conducts-politically-motivated-disruptive-activity-against/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'runupdate'
+    references:
+      - "https://cloud.google.com/blog/topics/threat-intelligence/likely-iranian-threat-actor-conducts-politically-motivated-disruptive-activity-against/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'runupdateok'
+    references:
+      - "https://cloud.google.com/blog/topics/threat-intelligence/likely-iranian-threat-actor-conducts-politically-motivated-disruptive-activity-against/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'baserun'
+    references:
+      - "https://cloud.google.com/blog/topics/threat-intelligence/likely-iranian-threat-actor-conducts-politically-motivated-disruptive-activity-against/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'heyirunadmn'
+    references:
+      - "https://cloud.google.com/blog/topics/threat-intelligence/likely-iranian-threat-actor-conducts-politically-motivated-disruptive-activity-against/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'corerun'
+    references:
+      - "https://cloud.google.com/blog/topics/threat-intelligence/likely-iranian-threat-actor-conducts-politically-motivated-disruptive-activity-against/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

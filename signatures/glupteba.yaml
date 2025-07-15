@@ -1,0 +1,37 @@
+# Glupteba Backdoor Mutex Intelligence
+# Analyst source file for Glupteba-related mutex data
+
+malware_info:
+  family: "Glupteba"
+  aliases:
+    - "Glupteba Backdoor"
+  description: "Glupteba is a sophisticated backdoor malware that has been observed in various cybercriminal campaigns. The malware is designed to provide remote access to compromised systems and has been analyzed for its advanced evasion techniques and multi-stage attack capabilities. It employs multiple mutexes to coordinate different components and prevent multiple infections."
+  threat_actor: "Unknown"
+  first_seen: "2019"
+
+category: "backdoor"
+primary_tags:
+  - "remote_access"
+  - "multi_stage"
+  - "evasion_techniques"
+  - "cybercriminal"
+  - "persistence"
+
+mutexes:
+  - name: 'Global\h48yorbq6rm87zot'
+    references:
+      - "https://rt-solar.ru/solar-4rays/blog/3832/"
+      - "https://github.com/sophoslabs/IoCs/blob/master/Trojan-Glupteba"
+      - "https://www.trendmicro.com/vinfo/ae/threat-encyclopedia/malware/trojan.win32.glupteba.ta"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'Global\y7ze3fznx1u0yc2z'
+    references:
+      - "https://www.trendmicro.com/vinfo/ae/threat-encyclopedia/malware/trojan.win32.glupteba.ta"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'Global\Mp6c3Ygukx29GbDk'
+    references:
+      - "https://www.trendmicro.com/vinfo/ae/threat-encyclopedia/malware/trojan.win32.glupteba.ta"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

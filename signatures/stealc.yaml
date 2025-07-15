@@ -1,0 +1,30 @@
+# Stealc Mutex Intelligence
+# Analyst source file for Stealc-related mutex data
+
+malware_info:
+  family: "Stealc"
+  aliases:
+    - "Stealerc"
+  description: "Stealc is an information-stealing malware that has been observed in various cybercriminal campaigns. The malware is designed to steal sensitive information from compromised systems including credentials, browser data, and other valuable information. It employs sophisticated techniques to evade detection and establish persistence."
+  threat_actor: "Unknown"
+  first_seen: "2023"
+
+category: "stealer"
+primary_tags:
+  - "information_stealer"
+  - "credential_theft"
+  - "browser_theft"
+  - "cybercriminal"
+  - "evasion_techniques"
+
+mutexes:
+  - name: 'GentleSpade'
+    references:
+      - "https://app.any.run/tasks/9777d1a9-134f-453a-a74b-18c6ea1bb030/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: '5rjtejk5rytrr'
+    references:
+      - "https://app.threat.zone/submission/51bd0182-a70d-40ca-b081-c4902a37b88b/dynamic-scan-report/behaviour/mutex"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

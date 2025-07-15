@@ -1,0 +1,25 @@
+# MagnetLoader Mutex Intelligence
+# Analyst source file for MagnetLoader-related mutex data
+
+malware_info:
+  family: "MagnetLoader"
+  aliases:
+    - "MagnetLoader"
+  description: "MagnetLoader is a loader malware that has been observed in various cybercriminal campaigns. The malware is designed to download and execute additional payloads on compromised systems and has been analyzed in the context of Cobalt Strike memory analysis. It employs sophisticated techniques to evade detection and establish persistence."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "loader"
+primary_tags:
+  - "payload_delivery"
+  - "multi_stage"
+  - "cobalt_strike"
+  - "memory_analysis"
+  - "cybercriminal"
+
+mutexes:
+  - name: 'SM0:220:304:WilStaging_02_p1h'
+    references:
+      - "https://unit42.paloaltonetworks.com/cobalt-strike-memory-analysis/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

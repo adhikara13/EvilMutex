@@ -1,0 +1,32 @@
+# Sharp Dragon Loader Mutex Intelligence
+# Analyst source file for Sharp Dragon-related mutex data
+
+malware_info:
+  family: "Sharp Dragon"
+  aliases:
+    - "Sharp Dragon Loader"
+    - "SharpDragon"
+    - "FirePeony"
+    - "SharpPanda"
+  description: "Sharp Dragon is a loader malware used by the FirePeony (also known as SharpPanda) threat group. The malware is designed to download and execute additional payloads on compromised systems and has been observed expanding its operations towards Africa and the Caribbean. It employs sophisticated techniques to evade detection and establish persistence."
+  threat_actor: ["FirePeony", "SharpPanda"]
+  first_seen: "2024"
+
+category: "loader"
+primary_tags:
+  - "payload_delivery"
+  - "multi_stage"
+  - "targeted_attack"
+  - "africa"
+  - "caribbean"
+  - "firepeony"
+  - "sharppanda"
+
+mutexes:
+  - name: 'mt_app_http_get_zed2vsp'
+    references:
+      - "https://x.com/t3ft3lb/status/1740661367299010957"
+      - "https://research.checkpoint.com/2024/sharp-dragon-expands-towards-africa-and-the-caribbean/"
+      - "https://notes.netbytesec.com/2024/05/inside-sharppandas-malware-targeting.html"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

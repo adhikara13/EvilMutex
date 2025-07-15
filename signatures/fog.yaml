@@ -1,0 +1,30 @@
+# Fog Ransomware Mutex Intelligence
+# Analyst source file for Fog-related mutex data
+
+malware_info:
+  family: "Fog"
+  aliases:
+    - "Fog Ransomware"
+  description: "Fog is a ransomware family that has been observed in various cybercriminal campaigns. The malware is designed to encrypt files on victim systems and demand payment for decryption. It employs sophisticated encryption techniques and has been analyzed by multiple security researchers for its evasion capabilities and attack patterns."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "extortion"
+  - "cybercriminal"
+  - "evasion_techniques"
+
+mutexes:
+  - name: '6jSf6QFH0VGR5XL4RGYarc5YVpB4W1H3'
+    references:
+      - "https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/ransom.win32.fog.thdodbe"
+      - "https://app.threat.zone/submission/efe469fe-d299-42d0-baf0-c01a2f5af95d/dynamic-scan-report/behaviour/mutex"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'BgGnsEdRrztEhEfg0vF8ZaFPYtoyg4lDQ'
+    references:
+      - "https://www.ionsec.io/resources/clearing-the-mist-unveiling-fog-ransomware"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

@@ -1,0 +1,27 @@
+# ROADSWEEP Ransomware Mutex Intelligence
+# Analyst source file for ROADSWEEP-related mutex data
+
+malware_info:
+  family: "ROADSWEEP"
+  aliases:
+    - "ROADSWEEP Ransomware"
+  description: "ROADSWEEP is a ransomware family that has been associated with likely Iranian threat actors conducting politically motivated disruptive activities. The malware is designed to encrypt files on victim systems and demand payment for decryption. It has been observed using stolen certificates and employing sophisticated techniques to evade detection."
+  threat_actor: "HomeLand Justice"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "extortion"
+  - "iranian_threat_actor"
+  - "politically_motivated"
+  - "stolen_certificates"
+  - "disruptive_activity"
+
+mutexes:
+  - name: 'abcdefghijklmnoklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890'
+    references:
+      - "https://cloud.google.com/blog/topics/threat-intelligence/likely-iranian-threat-actor-conducts-politically-motivated-disruptive-activity-against/"
+      - "https://securelist.com/ransomware-and-wiper-signed-with-stolen-certificates/108350/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

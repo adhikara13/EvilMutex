@@ -1,0 +1,26 @@
+# Mamona Ransomware Mutex Intelligence
+# Analyst source file for Mamona-related mutex data
+
+malware_info:
+  family: "Mamona"
+  aliases:
+    - "Mamona Ransomware"
+  description: "Mamona is a ransomware-as-a-service (RaaS) operation that has been observed in various cybercriminal campaigns. The malware is designed to encrypt files on victim systems and demand payment for decryption. It is associated with the Global Group and employs sophisticated encryption techniques to target organizations globally."
+  threat_actor: "Mamona Group"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "raas"
+  - "extortion"
+  - "global_group"
+  - "cybercriminal"
+
+mutexes:
+  - name: 'Global\Fxo16jmdgujs437'
+    references:
+      - "https://app.threat.zone/submission/2236ec1f-eaaa-4b19-b864-4059dac59efa/dynamic-scan-report/behaviour/mutex"
+      - "https://blog.eclecticiq.com/global-group-emerging-ransomware-as-a-service"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

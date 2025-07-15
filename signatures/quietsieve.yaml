@@ -1,0 +1,27 @@
+# QuietSieve Stealer Mutex Intelligence
+# Analyst source file for QuietSieve-related mutex data
+
+malware_info:
+  family: "QuietSieve"
+  aliases:
+    - "QuietSieve Stealer"
+  description: "QuietSieve is an information-stealing malware used by the Gamaredon threat group (also known as Primitive Bear or Trident Ursa). The malware is designed to steal sensitive information from compromised systems including credentials, browser data, and other valuable information. It has been observed targeting Ukraine and employs sophisticated techniques to evade detection."
+  threat_actor: ["Gamaredon", "Primitive Bear", "Trident Ursa"]
+  first_seen: "2021"
+
+category: "stealer"
+primary_tags:
+  - "information_stealer"
+  - "credential_theft"
+  - "browser_theft"
+  - "gamaredon"
+  - "ukraine_targeting"
+  - "apt"
+
+mutexes:
+  - name: 'Global\lCHBaUZcohRgQcOfdIFaf'
+    references:
+      - "https://unit42.paloaltonetworks.com/gamaredon-primitive-bear-ukraine-update-2021/"
+      - "https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/trojanspy.msil.quietsieve.lsa"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

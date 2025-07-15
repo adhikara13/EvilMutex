@@ -1,0 +1,32 @@
+# Tonto Team Loader Mutex Intelligence
+# Analyst source file for Tonto Team-related mutex data
+
+malware_info:
+  family: "Tonto Team"
+  aliases:
+    - "TontoTeam"
+  description: "Tonto Team is a sophisticated loader malware used by a threat group known by multiple aliases including HeartBeat, Karma Panda, CactusPete, Bronze Huntley, and Earth Akhlut. The malware is designed to download and execute additional payloads on compromised systems and has been observed in various targeted attack campaigns."
+  threat_actor: ["Tonto Team", "HeartBeat", "Karma Panda", "CactusPete", "Bronze Huntley", "Earth Akhlut"]
+  first_seen: "2018"
+
+category: "loader"
+primary_tags:
+  - "payload_delivery"
+  - "multi_stage"
+  - "targeted_attack"
+  - "apt"
+  - "persistence"
+
+mutexes:
+  - name: '{A931568B-94AF-449D-B7F6-6585EF9E9839}'
+    references:
+      - "https://www.f6.ru/blog/tonto-team/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'QuitMutex<pid>'
+    references:
+      - "https://www.group-ib.com/blog/tonto-team/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<pid>' part is a placeholder for the PID of the currently running process (downloader)." 

@@ -1,0 +1,29 @@
+# Matrix Ransomware Mutex Intelligence
+# Analyst source file for Matrix-related mutex data
+
+malware_info:
+  family: "Matrix"
+  aliases:
+    - "Matrix Ransomware"
+  description: "Matrix is a ransomware family that has been observed in various cybercriminal campaigns. The malware is designed to encrypt files on victim systems and demand payment for decryption. It employs sophisticated encryption techniques and has been analyzed for its attack patterns and evasion capabilities."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "extortion"
+  - "cybercriminal"
+  - "evasion_techniques"
+
+mutexes:
+  - name: 'OurMainMutex999'
+    references:
+      - "https://github.com/sophoslabs/IoCs/blob/4b06149929305d1431a425d2b271a0e04f855f4a/Ransomware-Matrix"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'OurMainMutex999net'
+    references:
+      - "https://github.com/sophoslabs/IoCs/blob/4b06149929305d1431a425d2b271a0e04f855f4a/Ransomware-Matrix"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

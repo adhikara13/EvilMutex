@@ -1,0 +1,26 @@
+# Suncrypt Ransomware Mutex Intelligence
+# Analyst source file for Suncrypt-related mutex data
+
+malware_info:
+  family: "Suncrypt"
+  aliases:
+    - "Suncrypt Ransomware"
+  description: "Suncrypt is a ransomware family that has been observed in various cybercriminal campaigns. The malware is designed to encrypt files on victim systems and demand payment for decryption. It has been analyzed for its new features and sophisticated encryption techniques, employing advanced evasion capabilities."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "extortion"
+  - "cybercriminal"
+  - "new_features"
+  - "evasion_techniques"
+
+mutexes:
+  - name: '0c91c96fd7124f21a0193cf842e3495f6daf84a394f44013e92a87ad9d2ef4a0ceec9dd2e2eca22e'
+    references:
+      - "https://www.pico-t.co.jp/product/minerva-tpp/suncrypt%E3%83%A9%E3%83%B3%E3%82%B5%E3%83%A0%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AF%E6%96%B0%E3%81%9F%E3%81%AA%E7%89%B9%E6%80%A7%E6%A9%9F%E8%83%BD%E3%82%92%E8%A3%85%E5%82%99/"
+      - "https://security.packt.com/suncrypt-ransomware/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

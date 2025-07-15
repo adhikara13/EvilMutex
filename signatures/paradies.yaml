@@ -1,0 +1,25 @@
+# Paradies Clipper Mutex Intelligence
+# Analyst source file for Paradies Clipper-related mutex data
+
+malware_info:
+  family: "Paradies Clipper"
+  aliases:
+    - "Paradies Clipper"
+  description: "Paradies Clipper is a cryptocurrency clipper malware that targets cryptocurrency wallets and transactions. The malware is designed to intercept and modify cryptocurrency addresses in the clipboard, redirecting funds to attacker-controlled wallets. It employs sophisticated techniques to evade detection and target specific cryptocurrency operations."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "clipper"
+primary_tags:
+  - "cryptocurrency"
+  - "clipboard_hijacking"
+  - "address_manipulation"
+  - "wallet_targeting"
+  - "crypto_theft"
+
+mutexes:
+  - name: '7CmLQX'
+    references:
+      - "https://perception-point.io/blog/behind-the-attack-paradies-clipper-malware/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

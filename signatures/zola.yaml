@@ -1,0 +1,26 @@
+# Zola Ransomware Mutex Intelligence
+# Analyst source file for Zola-related mutex data
+
+malware_info:
+  family: "Zola"
+  aliases:
+    - "Zola Ransomware"
+  description: "Zola is a ransomware variant that belongs to the Proton family of malware. The ransomware is designed to encrypt files on victim systems and demand payment for decryption. It is known for its sophisticated encryption techniques and has been observed in various cybercriminal campaigns targeting organizations globally."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "proton_family"
+  - "extortion"
+  - "cybercriminal"
+
+mutexes:
+  - name: '4B991369-7C7C-47AA-A81E-EF6ED1F5E24C'
+    references:
+      - "https://www.acronis.com/en-gb/tru/posts/zola-ransomware-the-many-faces-of-the-proton-family/"
+      - "https://www.loginsoft.com/post/zola-ransomware"
+      - "https://cyberinsider.com/zola-ransomware-springs-to-action-as-latest-proton-variant/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

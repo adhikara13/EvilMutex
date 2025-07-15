@@ -1,0 +1,49 @@
+# GuptiMiner Mutex Intelligence
+# Analyst source file for GuptiMiner-related mutex data
+
+malware_info:
+  family: "GuptiMiner"
+  aliases:
+    - "GuptiMiner"
+  description: "GuptiMiner is a sophisticated malware that hijacks antivirus updates to distribute backdoors and cryptocurrency miners. The malware employs advanced techniques to evade detection and has been observed using multiple mutexes to coordinate different components and prevent multiple infections on the same system."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "miner"
+primary_tags:
+  - "cryptocurrency_mining"
+  - "backdoor"
+  - "antivirus_hijacking"
+  - "update_abuse"
+  - "evasion_techniques"
+
+mutexes:
+  - name: 'Mutex_ONLY_ME_V<version>'
+    references:
+      - "https://decoded.avast.io/janrubin/guptiminer-hijacking-antivirus-updates-for-distributing-backdoors-and-casual-mining/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<version>' part can be 1, 2, or three."
+  - name: 'SLDV<2-3 numeric>'
+    references:
+      - "https://decoded.avast.io/janrubin/guptiminer-hijacking-antivirus-updates-for-distributing-backdoors-and-casual-mining/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<2-3 numeric>' part is a placeholder for 2-3 numeric characters."
+  - name: 'GlobalMIVOD_V4'
+    references:
+      - "https://decoded.avast.io/janrubin/guptiminer-hijacking-antivirus-updates-for-distributing-backdoors-and-casual-mining/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'MIVOD_6'
+    references:
+      - "https://decoded.avast.io/janrubin/guptiminer-hijacking-antivirus-updates-for-distributing-backdoors-and-casual-mining/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: 'MTX_EX01'
+    references:
+      - "https://decoded.avast.io/janrubin/guptiminer-hijacking-antivirus-updates-for-distributing-backdoors-and-casual-mining/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

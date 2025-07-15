@@ -1,0 +1,31 @@
+# SpiceRAT Mutex Intelligence
+# Analyst source file for SpiceRAT-related mutex data
+
+malware_info:
+  family: "SpiceRAT"
+  aliases:
+    - "SpiceRAT"
+  description: "SpiceRAT is a Remote Access Trojan (RAT) that has been observed in various cybercriminal campaigns. The malware is designed to provide remote access to compromised systems and is known for its sophisticated evasion techniques and multi-stage attack capabilities. It has been associated with the SneakyChef threat group."
+  threat_actor: "Unknown"
+  first_seen: "2023"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "multi_stage"
+  - "evasion_techniques"
+  - "cybercriminal"
+  - "sneakychef"
+
+mutexes:
+  - name: '{00866F68-6C46-4ABD-A8D6-2246FE482F99}'
+    references:
+      - "https://medium.com/@MateoPappa/letsdefend-spicerat-medium-881a474c0982"
+      - "https://blog.talosintelligence.com/new-spicerat-sneakychef/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: '{00861111-3333-4ABD-GGGG-2246FE482F99}'
+    references:
+      - "https://blog.talosintelligence.com/new-spicerat-sneakychef/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

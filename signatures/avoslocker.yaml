@@ -19,4 +19,9 @@ mutexes:
       - "https://www.threatdown.com/blog/avoslocker-enters-the-ransomware-scene-asks-for-partners/"
       - "https://hatching.io/blog/tt-2021-08-12/"
     date_added: "2025-07-14"
+    analyst: "@adhikara13"
+  - name: 'Cheic0WaZie6zeiy'
+    references:
+      - "https://www.cyfirma.com/research/avoslocker-ransomware-report/"
+    date_added: "2024-07-16"
     analyst: "@adhikara13" 

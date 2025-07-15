@@ -1,0 +1,25 @@
+# AstraLocker Ransomware Mutex Intelligence
+# Analyst source file for AstraLocker-related mutex data
+
+malware_info:
+  family: "AstraLocker"
+  aliases:
+    - "AstraLocker Ransomware"
+  description: "AstraLocker is a ransomware family that has been observed pushing ransomware directly from Office documents. The malware employs sophisticated techniques to evade detection and is known for its 'smash and grab' approach to file encryption. It targets organizations globally and demands payment for decryption."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "office_documents"
+  - "extortion"
+  - "smash_and_grab"
+  - "cybercriminal"
+
+mutexes:
+  - name: 'EncryptedWithAstraLocker'
+    references:
+      - "https://www.reversinglabs.com/blog/smash-and-grab-astralocker-2-pushes-ransomware-direct-from-office-docs"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

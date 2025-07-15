@@ -1,0 +1,31 @@
+# DJVU (Stop) Ransomware Mutex Intelligence
+# Analyst source file for DJVU-related mutex data
+
+malware_info:
+  family: "DJVU"
+  aliases:
+    - "DJVU Ransomware"
+    - "Stop Ransomware"
+  description: "DJVU (also known as Stop) is a ransomware family that has been observed in various cybercriminal campaigns. The malware is designed to encrypt files on victim systems and demand payment for decryption. It has been noted for its familiar characteristics and sophisticated encryption techniques."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "extortion"
+  - "cybercriminal"
+  - "stop_family"
+
+mutexes:
+  - name: '{FBB4BCC6-05C7-4ADD-B67B-A98A697323C1}'
+    references:
+      - "https://blogs.blackberry.com/en/2022/09/djvu-the-ransomware-that-seems-strangely-familiar"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: '{1D6FC66E-D1F3-422C-8A53-C0BBCF3D900D}'
+    references:
+      - "https://blogs.blackberry.com/en/2022/09/djvu-the-ransomware-that-seems-strangely-familiar"
+      - "https://tria.ge/230108-wwfvvaec82/behavioral2/analog?proc=100&main_event=Mutex&mutant=%7B1D6FC66E-D1F3-422C-8A53-C0BBCF3D900D%7D"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

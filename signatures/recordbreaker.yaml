@@ -1,0 +1,28 @@
+# RecordBreaker (Raccoon Stealer v2) Mutex Intelligence
+# Analyst source file for RecordBreaker-related mutex data
+
+malware_info:
+  family: "RecordBreaker"
+  aliases:
+    - "Raccoonv2"
+    - "Raccoon Stealer v2"
+    - "RaccoonStealerv2"
+  description: "RecordBreaker is the second version of Raccoon Stealer, an information-stealing malware that has been observed in various cybercriminal campaigns. The malware is designed to steal sensitive information from compromised systems including credentials, browser data, and other valuable information. It employs sophisticated techniques to evade detection and establish persistence."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "stealer"
+primary_tags:
+  - "information_stealer"
+  - "credential_theft"
+  - "browser_theft"
+  - "raccoon_stealer"
+  - "v2"
+  - "cybercriminal"
+
+mutexes:
+  - name: 'iqroq5112542785672901323'
+    references:
+      - "https://any.run/cybersecurity-blog/raccoon-stealer-v2-malware-analysis/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

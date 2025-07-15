@@ -1,0 +1,30 @@
+# BazarLoader Mutex Intelligence
+# Analyst source file for BazarLoader-related mutex data
+
+malware_info:
+  family: "BazarLoader"
+  aliases:
+    - "BazarLoader"
+  description: "BazarLoader is a sophisticated loader malware that has been observed in various cybercriminal campaigns. The malware is designed to download and execute additional payloads on compromised systems and has been analyzed for its reverse engineering techniques and multi-stage attack capabilities."
+  threat_actor: "Unknown"
+  first_seen: "2020"
+
+category: "loader"
+primary_tags:
+  - "payload_delivery"
+  - "multi_stage"
+  - "reverse_engineering"
+  - "cybercriminal"
+  - "evasion_techniques"
+
+mutexes:
+  - name: '{b837ef4f-10ee-4821-ac76-2331eb32a23f}'
+    references:
+      - "https://www.0ffset.net/reverse-engineering/analysing-the-main-bazarloader/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: '{0caa6ebb-cf78-4b01-9b0b-51032c9120ce}'
+    references:
+      - "https://www.0ffset.net/reverse-engineering/analysing-the-main-bazarloader/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

@@ -1,0 +1,27 @@
+# Moisha Ransomware Mutex Intelligence
+# Analyst source file for Moisha-related mutex data
+
+malware_info:
+  family: "Moisha"
+  aliases:
+    - "Moisha Ransomware"
+  description: "Moisha is a ransomware family that has been observed in various cybercriminal campaigns. The malware is designed to encrypt files on victim systems and demand payment for decryption. It has been analyzed for its attack patterns and sophisticated encryption techniques, employing advanced evasion capabilities."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "extortion"
+  - "cybercriminal"
+  - "evasion_techniques"
+
+mutexes:
+  - name: 'Global\__w3616de3-6u4b-32fc-97b1-de928faadf50'
+    references:
+      - "https://cyble.com/blog/moisha-ransomware-in-action"
+      - "https://app.any.run/tasks/11f66692-6cf7-4672-b6ba-a0095ac4dd3c"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+    notes:
+      - "No specific mutex identified in the provided references. This entry serves as a placeholder for future mutex discoveries." 
