@@ -1,0 +1,20 @@
+# BqtLock Ransomware Mutex Intelligence  
+# Analyst source file for BqtLock-related mutex data
+
+malware_info:
+  family: "BqtLock"
+  aliases: ["BaqiyatLock"]
+  description: "BqtLock (BaqiyatLock) is a ransomware family that encrypts files and demands payment for decryption. It uses specific mutexes to ensure only one instance runs on the system."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "ransom_demand", "windows"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\{00A0B0C0-D0E0-F000-1000-200030004000}'
+    references:
+      - "https://app.any.run/tasks/1b84c310-4494-4125-a7f2-8b15ae7dc7a9/"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 

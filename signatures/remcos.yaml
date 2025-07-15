@@ -50,4 +50,9 @@ mutexes:
     date_added: "2024-08-01"
     analyst: "@adhikara13"
     notes:
-      - "The mutex name is dynamic. The '<uniqueid>' part is a placeholder for a unique identifier generated on the compromised machine." 
+      - "The mutex name is dynamic. The '<uniqueid>' part is a placeholder for a unique identifier generated on the compromised machine."
+  - name: 'Mutex_RemWatchdog'
+    references:
+      - "https://www.trendmicro.com/vinfo/de/threat-encyclopedia/malware/backdoor.msil.remcos.jcasnr"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 

@@ -19,24 +19,24 @@ primary_tags:
   - "evasion_techniques"
 
 mutexes:
-  - name: 'Global\sysmon-windows-<CRC32 of an MD5 hash of the victim\'s username>'
+  - name: "Global\\sysmon-windows-<CRC32 of an MD5 hash of the victim's username>"
     references:
       - "https://decoded.avast.io/luigicamastra/operation-dragon-castling-apt-group-targeting-betting-companies/"
     date_added: "2024-07-16"
     analyst: "@adhikara13"
     notes:
-      - "The mutex name is dynamic. The '<CRC32 of an MD5 hash of the victim\'s username>' part is a placeholder for a CRC32 hash of an MD5 hash of the victim's username."
-  - name: 'Global\IntelGameSpeed-<CRC32 of an MD5 hash of the victim\'s username>'
+      - "The mutex name is dynamic. The '<CRC32 of an MD5 hash of the victim's username>' part is a placeholder for a CRC32 hash of an MD5 hash of the victim's username."
+  - name: "Global\\IntelGameSpeed-<CRC32 of an MD5 hash of the victim's username>"
     references:
       - "https://decoded.avast.io/luigicamastra/operation-dragon-castling-apt-group-targeting-betting-companies/"
     date_added: "2024-07-16"
     analyst: "@adhikara13"
     notes:
-      - "The mutex name is dynamic. The '<CRC32 of an MD5 hash of the victim\'s username>' part is a placeholder for a CRC32 hash of an MD5 hash of the victim's username."
-  - name: 'Global\TencentSecuriryAgent-P01-<victim\'s username>'
+      - "The mutex name is dynamic. The '<CRC32 of an MD5 hash of the victim's username>' part is a placeholder for a CRC32 hash of an MD5 hash of the victim's username."
+  - name: "Global\\TencentSecuriryAgent-P01-<victim's username>"
     references:
       - "https://decoded.avast.io/luigicamastra/operation-dragon-castling-apt-group-targeting-betting-companies/"
     date_added: "2024-07-16"
     analyst: "@adhikara13"
     notes:
-      - "The mutex name is dynamic. The '<victim\'s username>' part is a placeholder for the actual victim's username." 
+      - "The mutex name is dynamic. The '<victim's username>' part is a placeholder for the actual victim's username." 

@@ -1,0 +1,20 @@
+# Santarat Malware Mutex Intelligence  
+# Analyst source file for Santarat-related mutex data
+
+malware_info:
+  family: "Santarat"
+  aliases: []
+  description: "Santarat is a fork of AsyncRat, a remote access trojan (RAT) that provides attackers with remote control capabilities over infected systems. It uses specific mutexes to ensure single instance execution and coordinate its activities on the infected system."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "malware"
+primary_tags: ["malware", "single_instance", "windows"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "setox-7yssdee"
+    references:
+      - "https://tria.ge/220809-t38hbsefa3/behavioral2/analog?main_event=Mutex&mutant=setox-7yssdee"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13"

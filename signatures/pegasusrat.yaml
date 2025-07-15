@@ -1,0 +1,20 @@
+# PegasusRAT Malware Mutex Intelligence  
+# Analyst source file for PegasusRAT-related mutex data
+
+malware_info:
+  family: "PegasusRAT"
+  aliases: []
+  description: "PegasusRAT is a remote access trojan (RAT) that provides attackers with remote control capabilities over infected systems. It uses specific mutexes to ensure single instance execution and coordinate its activities."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "rat"
+primary_tags: ["remote_access", "backdoor", "windows", "rat"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "PEGASUS"
+    references:
+      - "https://github.com/GuinnessShep/pegasusrat/blob/dbfdde88b23bca59d1d490149359c42bf019013b/Pegasus%20Hvnc%20V2/Pantheon%20V2/Program.cs#L29"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 

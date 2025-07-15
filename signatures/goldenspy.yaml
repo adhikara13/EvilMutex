@@ -1,0 +1,20 @@
+# GoldenSpy Backdoor Mutex Intelligence  
+# Analyst source file for GoldenSpy-related mutex data
+
+malware_info:
+  family: "GoldenSpy"
+  aliases: []
+  description: "GoldenSpy is a backdoor malware that provides remote access capabilities to compromised systems. It uses specific mutexes to ensure single instance execution and coordinate its activities on the infected system."
+  threat_actor: "Unknown"
+  first_seen: "2020"
+
+category: "backdoor"
+primary_tags: ["remote_access", "backdoor", "windows", "persistence"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "nb_app_log_mutex"
+    references:
+      - "https://www.trendmicro.com/vinfo/de/threat-encyclopedia/malware/backdoor.win32.goldenspy.ypah-a"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 

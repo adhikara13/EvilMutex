@@ -1,0 +1,21 @@
+# 5ss5c Ransomware Mutex Intelligence  
+# Analyst source file for 5ss5c-related mutex data
+
+malware_info:
+  family: "5ss5c"
+  aliases: []
+  description: "5ss5c is a ransomware family that is a rebrand of Satan ransomware. It encrypts files and demands payment for decryption, using specific mutexes to ensure only one instance runs on the infected system."
+  threat_actor: "Unknown"
+  first_seen: "2020"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "ransom_demand", "windows", "satan_rebrand"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "5ss5c_CRYPT"
+    references:
+      - "https://bartblaze.blogspot.com/2020/01/satan-ransomware-rebrands-as-5ss5c.html"
+      - "https://digital.nhs.uk/cyber-alerts/2020/cc-3344"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 

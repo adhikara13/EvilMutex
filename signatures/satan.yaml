@@ -1,0 +1,26 @@
+# Satan Ransomware Mutex Intelligence  
+# Analyst source file for Satan-related mutex data
+
+malware_info:
+  family: "Satan"
+  aliases: []
+  description: "Satan is a ransomware family that encrypts files and demands payment for decryption. It uses specific mutexes to ensure only one instance runs on the infected system and has been rebranded as 5ss5c in later variants."
+  threat_actor: "Unknown"
+  first_seen: "2017"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "ransom_demand", "windows"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "SSSS_Scan"
+    references:
+      - "https://www.trendmicro.com/vinfo/fi/threat-encyclopedia/malware/ransom.win32.satana.a"
+      - "https://bartblaze.blogspot.com/2020/01/satan-ransomware-rebrands-as-5ss5c.html"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13"
+  - name: "SATAN_CRYPT"
+    references:
+      - "https://www.trendmicro.com/vinfo/fi/threat-encyclopedia/malware/ransom.win32.satana.a"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 
