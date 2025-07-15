@@ -1,0 +1,27 @@
+# CoinHelper Miner Mutex Intelligence
+# Analyst source file for CoinHelper-related mutex data
+
+malware_info:
+  family: "CoinHelper"
+  aliases:
+    - "CoinHelper Miner"
+  description: "CoinHelper is a cryptocurrency mining malware that has been observed in various cybercriminal campaigns. The malware is designed to mine cryptocurrency on compromised systems without user consent, utilizing system resources for financial gain. It employs sophisticated techniques to evade detection and establish persistence."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "miner"
+primary_tags:
+  - "cryptocurrency_mining"
+  - "resource_abuse"
+  - "cybercriminal"
+  - "evasion_techniques"
+  - "persistence"
+
+mutexes:
+  - name: 'QPRZ<digit>bWvXh'
+    references:
+      - "https://decoded.avast.io/janrubin/toss-a-coin-to-your-helper/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<digit>' part can be 1, 2, or 3." 

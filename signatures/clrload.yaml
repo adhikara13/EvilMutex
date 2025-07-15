@@ -1,0 +1,25 @@
+# CLRLoad Loader Mutex Intelligence
+# Analyst source file for CLRLoad-related mutex data
+
+malware_info:
+  family: "CLRLoad"
+  aliases:
+    - "CLRLoad Loader"
+  description: "CLRLoad is a loader malware used by the Worok threat group. The malware is designed to download and execute additional payloads on compromised systems and has been observed in various targeted attack campaigns. It employs sophisticated techniques to evade detection and establish persistence."
+  threat_actor: "Worok"
+  first_seen: "2022"
+
+category: "loader"
+primary_tags:
+  - "payload_delivery"
+  - "multi_stage"
+  - "worok"
+  - "targeted_attack"
+  - "evasion_techniques"
+
+mutexes:
+  - name: 'Wo0r0KGWhYGO'
+    references:
+      - "https://www.welivesecurity.com/2022/09/06/worok-big-picture/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

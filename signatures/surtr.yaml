@@ -1,0 +1,28 @@
+# Surtr Ransomware Mutex Intelligence
+# Analyst source file for Surtr-related mutex data
+
+malware_info:
+  family: "Surtr"
+  aliases:
+    - "Surtr Ransomware"
+  description: "Surtr is a ransomware family that has been observed in various cybercriminal campaigns. The malware is designed to encrypt files on victim systems and demand payment for decryption. It is known for its tribute to REvil and employs sophisticated encryption and evasion techniques."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "extortion"
+  - "cybercriminal"
+  - "revil_tribute"
+  - "evasion_techniques"
+
+mutexes:
+  - name: 'SurtrMUTEX'
+    references:
+      - "https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/ransom.win64.surtr.a"
+      - "https://areteir.com/article/surtr-ransomware-pays-tribute-to-revil/"
+      - "https://malgamy.github.io/malware-analysis/YARA_Surtr_Ransomware/"
+      - "https://www.piolink.com/_dev/data/file/security/ckm921ke7j3wzr8.pdf"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

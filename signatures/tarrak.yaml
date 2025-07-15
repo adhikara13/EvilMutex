@@ -1,0 +1,26 @@
+# TaRRaK Ransomware Mutex Intelligence
+# Analyst source file for TaRRaK-related mutex data
+
+malware_info:
+  family: "TaRRaK"
+  aliases:
+    - "TaRRaK Ransomware"
+    - "tarrak-ransomware"
+  description: "TaRRaK is a ransomware family that has been observed in various cybercriminal campaigns. The malware is designed to encrypt files on victim systems and demand payment for decryption. It has been analyzed for its decryption capabilities and employs sophisticated encryption techniques to evade detection."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags:
+  - "file_encryption"
+  - "extortion"
+  - "cybercriminal"
+  - "decryption_analysis"
+  - "evasion_techniques"
+
+mutexes:
+  - name: 'TaRRaK'
+    references:
+      - "https://decoded.avast.io/threatresearch/decrypted-tarrak-ransomware/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 

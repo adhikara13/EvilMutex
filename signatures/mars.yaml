@@ -1,0 +1,35 @@
+# Mars Stealer Mutex Intelligence
+# Analyst source file for Mars-related mutex data
+
+malware_info:
+  family: "Mars"
+  aliases:
+    - "Mars Stealer"
+  description: "Mars Stealer is an information-stealing malware that has been observed in various cybercriminal campaigns. The malware is designed to steal sensitive information from compromised systems including credentials, browser data, and other valuable information. It employs sophisticated techniques to evade detection and establish persistence."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "stealer"
+primary_tags:
+  - "information_stealer"
+  - "credential_theft"
+  - "browser_theft"
+  - "cybercriminal"
+  - "evasion_techniques"
+
+mutexes:
+  - name: '67820366929896267194'
+    references:
+      - "https://www.esentire.com/blog/esentire-threat-intelligence-malware-analysis-mars-stealer"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: '92550737836278980100'
+    references:
+      - "https://x-junior.github.io/malware%20analysis/2022/05/19/MarsStealer.html"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13"
+  - name: '86223203794583053453'
+    references:
+      - "https://3xp0rt.com/posts/mars-stealer/"
+    date_added: "2024-07-16"
+    analyst: "@adhikara13" 
