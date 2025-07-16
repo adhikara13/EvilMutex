@@ -1,0 +1,20 @@
+# YaRAT Mutex Intelligence  
+# Analyst source file for YaRAT-related mutex data
+
+malware_info:
+  family: "YaRAT"
+  aliases: []
+  description: "YaRAT is a remote access trojan (RAT) attributed to APT31, a Chinese state-sponsored threat group. It is used for cyber-espionage and persistent access, often leveraging cloud services for C2 and data exfiltration."
+  threat_actor: ["APT31", "BRONZE VINEWOOD", "JUDGMENT PANDA", "Red keres", "TA412", "Violet Typhoon", "ZIRCONIUM", "Zirconium"]
+  first_seen: "2024"
+
+category: "rat"
+primary_tags: ["apt", "apt31", "remote_access", "cloud", "windows", "persistence"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "YandexDisk"
+    references:
+      - "https://global.ptsecurity.com/en/research/pt-esc-threat-intelligence/apt31-cloud-attacks/"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 
