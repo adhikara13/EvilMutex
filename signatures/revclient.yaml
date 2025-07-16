@@ -1,0 +1,27 @@
+# RevClient Mutex Intelligence
+# Analyst source file for RevClient-related mutex data
+
+malware_info:
+  family: "RevClient"
+  aliases:
+    - "RevClient rat"
+  description: "RevClient is a remote access trojan (RAT) used by the Kimsuky threat group for espionage activities, providing remote control capabilities over compromised systems."
+  threat_actor: "kimsuky"
+  first_seen: "Unknown"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "espionage"
+  - "apt"
+  - "korea"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "ZhengReversePC"
+    references:
+      - "https://asec.ahnlab.com/en/57873/"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
+    notes:
+      - "Mutex used by RevClient RAT for process synchronization" 

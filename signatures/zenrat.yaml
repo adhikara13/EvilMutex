@@ -1,0 +1,27 @@
+# Zenrat Mutex Intelligence
+# Analyst source file for Zenrat-related mutex data
+
+malware_info:
+  family: "Zenrat"
+  aliases:
+    - "Zenrat"
+  description: "Zenrat is a remote access trojan (RAT) that provides attackers with full control over compromised systems, including file operations, process management, and data exfiltration capabilities."
+  threat_actor: "Unknown"
+  first_seen: "Unknown"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "infostealer"
+  - "file_operations"
+  - "process_management"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "System.Byte[]"
+    references:
+      - "https://www.proofpoint.com/us/blog/threat-insight/zenrat-malware-brings-more-chaos-calm"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
+    notes:
+      - "Mutex used by Zenrat RAT for process synchronization" 

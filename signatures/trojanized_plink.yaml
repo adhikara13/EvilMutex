@@ -1,0 +1,27 @@
+# Trojanized Plink Mutex Intelligence
+# Analyst source file for Trojanized Plink-related mutex data
+
+malware_info:
+  family: "Trojanized Plink"
+  aliases:
+    - "backdoored plink"
+    - "plink"
+  description: "Trojanized Plink is a backdoored version of the legitimate PuTTY Link (plink) tool, modified by threat actors to provide remote access capabilities while appearing as legitimate software."
+  threat_actor: "lazarus"
+  first_seen: "Unknown"
+
+category: "Backdoor"
+primary_tags:
+  - "trojanized"
+  - "remote_access"
+  - "legitimate_software_abuse"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\WindowsSvchost'
+    references:
+      - "https://blog.talosintelligence.com/lazarus-collectionrat/"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
+    notes:
+      - "Global mutex used by Trojanized Plink to ensure single instance execution" 

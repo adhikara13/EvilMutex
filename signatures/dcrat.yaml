@@ -20,4 +20,11 @@ mutexes:
     date_added: "2024-12-19"
     analyst: "@adhikara13"
     notes:
-      - "The mutex name is dynamic. The '<20_random_alphanumeric_characters>' part is a placeholder for 20 random alphanumeric characters generated on the compromised machine." 
+      - "The mutex name is dynamic. The '<20_random_alphanumeric_characters>' part is a placeholder for 20 random alphanumeric characters generated on the compromised machine."
+  - name: "DcRatMutex_qwqdanchun"
+    references:
+      - "https://www.fortinet.com/blog/threat-research/dcrat-impersonating-the-columbian-government"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
+    notes:
+      - "Static mutex used by DCRat variant impersonating Colombian government" 

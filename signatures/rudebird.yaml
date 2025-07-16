@@ -1,0 +1,26 @@
+# RUDEBIRD Mutex Intelligence
+# Analyst source file for RUDEBIRD-related mutex data
+
+malware_info:
+  family: "RUDEBIRD"
+  aliases:
+    - "RUDEBIRD backdoor"
+  description: "RUDEBIRD is a backdoor malware associated with the REF5961 threat group, used for remote access and control of compromised systems."
+  threat_actor: "Unknown"
+  first_seen: "Unknown"
+
+category: "Backdoor"
+primary_tags:
+  - "backdoor"
+  - "remote_access"
+  - "apt"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "VV.0"
+    references:
+      - "https://www.elastic.co/de/security-labs/introducing-the-ref5961-intrusion-set"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
+    notes:
+      - "Mutex used by RUDEBIRD backdoor for process synchronization" 
