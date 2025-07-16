@@ -1,0 +1,20 @@
+# XieBroRAT Mutex Intelligence  
+# Analyst source file for XieBroRAT-related mutex data
+
+malware_info:
+  family: "XieBroRAT"
+  aliases: []
+  description: "XieBroRAT is a fork of AsyncRat that provides attackers with remote control capabilities over compromised systems. It uses specific mutexes to ensure single instance execution and coordinate its activities on the infected system."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "rat"
+primary_tags: ["remote_access", "backdoor", "windows", "asyncrat_fork", "persistence"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "pLONGFEIFFmm1"
+    references:
+      - "https://app.any.run/tasks/c2f62dff-09bd-4498-b528-9154c87dc101?malconf=682e320dafec3767f7fee726"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 

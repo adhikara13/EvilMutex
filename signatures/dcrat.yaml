@@ -1,0 +1,23 @@
+# Dark Crystal RAT Mutex Intelligence  
+# Analyst source file for Dark Crystal RAT-related mutex data
+
+malware_info:
+  family: "Dark Crystal RAT"
+  aliases: ["DCRat"]
+  description: "Dark Crystal RAT (DCRat) is a Russian-developed remote access trojan that provides attackers with extensive control over compromised systems. It is sold as a commercial RAT and has been used in various cybercriminal campaigns. The malware uses specific mutexes to ensure single instance execution and coordinate its activities."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "rat"
+primary_tags: ["remote_access", "commercial_rat", "russian_origin", "backdoor", "windows"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "DCR_MUTEX-<20_random_alphanumeric_characters>"
+    references:
+      - "https://www.splunk.com/en_us/blog/security/dark-crystal-rat-agent-deep-dive.html"
+      - "https://blogs.blackberry.com/en/2022/05/dirty-deeds-done-dirt-cheap-russian-rat-offers-backdoor-bargains"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<20_random_alphanumeric_characters>' part is a placeholder for 20 random alphanumeric characters generated on the compromised machine." 

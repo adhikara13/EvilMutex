@@ -1,0 +1,21 @@
+# 3LOSH RAT Mutex Intelligence  
+# Analyst source file for 3LOSH RAT-related mutex data
+
+malware_info:
+  family: "3LOSH RAT"
+  aliases: ["3loshrat"]
+  description: "3LOSH RAT (3loshrat) is a fork of AsyncRat that provides attackers with remote control capabilities over compromised systems. It uses specific mutexes to ensure single instance execution and coordinate its activities on the infected system."
+  threat_actor: "Unknown"
+  first_seen: "2022"
+
+category: "rat"
+primary_tags: ["remote_access", "backdoor", "windows", "asyncrat_fork", "persistence"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "AsyncMutex_Devil"
+    references:
+      - "https://tria.ge/221215-ssfh5acf75/behavioral3/analog?main_event=Mutex&q=&mutant=AsyncMutex_Devil"
+      - "https://app.any.run/tasks/a8254afb-57de-4e78-a8b6-173ce88ffb62?malconf=66fcb7d32f4ad79febb7fb05"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 

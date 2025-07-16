@@ -1,0 +1,20 @@
+# ArrowRAT Mutex Intelligence  
+# Analyst source file for ArrowRAT-related mutex data
+
+malware_info:
+  family: "ArrowRAT"
+  aliases: []
+  description: "ArrowRAT is a fork of AsyncRat that provides attackers with remote control capabilities over compromised systems. It uses specific mutexes to ensure single instance execution and coordinate its activities on the infected system."
+  threat_actor: "Unknown"
+  first_seen: "2023"
+
+category: "rat"
+primary_tags: ["remote_access", "backdoor", "windows", "asyncrat_fork", "persistence"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "ArrowRAT_Mutex_ArrowRAT"
+    references:
+      - "https://tria.ge/230504-pqel9scc96"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 

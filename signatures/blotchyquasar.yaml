@@ -1,0 +1,20 @@
+# BlotchyQuasar RAT Mutex Intelligence  
+# Analyst source file for BlotchyQuasar-related mutex data
+
+malware_info:
+  family: "BlotchyQuasar"
+  aliases: ["NUCLEAR RAT"]
+  description: "BlotchyQuasar (NUCLEAR RAT) is a remote access trojan used by the Hive0129 threat group to target financial institutions in Latin America. It is designed as a banking trojan that provides attackers with remote control capabilities over compromised systems and uses specific mutexes to ensure single instance execution."
+  threat_actor: "Hive0129"
+  first_seen: "2024"
+
+category: "rat"
+primary_tags: ["remote_access", "banking_trojan", "financial_targeting", "latam", "hive0129", "windows"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "44474877AKs8XXT4SylAo2kAlUS2kYkala!"
+    references:
+      - "https://www.ibm.com/think/x-force/x-force-hive0129-targeting-financial-institutions-latam-banking-trojan"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 

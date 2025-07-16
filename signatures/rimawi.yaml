@@ -1,0 +1,21 @@
+# Rimawi RAT Mutex Intelligence  
+# Analyst source file for Rimawi RAT-related mutex data
+
+malware_info:
+  family: "Rimawi"
+  aliases: []
+  description: "Rimawi is a fork of AsyncRat, a remote access trojan (RAT) that provides attackers with remote control capabilities over compromised systems. It uses specific mutexes to ensure single instance execution and coordinate its activities on the infected system."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "rat"
+primary_tags: ["remote_access", "backdoor", "windows", "persistence"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "AZSXDCFVGBHNqwertyui"
+    references:
+      - "https://tria.ge/240623-ntewrsyhpg/behavioral15"
+      - "https://app.any.run/tasks/eeed2f54-4dbb-43d8-ac4a-5dc3b24c2419"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 

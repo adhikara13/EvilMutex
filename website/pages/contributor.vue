@@ -415,6 +415,38 @@ const extractDomain = (url) => {
       domain = domain.substring(4)
     }
 
+    // Extract specific user/author information for certain platforms
+    if (domain === 'x.com' || domain === 'twitter.com') {
+      const pathParts = urlObj.pathname.split('/')
+      if (pathParts.length >= 2 && pathParts[1]) {
+        return `x.com/@${pathParts[1]}`
+      }
+    }
+
+    if (domain === 'medium.com') {
+      const pathParts = urlObj.pathname.split('/')
+      if (pathParts.length >= 2 && pathParts[1]) {
+        // Handle @username format
+        if (pathParts[1].startsWith('@')) {
+          return `medium.com/${pathParts[1]}`
+        }
+        // Handle publication/organization format (like s2wblog)
+        return `medium.com/${pathParts[1]}`
+      }
+      // Check for organization.medium.com format
+      if (urlObj.hostname.includes('.medium.com')) {
+        const subdomain = urlObj.hostname.replace('.medium.com', '')
+        return `medium.com/${subdomain}`
+      }
+    }
+
+    if (domain === 'github.com') {
+      const pathParts = urlObj.pathname.split('/')
+      if (pathParts.length >= 2 && pathParts[1]) {
+        return `github.com/${pathParts[1]}`
+      }
+    }
+
     return domain
   } catch (error) {
 

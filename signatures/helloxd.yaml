@@ -1,0 +1,20 @@
+# HelloXD Ransomware Mutex Intelligence  
+# Analyst source file for HelloXD-related mutex data
+
+malware_info:
+  family: "HelloXD"
+  aliases: []
+  description: "HelloXD is a ransomware family that encrypts files and demands payment for decryption. It uses specific mutexes to ensure only one instance runs on the infected system and has been analyzed for its encryption techniques and ransom note characteristics."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "ransom_demand", "windows", "extortion"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "With best wishes And good intentions..."
+    references:
+      - "https://unit42.paloaltonetworks.com/helloxd-ransomware/"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 
