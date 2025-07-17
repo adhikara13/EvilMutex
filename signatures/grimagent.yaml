@@ -1,0 +1,25 @@
+# GrimAgent Mutex Intelligence
+# Analyst source file for GrimAgent-related mutex data
+
+malware_info:
+  family: "GrimAgent"
+  aliases:
+    - "GrimAgent backdoor"
+  description: "GrimAgent is a sophisticated backdoor malware designed to provide persistent access to compromised systems. The malware uses advanced evasion techniques and is capable of executing various commands from command and control servers."
+  threat_actor: ["FIN6","Wizard Spider"]
+  first_seen: "Unknown"
+
+category: "Backdoor"
+primary_tags:
+  - "backdoor"
+  - "persistence"
+  - "remote_control"
+  - "evasion"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "mymutex"
+    references:
+      - "https://www.group-ib.com/blog/grimagent/"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13" 

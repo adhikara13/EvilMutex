@@ -1,0 +1,27 @@
+# FalseFront Mutex Intelligence
+# Analyst source file for FalseFront-related mutex data
+
+malware_info:
+  family: "FalseFront"
+  aliases:
+    - "falsefront backdoor"
+  description: "FalseFront is a sophisticated backdoor malware used by the Peach Sandstorm threat actor (Curious Serpens). The malware is designed to provide persistent access to compromised systems and is known for its advanced evasion techniques and modular architecture."
+  threat_actor: ["Peach Sandstorm","Curious Serpens"]
+  first_seen: "Unknown"
+
+category: "Backdoor"
+primary_tags:
+  - "backdoor"
+  - "persistence"
+  - "apt"
+  - "evasion"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "864H!NKLNB*x_H?5"
+    references:
+      - "https://unit42.paloaltonetworks.com/curious-serpens-falsefont-backdoor/"
+      - "https://www.nextron-systems.com/2024/01/29/analysis-of-falsefont-backdoor-used-by-peach-sandstorm-threat-actor/"
+      - "https://www.cyfirma.com/news/weekly-intelligence-report-29-mar-2024/"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13" 

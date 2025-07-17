@@ -1,0 +1,25 @@
+# Persian RAT Mutex Intelligence
+# Analyst source file for Persian RAT-related mutex data
+
+malware_info:
+  family: "Persian RAT"
+  aliases:
+    - "Persian"
+  description: "Persian RAT is a remote access trojan that provides attackers with full control over compromised systems. The malware is part of a suite of malicious tools sold by threat actors and is designed for surveillance, data theft, and system manipulation."
+  threat_actor: "Unknown"
+  first_seen: "Unknown"
+
+category: "RAT"
+primary_tags:
+  - "remote_access"
+  - "surveillance"
+  - "data_theft"
+  - "system_control"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "Persian"
+    references:
+      - "https://cyble.com/blog/new-persian-remote-world-selling-a-suite-of-malicious-tools/"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13" 
