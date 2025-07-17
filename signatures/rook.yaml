@@ -1,0 +1,25 @@
+# Rook Mutex Intelligence
+# Analyst source file for Rook-related mutex data
+
+malware_info:
+  family: "Rook"
+  aliases:
+    - "rook ransomware"
+  description: "Rook is a ransomware family designed to encrypt files on compromised systems and demand cryptocurrency payments for decryption. The malware uses sophisticated encryption techniques and is known for its targeted attacks against organizations."
+  threat_actor: "Unknown"
+  first_seen: "Unknown"
+
+category: "Ransomware"
+primary_tags:
+  - "ransomware"
+  - "file_encryption"
+  - "targeted_attacks"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "asfgjkl878645165456fa888"
+    references:
+      - "https://www.infosecinstitute.com/resources/malware-analysis/rook-ransomware-analysis/"
+      - "https://seguranca-informatica.pt/rook-ransomware-analysis/"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13" 

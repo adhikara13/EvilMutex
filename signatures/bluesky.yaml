@@ -1,0 +1,24 @@
+# Bluesky Mutex Intelligence
+# Analyst source file for Bluesky-related mutex data
+
+malware_info:
+  family: "Bluesky"
+  aliases:
+    - "bluesky ransomware"
+  description: "Bluesky is a ransomware family that encrypts files on compromised systems and demands cryptocurrency payments for decryption. The malware uses sophisticated encryption techniques and is designed to evade detection while maximizing damage to targeted systems."
+  threat_actor: "Unknown"
+  first_seen: "Unknown"
+
+category: "Ransomware"
+primary_tags:
+  - "ransomware"
+  - "file_encryption"
+  - "evasion"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\EA408C6BF0D12F526F821798C3F54C9A'
+    references:
+      - "https://app.any.run/tasks/d537c305-659f-4ac8-86b5-92f79b951763"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13" 

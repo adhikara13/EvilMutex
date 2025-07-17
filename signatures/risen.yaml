@@ -1,0 +1,25 @@
+# Risen Mutex Intelligence
+# Analyst source file for Risen-related mutex data
+
+malware_info:
+  family: "Risen"
+  aliases:
+    - "risen ransomware"
+  description: "Risen is a ransomware family operated by the Risen Group, designed to encrypt files on compromised systems and demand cryptocurrency payments for decryption. The malware uses sophisticated encryption techniques and is known for its targeted attacks."
+  threat_actor: "risen group"
+  first_seen: "Unknown"
+
+category: "Ransomware"
+primary_tags:
+  - "ransomware"
+  - "file_encryption"
+  - "apt"
+  - "targeted_attacks"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "risen_mutex"
+    references:
+      - "https://motasem-notes.net/ranswomare-analysis-reverse-engineering-risen-ransomware-letsdefend-walkthrough/"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13" 

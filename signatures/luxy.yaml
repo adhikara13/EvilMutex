@@ -1,0 +1,24 @@
+# Luxy Mutex Intelligence
+# Analyst source file for Luxy-related mutex data
+
+malware_info:
+  family: "Luxy"
+  aliases:
+    - "luxy stealer"
+  description: "Luxy is an information stealer malware designed to extract sensitive data from compromised systems, including credentials, cookies, and other valuable information for cybercriminal operations."
+  threat_actor: "Unknown"
+  first_seen: "Unknown"
+
+category: "Stealer"
+primary_tags:
+  - "infostealer"
+  - "credential_theft"
+  - "cookie_theft"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "DBPC303NG10hWTOR7NoN"
+    references:
+      - "https://app.any.run/tasks/449fa9a2-cccc-4d03-822c-dd6ccbf0a883"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13" 

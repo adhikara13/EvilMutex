@@ -1,0 +1,27 @@
+# Matanbuchus Mutex Intelligence
+# Analyst source file for Matanbuchus-related mutex data
+
+malware_info:
+  family: "Matanbuchus"
+  aliases:
+    - "matanbuchus loader"
+  description: "Matanbuchus is a sophisticated loader malware that operates as Malware-as-a-Service (MaaS), designed to deliver additional payloads to compromised systems. The malware uses advanced evasion techniques and is known for its modular architecture."
+  threat_actor: "Unknown"
+  first_seen: "Unknown"
+
+category: "Loader"
+primary_tags:
+  - "loader"
+  - "maas"
+  - "evasion"
+  - "payload_delivery"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "sync<UniqueID>"
+    references:
+      - "https://www.morphisec.com/blog/ransomware-threat-matanbuchus-3-0-maas-levels-up/"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<UniqueID>' part is a placeholder for a unique identifier generated on the compromised machine." 

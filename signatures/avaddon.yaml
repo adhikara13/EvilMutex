@@ -1,0 +1,26 @@
+# Avaddon Mutex Intelligence
+# Analyst source file for Avaddon-related mutex data
+
+malware_info:
+  family: "Avaddon"
+  aliases:
+    - "avaddon ransomware"
+  description: "Avaddon is a ransomware-as-a-service (RaaS) that emerged in 2020, known for its aggressive encryption techniques and double-extortion tactics. The malware targets organizations and demands cryptocurrency payments for file decryption."
+  threat_actor: "Unknown"
+  first_seen: "2020"
+
+category: "Ransomware"
+primary_tags:
+  - "ransomware"
+  - "file_encryption"
+  - "raas"
+  - "double_extortion"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "{2A0E9C7B-6BE8-4306-9F73-1057003F605B}"
+    references:
+      - "https://bbs.360.cn/thread-15888858-1-1.html"
+      - "https://id-ransomware.blogspot.com/2020/06/avaddon-ransomware.html"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13" 

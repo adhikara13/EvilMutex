@@ -1,0 +1,25 @@
+# Lorenz Mutex Intelligence
+# Analyst source file for Lorenz-related mutex data
+
+malware_info:
+  family: "Lorenz"
+  aliases:
+    - "Lorenz ransomware"
+  description: "Lorenz is a ransomware family operated by the Lorenz Group, known for targeting organizations and demanding cryptocurrency payments for file decryption. The malware uses sophisticated encryption techniques and is designed to evade detection."
+  threat_actor: "lorenz group"
+  first_seen: "Unknown"
+
+category: "Ransomware"
+primary_tags:
+  - "ransomware"
+  - "file_encryption"
+  - "apt"
+  - "data_exfiltration"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "wolf"
+    references:
+      - "https://lmntrix.com/blog/lmntrix-vs-lorenz-ransomware/"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13" 

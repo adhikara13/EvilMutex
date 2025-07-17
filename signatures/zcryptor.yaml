@@ -1,0 +1,25 @@
+# ZCryptor Mutex Intelligence
+# Analyst source file for ZCryptor-related mutex data
+
+malware_info:
+  family: "ZCryptor"
+  aliases:
+    - "zcryptor-ransomware"
+  description: "ZCryptor is a ransomware that spreads via removable drives and encrypts files on infected systems. It was first discovered in 2016 and uses sophisticated propagation techniques to infect multiple systems through USB drives and other removable media."
+  threat_actor: "Unknown"
+  first_seen: "2016"
+
+category: "Ransomware"
+primary_tags:
+  - "ransomware"
+  - "file_encryption"
+  - "removable_drive_spread"
+  - "usb_propagation"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "zcrypt1.0"
+    references:
+      - "https://www.helpnetsecurity.com/2016/05/27/zcryptor-ransomware-spreads-via-removable-drives/"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13" 

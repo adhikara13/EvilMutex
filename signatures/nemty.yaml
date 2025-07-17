@@ -1,0 +1,30 @@
+# Nemty Mutex Intelligence
+# Analyst source file for Nemty-related mutex data
+
+malware_info:
+  family: "Nemty"
+  aliases:
+    - "nemty-ransomware"
+  description: "Nemty is a ransomware family that emerged in 2019, known for its aggressive encryption techniques and targeting of organizations. The malware uses sophisticated evasion methods and demands cryptocurrency payments for file decryption."
+  threat_actor: "Unknown"
+  first_seen: "2019"
+
+category: "Ransomware"
+primary_tags:
+  - "ransomware"
+  - "file_encryption"
+  - "evasion"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "hate"
+    references:
+      - "https://securityaffairs.com/90396/malware/nemty-ransomware.html"
+      - "https://id-ransomware.blogspot.com/2019/08/nemty-ransomware.html"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
+  - name: "just_a_game"
+    references:
+      - "https://id-ransomware.blogspot.com/2019/08/nemty-ransomware.html"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13" 
