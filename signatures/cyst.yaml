@@ -1,0 +1,27 @@
+# Cyst Mutex Intelligence
+# Analyst source file for Cyst-related mutex data
+
+malware_info:
+  family: "Cyst"
+  aliases:
+    - "cystloader"
+  description: "Cyst is a loader malware that has been used by various threat actors, including the Cobalt Group, to deliver additional payloads to compromised systems. The malware is designed to evade detection while establishing persistence and executing malicious code."
+  threat_actor: "Unknown"
+  first_seen: "Unknown"
+
+category: "Loader"
+primary_tags:
+  - "loader"
+  - "payload_delivery"
+  - "evasion"
+  - "persistence"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "syst<10 digits>"
+    references:
+      - "https://www.proofpoint.com/us/threat-insight/post/microsoft-word-intruder-integrates-cve-2017-0199-utilized-cobalt-group-target"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
+    notes:
+      - "The mutex name is dynamic. The '<10 digits>' part is a placeholder for 10 random digits generated on the compromised machine." 
