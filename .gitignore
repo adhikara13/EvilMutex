@@ -200,8 +200,7 @@ $RECYCLE.BIN/
 Desktop.ini
 
 # Generated stats for badges (only exist on Cloudflare Pages)
-website/public/data/stats-malware.json
-website/public/data/stats-mutexes.json
+# Note: These are generated during build and served live
 ehthumbs.db
 ehthumbs_vista.db
 *.stackdump
@@ -235,7 +234,9 @@ Temporary Items
 
 # Generated files that should not be committed
 website/public/sitemap.xml
-website/public/data/malware.json 
+website/public/data/malware.json
+website/public/data/stats-malware.json
+website/public/data/stats-mutexes.json
 
 # Generated statistics file
 stats.json 
