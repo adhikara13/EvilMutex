@@ -1,0 +1,27 @@
+# FFDroider Mutex Intelligence
+# Analyst source file for FFDroider-related mutex data
+
+malware_info:
+  family: "FFDroider"
+  aliases:
+    - "FFDroider stealer"
+  description: "FFDroider is a stealer malware that targets social media platform users, designed to extract credentials, cookies, and other sensitive information from compromised systems."
+  threat_actor: "Unknown"
+  first_seen: "Unknown"
+
+category: "Stealer"
+primary_tags:
+  - "infostealer"
+  - "social_media_targeting"
+  - "credential_theft"
+  - "cookie_theft"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "37238328-1324242-5456786-8fdff0-67547552436675"
+    references:
+      - "https://www.zscaler.com/blogs/security-research/ffdroider-stealer-targeting-social-media-platform-users"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
+    notes:
+      - "Mutex used by FFDroider stealer for process synchronization" 

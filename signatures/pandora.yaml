@@ -19,4 +19,10 @@ mutexes:
       - "https://www.fortinet.com/blog/threat-research/looking-inside-pandoras-box"
       - "https://cyble.com/blog/deep-dive-analysis-pandora-ransomware/"
     date_added: "2025-01-15"
-    analyst: "@adhikara13" 
+    analyst: "@adhikara13"
+  - name: "FFFFFMutex"
+    references:
+      - "https://app.any.run/tasks/a6b6fe42-6b10-471e-9fc8-8bc8b793601d"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
+    

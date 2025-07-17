@@ -1,0 +1,29 @@
+# Anatova Mutex Intelligence
+# Analyst source file for Anatova-related mutex data
+
+malware_info:
+  family: "Anatova"
+  aliases:
+    - "Anatova ransomware"
+  description: "Anatova is a sophisticated ransomware that emerged in 2019, known for its modular architecture and ability to evade detection. It encrypts files and demands cryptocurrency payments for decryption."
+  threat_actor: "Unknown"
+  first_seen: "2019"
+
+category: "Ransomware"
+primary_tags:
+  - "ransomware"
+  - "file_encryption"
+  - "modular_architecture"
+  - "evasion"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "6a8c9937zFIwHPZ309UZMZYVnwScPB2pR2MEx5SY7B1xgbruoO"
+    references:
+      - "https://whitehat.eu/anatova-ransomware-experts-believe-it-will-be-a-dangerous-threat/"
+      - "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/happy-new-year-2019-anatova-is-here/"
+      - "https://www.fortinet.com/blog/threat-research/looking-into-anatova-ransomware"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
+    notes:
+      - "Mutex used by Anatova ransomware for process synchronization" 

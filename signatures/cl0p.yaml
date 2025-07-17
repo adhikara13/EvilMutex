@@ -13,4 +13,19 @@ mutexes:
     references:
       - "https://cyble.com/blog/cl0p-ransomware-active-threat-plaguing-businesses-worldwide/"
     date_added: "2025-07-16"
-    analyst: "@adhikara13" 
+    analyst: "@adhikara13"
+  - name: "LifeBeHappy#-#-#666^_-"
+    references:
+      - "https://www.otorio.com/blog/ransomware-targeting-industry-4-0/"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
+  - name: "CLOP#666"
+    references:
+      - "https://id-ransomware.blogspot.com/2019/02/clop-ransomware.html"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
+  - name: "^_-HappyLife^_-"
+    references:
+      - "https://id-ransomware.blogspot.com/2019/02/clop-ransomware.html"
+    date_added: "2024-07-19"
+    analyst: "@adhikara13"
