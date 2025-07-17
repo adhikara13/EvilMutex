@@ -198,6 +198,10 @@ tmp/
 # Windows specific
 $RECYCLE.BIN/
 Desktop.ini
+
+# Generated stats for badges (only exist on Cloudflare Pages)
+website/public/data/stats-malware.json
+website/public/data/stats-mutexes.json
 ehthumbs.db
 ehthumbs_vista.db
 *.stackdump

@@ -2,6 +2,7 @@
 import { promises as fs } from 'fs'
 import { join } from 'path'
 import * as yaml from 'yaml'
+import { generateBadgeJson } from './utils/dataProcessor'
 
 async function buildMalwareData() {
   console.log('🔒 Building malware data from YAML files...')
@@ -39,7 +40,19 @@ async function buildMalwareData() {
       JSON.stringify(jsonResponse, null, 2)
     )
 
+    // Generate badge JSON files for shields.io
+    const badgeData = generateBadgeJson(malwareList)
+    await fs.writeFile(
+      join(publicDataDir, 'stats-malware.json'),
+      badgeData.malware
+    )
+    await fs.writeFile(
+      join(publicDataDir, 'stats-mutexes.json'),
+      badgeData.mutexes
+    )
+
     console.log(`✅ Built data for ${malwareList.length} malware families`)
+    console.log(`✅ Generated badge JSON files for shields.io`)
     return jsonResponse
   } catch (error) {
     console.error('❌ Error building malware data:', error)

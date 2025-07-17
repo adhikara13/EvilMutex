@@ -1,4 +1,4 @@
-name: Update README
+name: Generate Statistics
 
 on:
   push:
@@ -13,8 +13,8 @@ permissions:
   contents: write
 
 jobs:
-  update-readme:
-    name: Update README with Latest Stats
+  generate-stats:
+    name: Generate Statistics JSON
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -54,7 +54,7 @@ jobs:
             console.log(total);
           ")
           
-          # Save statistics to file
+          # Save statistics to file (for reference only, not used in README)
           cat > ../stats.json << EOF
           {
             "total_yaml": $total_yaml,
@@ -66,40 +66,6 @@ jobs:
             "last_updated": "$(date -u +"%Y-%m-%d %H:%M:%S UTC")"
           }
           EOF
-
-      - name: Update README badges
-        run: |
-          # Read statistics
-          stats=$(cat stats.json)
-          total_yaml=$(echo $stats | node -e "console.log(JSON.parse(require('fs').readFileSync(0, 'utf8')).total_yaml)")
-          total_mutexes=$(echo $stats | node -e "console.log(JSON.parse(require('fs').readFileSync(0, 'utf8')).total_mutexes)")
-          last_updated=$(echo $stats | node -e "console.log(JSON.parse(require('fs').readFileSync(0, 'utf8')).last_updated)")
-          
-          # Generate badges
-          ci_cd_badge="![CI/CD Pipeline](https://github.com/${{ github.repository }}/actions/workflows/ci-cd.yml/badge.svg)"
-          pr_validation_badge="![PR Validation](https://github.com/${{ github.repository }}/actions/workflows/pr-validation.yml/badge.svg)"
-          malware_count_badge="![Malware Families](https://img.shields.io/badge/Malware%20Families-${total_yaml}-red)"
-          mutex_count_badge="![Total Mutexes](https://img.shields.io/badge/Total%20Mutexes-${total_mutexes}-blue)"
-          cloudflare_badge="![Hosted on Cloudflare](https://img.shields.io/badge/Hosted%20on-Cloudflare%20Pages-orange)"
-          
-          # Update README.md
-          # First, let's check if README has a badges section
-          if ! grep -q "<!-- BADGES START -->" README.md; then
-            # Add badges section after the first header
-            sed -i '1 a\\n<!-- BADGES START -->\n<!-- BADGES END -->' README.md
-          fi
-          
-          # Replace badges section
-          sed -i '/<!-- BADGES START -->/,/<!-- BADGES END -->/c\
-          <!-- BADGES START -->\
-          '"$ci_cd_badge"' \
-          '"$pr_validation_badge"' \
-          '"$malware_count_badge"' \
-          '"$mutex_count_badge"' \
-          '"$cloudflare_badge"'\
-          \
-          **Last Updated:** '"$last_updated"'\
-          <!-- BADGES END -->' README.md
 
       - name: Check for changes
         id: verify-changed-files
@@ -115,6 +81,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add README.md
-          git commit -m "Update README with latest statistics and badges"
+          git add stats.json
+          git commit -m "Update statistics JSON (badges now generated on Cloudflare Pages)"
           git push 

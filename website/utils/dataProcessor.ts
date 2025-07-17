@@ -399,6 +399,68 @@ function generateMonthlyGrowth(malwareList: MalwareData[]): Array<{ month: strin
   }
 }
 
+export function generateBadgeJson(malwareList: MalwareData[]): { malware: string; mutexes: string } {
+  try {
+    if (!Array.isArray(malwareList)) {
+      console.warn('generateBadgeJson received non-array:', malwareList)
+      malwareList = []
+    }
+
+    const validMalware = malwareList.filter(m =>
+      m &&
+      m.malware_info &&
+      m.malware_info.family &&
+      Array.isArray(m.mutexes)
+    )
+
+    const totalMalware = validMalware.length
+    const totalMutexes = validMalware.reduce((sum, m) => {
+      try {
+        return sum + (m.mutexes?.length || 0)
+      } catch (error) {
+        console.error('Error calculating mutex count for malware:', m, error)
+        return sum
+      }
+    }, 0)
+
+    // Generate JSON for shields.io endpoint badges
+    const malwareBadge = {
+      schemaVersion: 1,
+      label: 'Malware Families',
+      message: totalMalware.toString(),
+      color: 'red'
+    }
+
+    const mutexesBadge = {
+      schemaVersion: 1,
+      label: 'Total Mutexes',
+      message: totalMutexes.toString(),
+      color: 'blue'
+    }
+
+    return {
+      malware: JSON.stringify(malwareBadge, null, 2),
+      mutexes: JSON.stringify(mutexesBadge, null, 2)
+    }
+  } catch (error) {
+    console.error('Error generating badge JSON:', error)
+    return {
+      malware: JSON.stringify({
+        schemaVersion: 1,
+        label: 'Malware Families',
+        message: '0',
+        color: 'red'
+      }, null, 2),
+      mutexes: JSON.stringify({
+        schemaVersion: 1,
+        label: 'Total Mutexes',
+        message: '0',
+        color: 'blue'
+      }, null, 2)
+    }
+  }
+}
+
 export function validateYamlStructure(yamlContent: string): { valid: boolean; errors: string[] } {
   const errors: string[] = []
 
