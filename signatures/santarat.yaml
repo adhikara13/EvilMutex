@@ -8,7 +8,7 @@ malware_info:
   threat_actor: "Unknown"
   first_seen: "2022"
 
-category: "malware"
+category: "Rat"
 primary_tags: ["malware", "single_instance", "windows"]
 
 # Mutexes used by this malware family

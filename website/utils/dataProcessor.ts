@@ -35,7 +35,7 @@ export function generateJsonResponse(
     filteredData = applyFilters(filteredData, filters)
   }
 
-  const categories = [...new Set(filteredData.map(m => m.category))]
+  const categories = [...new Set(filteredData.map(m => m.category?.toLowerCase()))]
   const tags = [...new Set(filteredData.flatMap(m => m.primary_tags))]
 
   return {
@@ -52,20 +52,31 @@ export function generateCsvExport(
 ): string {
   const csvData: any[] = []
 
+  // Validate input
+  if (!Array.isArray(malwareList)) {
+    console.warn('generateCsvExport received non-array:', malwareList)
+    return ''
+  }
+
   malwareList.forEach(malware => {
+    // Skip invalid malware entries
+    if (!malware || !malware.malware_info || !Array.isArray(malware.mutexes)) {
+      console.warn('Skipping invalid malware entry:', malware)
+      return
+    }
 
     const allMutexes = malware.mutexes.map(m => m.name).join(' | ')
     const allAnalysts = [...new Set(malware.mutexes.map(m => m.analyst))].join('; ')
     const allDates = [...new Set(malware.mutexes.map(m => m.date_added))].join('; ')
-    const allReferences = [...new Set(malware.mutexes.flatMap(m => m.references))].join(' | ')
+    const allReferences = [...new Set(malware.mutexes.flatMap(m => Array.isArray(m.references) ? m.references : []))].join(' | ')
 
     csvData.push({
       malware_family: malware.malware_info.family,
-      category: malware.category,
+      category: malware.category?.toLowerCase(),
       mutex_count: malware.mutexes.length,
       mutex_names: allMutexes,
-      aliases: malware.malware_info.aliases.join('; '),
-      tags: malware.primary_tags.join('; '),
+      aliases: Array.isArray(malware.malware_info.aliases) ? malware.malware_info.aliases.join('; ') : '',
+      tags: Array.isArray(malware.primary_tags) ? malware.primary_tags.join('; ') : '',
       description: malware.malware_info.description,
       threat_actor: malware.malware_info.threat_actor || 'Unknown',
       first_seen: malware.malware_info.first_seen || 'Unknown',
@@ -88,17 +99,34 @@ export function generateDetailedCsvExport(
 ): string {
   const csvData: any[] = []
 
+  // Validate input
+  if (!Array.isArray(malwareList)) {
+    console.warn('generateDetailedCsvExport received non-array:', malwareList)
+    return ''
+  }
+
   malwareList.forEach(malware => {
+    // Skip invalid malware entries
+    if (!malware || !malware.malware_info || !Array.isArray(malware.mutexes)) {
+      console.warn('Skipping invalid malware entry:', malware)
+      return
+    }
     malware.mutexes.forEach(mutex => {
+      // Skip invalid mutex entries
+      if (!mutex || typeof mutex.name !== 'string') {
+        console.warn('Skipping invalid mutex entry:', mutex)
+        return
+      }
+      
       csvData.push({
         malware_family: malware.malware_info.family,
-        category: malware.category,
+        category: malware.category?.toLowerCase(),
         mutex_name: mutex.name,
         analyst: mutex.analyst,
         date_added: mutex.date_added,
-        references: mutex.references.join('; '),
-        tags: malware.primary_tags.join('; '),
-        aliases: malware.malware_info.aliases.join('; '),
+        references: Array.isArray(mutex.references) ? mutex.references.join('; ') : '',
+        tags: Array.isArray(malware.primary_tags) ? malware.primary_tags.join('; ') : '',
+        aliases: Array.isArray(malware.malware_info.aliases) ? malware.malware_info.aliases.join('; ') : '',
         threat_actor: malware.malware_info.threat_actor,
         first_seen: malware.malware_info.first_seen,
         description: malware.malware_info.description
@@ -132,7 +160,7 @@ export function generateSigmaRule(malware: MalwareData): SigmaRule {
     tags: [
       'attack.defense_evasion',
       'attack.t1027',
-      `malware.${malware.category}`,
+      `malware.${malware.category?.toLowerCase()}`,
       ...malware.primary_tags.map(tag => `malware.${tag}`)
     ],
     logsource: {
@@ -162,11 +190,13 @@ function determineSigmaLevel(malware: MalwareData): string {
   const highCategories = ['rat', 'backdoor', 'stealer']
   const mediumCategories = ['trojan', 'keylogger', 'downloader']
 
-  if (criticalCategories.includes(malware.category)) {
+  const normalizedCategory = malware.category?.toLowerCase()
+
+  if (criticalCategories.includes(normalizedCategory)) {
     return 'critical'
-  } else if (highCategories.includes(malware.category)) {
+  } else if (highCategories.includes(normalizedCategory)) {
     return 'high'
-  } else if (mediumCategories.includes(malware.category)) {
+  } else if (mediumCategories.includes(normalizedCategory)) {
     return 'medium'
   }
 
@@ -192,7 +222,7 @@ function applyFilters(malwareList: MalwareData[], filters: SearchFilters): Malwa
       }
     }
 
-    if (filters.category && malware.category !== filters.category) {
+    if (filters.category && malware.category?.toLowerCase() !== filters.category.toLowerCase()) {
       return false
     }
 
@@ -262,7 +292,7 @@ export function generateStatistics(malwareList: MalwareData[]): StatisticsData {
 
     const categories = [...new Set(validMalware
       .filter(m => m.category)
-      .map(m => m.category)
+      .map(m => m.category.toLowerCase())
     )]
 
     const thirtyDaysAgo = new Date()
@@ -311,7 +341,7 @@ export function generateStatistics(malwareList: MalwareData[]): StatisticsData {
 
     const categoryDistribution = categories.map(category => ({
       category,
-      count: validMalware.filter(m => m.category === category).length
+      count: validMalware.filter(m => m.category?.toLowerCase() === category).length
     }))
 
     const monthlyGrowth = generateMonthlyGrowth(validMalware)

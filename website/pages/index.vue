@@ -94,7 +94,7 @@
                         <span v-if="safeArray(malware?.malware_info?.aliases).length > 2">...</span>
                       </div>
                     </div>
-                     <span class="badge badge-red">{{ safeValue(malware?.category, 'unknown') }}</span>
+                     <span class="badge badge-red">{{ safeValue(malware?.category, 'unknown').toLowerCase() }}</span>
                    </div>
                   <div class="flex justify-between items-center mt-4">
                     <div class="text-sm">
@@ -122,7 +122,7 @@
                     </div>
                   </div>
                   <div>
-                    <span class="badge badge-red">{{ safeValue(malware?.category, 'unknown') }}</span>
+                    <span class="badge badge-red">{{ safeValue(malware?.category, 'unknown').toLowerCase() }}</span>
                   </div>
                   <div class="text-warning">
                     {{ safeArray(malware?.mutexes).length }}
@@ -228,7 +228,7 @@ const filteredMalware = computed(() => {
   }
 
   if (selectedCategory.value) {
-    filtered = filtered.filter(malware => malware?.category === selectedCategory.value)
+    filtered = filtered.filter(malware => malware?.category?.toLowerCase() === selectedCategory.value.toLowerCase())
   }
 
   return filtered
@@ -320,7 +320,7 @@ ${safeArray(malwareStore.malwareList).map(malware => {
   if (!malware || !malware.malware_info) return ''
 
   return `  - name: "${malware.malware_info.family || 'Unknown'}"
-    category: "${malware.category || 'unknown'}"
+    category: "${(malware.category || 'unknown').toLowerCase()}"
     family: "${malware.malware_info.family || 'unknown'}"
     description: "${malware.malware_info.description || ''}"
     aliases: ${JSON.stringify(safeArray(malware.malware_info.aliases))}

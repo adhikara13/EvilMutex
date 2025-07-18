@@ -24,13 +24,19 @@ async function buildMalwareData() {
       const filePath = join(signaturesDir, file)
       const content = await fs.readFile(filePath, 'utf-8')
       const malwareData = yaml.parse(content)
+      
+      // Normalize category to lowercase
+      if (malwareData.category) {
+        malwareData.category = malwareData.category.toLowerCase()
+      }
+      
       malwareList.push(malwareData)
     }
 
     const jsonResponse = {
       malware: malwareList,
       total: malwareList.length,
-      categories: [...new Set(malwareList.map(m => m.category))].sort(),
+      categories: [...new Set(malwareList.map(m => m.category?.toLowerCase()))].sort(),
       tags: [...new Set(malwareList.flatMap(m => m.primary_tags))].sort(),
       last_updated: new Date().toISOString()
     }
