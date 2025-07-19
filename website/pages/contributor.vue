@@ -1,12 +1,12 @@
 <template>
   <div class="bg-darker min-h-screen text-green-400 font-mono">
     
-    <div class="container mx-auto px-12 py-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-12 py-4 sm:py-6 lg:py-8">
       
-      <div class="p-6">
+      <div class="p-2 sm:p-4 lg:p-6">
         
-        <div class="mb-8">
-          <h1 class="text-2xl font-bold text-green-400 mb-4">
+        <div class="mb-6 sm:mb-8">
+          <h1 class="text-xl sm:text-2xl font-bold text-green-400 mb-3 sm:mb-4">
             <span class="text-red-400">[</span>CONTRIBUTOR_HALL_OF_FAME<span class="text-red-400">]</span>
           </h1>
           <pre class="text-sm text-gray-400 mb-4">
@@ -18,14 +18,14 @@ Contributions: <span class="text-green-400">WELCOME</span>
         </div>
 
         
-        <div class="mb-8">
-          <h2 class="text-xl font-bold text-green-400 mb-4">
+        <div class="mb-6 sm:mb-8">
+          <h2 class="text-lg sm:text-xl font-bold text-green-400 mb-3 sm:mb-4">
             <span class="text-red-400">[</span>HOW_TO_CONTRIBUTE<span class="text-red-400">]</span>
           </h2>
-          <div class="bg-dark border border-gray-600 p-4">
-            <div class="space-y-4">
+          <div class="bg-dark border border-gray-600 p-3 sm:p-4">
+            <div class="space-y-3 sm:space-y-4">
               <div class="border-l-2 border-green-400 pl-4">
-                <div class="text-green-400 font-bold text-sm mb-2">
+                <div class="text-green-400 font-bold text-xs sm:text-sm mb-2">
                   <span class="text-red-400">01.</span> ADD_NEW_MALWARE_SIGNATURES
                 </div>
                 <div class="text-muted text-xs">
@@ -34,7 +34,7 @@ Contributions: <span class="text-green-400">WELCOME</span>
               </div>
 
               <div class="border-l-2 border-warning pl-4">
-                <div class="text-warning font-bold text-sm mb-2">
+                <div class="text-warning font-bold text-xs sm:text-sm mb-2">
                   <span class="text-red-400">02.</span> IMPROVE_DETECTION_RULES
                 </div>
                 <div class="text-muted text-xs">
@@ -43,7 +43,7 @@ Contributions: <span class="text-green-400">WELCOME</span>
               </div>
 
               <div class="border-l-2 border-secondary pl-4">
-                <div class="text-secondary font-bold text-sm mb-2">
+                <div class="text-secondary font-bold text-xs sm:text-sm mb-2">
                   <span class="text-red-400">03.</span> PLATFORM_DEVELOPMENT
                 </div>
                 <div class="text-muted text-xs">
@@ -52,7 +52,7 @@ Contributions: <span class="text-green-400">WELCOME</span>
               </div>
 
               <div class="border-l-2 border-info pl-4">
-                <div class="text-info font-bold text-sm mb-2">
+                <div class="text-info font-bold text-xs sm:text-sm mb-2">
                   <span class="text-red-400">04.</span> DOCUMENTATION_&_RESEARCH
                 </div>
                 <div class="text-muted text-xs">
@@ -64,8 +64,8 @@ Contributions: <span class="text-green-400">WELCOME</span>
         </div>
 
         
-        <div class="mb-8">
-          <h2 class="text-xl font-bold text-green-400 mb-4">
+        <div class="mb-6 sm:mb-8">
+          <h2 class="text-lg sm:text-xl font-bold text-green-400 mb-3 sm:mb-4">
             <span class="text-red-400">[</span>CONTRIBUTION_GUIDELINES<span class="text-red-400">]</span>
           </h2>
           <div class="bg-dark border border-gray-600">
@@ -112,12 +112,12 @@ Contributions: <span class="text-green-400">WELCOME</span>
         </div>
 
         
-        <div class="mb-8">
-          <h2 class="text-xl font-bold text-green-400 mb-4">
+        <div class="mb-6 sm:mb-8">
+          <h2 class="text-lg sm:text-xl font-bold text-green-400 mb-3 sm:mb-4">
             <span class="text-red-400">[</span>REPOSITORY_ACCESS<span class="text-red-400">]</span>
           </h2>
-          <div class="bg-dark border border-gray-600 p-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-dark border border-gray-600 p-3 sm:p-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
               <div>
                 <div class="text-sm font-bold text-green-400 mb-2">
                   <span class="text-red-400">PRIMARY_REPOSITORY:</span>
@@ -144,11 +144,11 @@ Contributions: <span class="text-green-400">WELCOME</span>
         </div>
 
         
-        <div class="mb-8">
-          <h2 class="text-xl font-bold text-green-400 mb-4">
+        <div class="mb-6 sm:mb-8">
+          <h2 class="text-lg sm:text-xl font-bold text-green-400 mb-3 sm:mb-4">
             <span class="text-red-400">[</span>CONTACT_CHANNELS<span class="text-red-400">]</span>
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             <template v-for="channel in appConfig.contact.channels" :key="channel.name">
               <!-- Disabled/Non-clickable Discord button -->
               <div
@@ -173,13 +173,13 @@ Contributions: <span class="text-green-400">WELCOME</span>
         </div>
 
         
-        <div class="mb-8">
-          <h2 class="text-xl font-bold text-green-400 mb-4">
+        <div class="mb-6 sm:mb-8">
+          <h2 class="text-lg sm:text-xl font-bold text-green-400 mb-3 sm:mb-4">
             <span class="text-red-400">[</span>TOP_CONTRIBUTORS<span class="text-red-400">]</span>
           </h2>
           <div class="bg-dark border border-gray-600">
             <div class="border-b border-gray-600 p-4 bg-darker">
-              <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm font-bold text-green-400">
+              <div class="hidden md:grid grid-cols-4 gap-4 text-sm font-bold text-green-400">
                 <div>CONTRIBUTOR</div>
                 <div>CONTRIBUTIONS</div>
                 <div>SPECIALIZATION</div>
@@ -199,7 +199,28 @@ Contributions: <span class="text-green-400">WELCOME</span>
               <div v-else-if="topContributors?.length > 0">
                 <div v-for="(contributor, index) in topContributors" :key="contributor.analyst"
                      :class="{ 'border-b border-gray-600 pb-3 mb-3': index < topContributors.length - 1 }">
-                  <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+                  <!-- Mobile layout -->
+                  <div class="md:hidden space-y-2">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <div class="font-bold text-green-400 text-sm">{{ contributor.analyst }}</div>
+                        <div class="text-muted text-xs">{{ contributor.role }}</div>
+                      </div>
+                      <div class="text-right">
+                        <span class="badge badge-green text-xs">ACTIVE</span>
+                      </div>
+                    </div>
+                    <div class="text-warning text-xs">
+                      {{ contributor.totalMutexes }} signatures, {{ contributor.familyCount }} families
+                    </div>
+                    <div>
+                      <span class="badge text-xs" :class="getSpecializationBadgeClass(contributor.specialization)">
+                        {{ contributor.specialization }}
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Desktop layout -->
+                  <div class="hidden md:grid grid-cols-4 gap-4 text-sm">
                     <div>
                       <div class="font-bold text-green-400">{{ contributor.analyst }}</div>
                       <div class="text-muted text-xs">{{ contributor.role }}</div>
@@ -227,8 +248,8 @@ Contributions: <span class="text-green-400">WELCOME</span>
         </div>
 
         
-        <div class="mb-8">
-          <h2 class="text-xl font-bold text-green-400 mb-4">
+        <div class="mb-6 sm:mb-8">
+          <h2 class="text-lg sm:text-xl font-bold text-green-400 mb-3 sm:mb-4">
             <span class="text-red-400">[</span>REFERENCES_&_SOURCES<span class="text-red-400">]</span>
           </h2>
           <div class="bg-dark border border-gray-600">
@@ -255,14 +276,33 @@ Contributions: <span class="text-green-400">WELCOME</span>
 
               
               <div v-else>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-bold text-green-400 mb-4">
+                <div class="hidden md:grid grid-cols-2 gap-4 text-sm font-bold text-green-400 mb-4">
                   <div>SOURCE</div>
                   <div class="text-right">REFERENCES</div>
                 </div>
+                <div class="md:hidden text-xs text-muted mb-2 text-center">↓ Scroll to see all sources ↓</div>
 
-                <div class="space-y-2">
+                <div class="space-y-2 max-h-64 sm:max-h-80 overflow-y-auto pr-2">
                   <div v-for="source in referenceSources" :key="source.domain"
-                       class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm border-b border-gray-600 pb-2">
+                       class="border-b border-gray-600 pb-2">
+                    <!-- Mobile layout -->
+                    <div class="md:hidden space-y-1">
+                      <div class="flex items-center gap-2">
+                        <span class="text-green-400">►</span>
+                        <a
+                          :href="`https://${source.domain}`"
+                          target="_blank"
+                          class="text-blue-400 hover:text-blue-300 underline text-sm"
+                        >
+                          {{ source.domain }}
+                        </a>
+                      </div>
+                      <div class="text-right text-warning font-mono text-xs">
+                        {{ source.count }} references
+                      </div>
+                    </div>
+                    <!-- Desktop layout -->
+                    <div class="hidden md:grid grid-cols-2 gap-4 text-sm">
                     <div class="flex items-center gap-2">
                       <span class="text-green-400">►</span>
                       <a
@@ -277,6 +317,7 @@ Contributions: <span class="text-green-400">WELCOME</span>
                       {{ source.count }}
                     </div>
                   </div>
+                </div>
                 </div>
 
                 <div class="mt-4 pt-4 border-t border-gray-600">
@@ -576,5 +617,23 @@ useHead({
   51%, 100% {
     opacity: 0;
   }
+}
+
+/* Custom scrollbar styling - unified design */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 4px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: var(--bg-accent);
+  border: 1px solid var(--border-color);
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: var(--border-active);
 }
 </style>

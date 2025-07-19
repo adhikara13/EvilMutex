@@ -153,8 +153,8 @@ export default defineNuxtConfig({
         { name: 'twitter:description', content: 'Comprehensive database of malware mutex signatures for threat intelligence and detection' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-        // Removed GitHub Pages canonical URL for Cloudflare Pages deployment
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'canonical', href: 'https://evilmutex.org' }
       ]
     }
   },
@@ -240,9 +240,28 @@ export default defineNuxtConfig({
         '/contributor'
       ]
     },
-    // Fix middleware conflict warning
+    // Fix middleware conflict warning and handle trailing slashes
     routeRules: {
-      '/robots.txt': { headers: { 'Content-Type': 'text/plain' } }
+      '/robots.txt': { headers: { 'Content-Type': 'text/plain' } },
+      // Handle both trailing and non-trailing slash versions
+      '/malware/**': { 
+        headers: { 
+          'Cache-Control': 'public, max-age=3600',
+          'X-Robots-Tag': 'index, follow'
+        }
+      },
+      '/contributor/**': { 
+        headers: { 
+          'Cache-Control': 'public, max-age=3600',
+          'X-Robots-Tag': 'index, follow'
+        }
+      },
+      '/**': { 
+        headers: { 
+          'Cache-Control': 'public, max-age=3600',
+          'X-Robots-Tag': 'index, follow'
+        }
+      }
     }
   },
 
