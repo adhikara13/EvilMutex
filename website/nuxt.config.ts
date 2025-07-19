@@ -240,28 +240,9 @@ export default defineNuxtConfig({
         '/contributor'
       ]
     },
-    // Fix middleware conflict warning and handle trailing slashes
+    // Simple route rules for Cloudflare Pages
     routeRules: {
-      '/robots.txt': { headers: { 'Content-Type': 'text/plain' } },
-      // Handle both trailing and non-trailing slash versions
-      '/malware/**': { 
-        headers: { 
-          'Cache-Control': 'public, max-age=3600',
-          'X-Robots-Tag': 'index, follow'
-        }
-      },
-      '/contributor/**': { 
-        headers: { 
-          'Cache-Control': 'public, max-age=3600',
-          'X-Robots-Tag': 'index, follow'
-        }
-      },
-      '/**': { 
-        headers: { 
-          'Cache-Control': 'public, max-age=3600',
-          'X-Robots-Tag': 'index, follow'
-        }
-      }
+      '/robots.txt': { headers: { 'Content-Type': 'text/plain' } }
     }
   },
 
