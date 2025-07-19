@@ -240,3 +240,5 @@ website/public/data/stats-mutexes.json
 
 # Generated statistics file
 stats.json 
+
+.wrangler

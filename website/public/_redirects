@@ -1,2 +1,6 @@
-# SPA fallback - serve all routes through index.html
+# Redirect clean URLs to .html files (Cloudflare Pages style)
+/contributor /contributor.html 200
+/malware/* /malware/*.html 200
+
+# SPA fallback for client-side routing
 /* /index.html 200 
