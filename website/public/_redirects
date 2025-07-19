@@ -1,6 +1,0 @@
-# Handle both trailing and non-trailing slash versions for SPA
-/malware/* /index.html 200
-/malware/*/ /index.html 200
-/contributor /index.html 200
-/contributor/ /index.html 200
-/* /index.html 200 
