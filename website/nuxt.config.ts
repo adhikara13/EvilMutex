@@ -83,18 +83,18 @@ async function generateStaticSitemap() {
     <lastmod>${currentDate}</lastmod>
   </url>
   <url>
-    <loc>${baseUrl}/contributor</loc>
+    <loc>${baseUrl}/contributor/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>${currentDate}</lastmod>
   </url>`
 
-    // Add malware pages
+    // Add malware pages with trailing slashes for consistency
     data.malware.forEach(malware => {
       const slug = malware.malware_info.family.toLowerCase().replace(/[^a-z0-9]/g, '-')
       sitemap += `
   <url>
-    <loc>${baseUrl}/malware/${slug}</loc>
+    <loc>${baseUrl}/malware/${slug}/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <lastmod>${currentDate}</lastmod>

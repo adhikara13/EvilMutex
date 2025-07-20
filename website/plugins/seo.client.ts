@@ -6,10 +6,12 @@ export default defineNuxtPlugin(() => {
   const router = useRouter()
   
   router.afterEach((to) => {
-    // Normalize path for canonical URL (remove trailing slash except for root)
-    const normalizedPath = to.path.endsWith('/') && to.path !== '/' 
-      ? to.path.slice(0, -1) 
-      : to.path
+    // Normalize path for canonical URL (add trailing slash for consistency)
+    const normalizedPath = to.path === '/' 
+      ? to.path 
+      : to.path.endsWith('/') 
+        ? to.path 
+        : to.path + '/'
     
     // Set canonical URL
     const canonicalUrl = `https://evilmutex.org${normalizedPath}`

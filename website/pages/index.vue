@@ -102,7 +102,7 @@
                         <span class="text-warning">{{ safeArray(malware?.mutexes).length }}</span>
                     </div>
                      <div class="flex gap-2">
-                      <NuxtLink :to="`/malware/${(malware?.malware_info?.family || 'unknown').toLowerCase().replace(/\s+/g, '-')}`" class="btn btn-outline text-xs">
+                      <NuxtLink :to="`/malware/${(malware?.malware_info?.family || 'unknown').toLowerCase().replace(/\s+/g, '-')}/`" class="btn btn-outline text-xs">
                         VIEW
                       </NuxtLink>
                       <button @click="copyMutexes(malware)" class="btn btn-outline text-xs" :disabled="!malware || !malware.mutexes">
@@ -128,7 +128,7 @@
                     {{ safeArray(malware?.mutexes).length }}
                   </div>
                   <div class="flex gap-2">
-                    <NuxtLink :to="`/malware/${(malware?.malware_info?.family || 'unknown').toLowerCase().replace(/\s+/g, '-')}`" class="btn btn-outline text-xs">
+                    <NuxtLink :to="`/malware/${(malware?.malware_info?.family || 'unknown').toLowerCase().replace(/\s+/g, '-')}/`" class="btn btn-outline text-xs">
                       VIEW
                     </NuxtLink>
                     <button @click="copyMutexes(malware)" class="btn btn-outline text-xs" :disabled="!malware || !malware.mutexes">
