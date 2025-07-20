@@ -189,6 +189,7 @@ export default defineNuxtConfig({
           { name: 'keywords', content: 'malware, mutex, threat intelligence, cybersecurity, detection, sigma rules' },
           { name: 'author', content: 'EvilMutex Team' },
           { name: 'seznam-wmt', content: 'zNCSjjygAPUgu8bISSRgLXlOMJeLS9ek' },
+          { name: 'yandex-verification', content: '387089ba2217cdd8' },
         { property: 'og:title', content: 'EvilMutex - Malware Mutex Intelligence' },
         { property: 'og:description', content: 'Comprehensive database of malware mutex signatures for threat intelligence and detection' },
         { property: 'og:type', content: 'website' },

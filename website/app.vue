@@ -217,10 +217,7 @@ useHead({
       name: 'keywords',
       content: appConfig.app.keywords
     },
-    {
-      name: 'yandex-verification',
-      content: '387089ba2217cdd8'
-    }
+
   ]
 })
 </script>
