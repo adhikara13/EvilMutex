@@ -1,6 +1,11 @@
-# Redirect clean URLs to .html files (Cloudflare Pages style)
-/contributor /contributor.html 200
-/malware/* /malware/*.html 200
+# Handle trailing slashes for malware pages
+/malware/*/ /malware/*/index.html 200
+
+# Handle clean URLs for malware pages
+/malware/* /malware/*/index.html 200
+
+# Handle contributor page
+/contributor /contributor/index.html 200
 
 # SPA fallback for client-side routing
 /* /index.html 200 
