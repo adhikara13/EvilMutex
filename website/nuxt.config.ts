@@ -198,7 +198,16 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'canonical', href: 'https://evilmutex.org' }
+        { rel: 'canonical', href: 'https://evilmutex.org' },
+        // Preload critical resources
+        { rel: 'preload', href: '/_nuxt/entry.Da3oFN-N.css', as: 'style' },
+        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+        // Preload fonts
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { rel: 'preload', href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap', as: 'style' },
+        { rel: 'preload', href: 'https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap', as: 'style' }
       ]
     }
   },
@@ -225,12 +234,14 @@ export default defineNuxtConfig({
       }
     },
     build: {
-      target: 'es2020'
+      target: 'es2020',
+      cssCodeSplit: true
     },
     esbuild: {
       // Remove console logs in production
       drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : []
-    }
+    },
+
   },
 
 

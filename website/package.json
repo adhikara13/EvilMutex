@@ -10,6 +10,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "analyze": "nuxt build --analyze",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "start": "nuxt dev"
