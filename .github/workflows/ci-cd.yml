@@ -102,6 +102,7 @@ jobs:
           BASE_URLS=(
             "https://${DOMAIN}/"
             "https://${DOMAIN}/contributor"
+            "https://${DOMAIN}/favicon.ico"
           )
           
           # Get dynamic malware URLs from generated sitemap
