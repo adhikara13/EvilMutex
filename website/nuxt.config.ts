@@ -3,7 +3,40 @@ import { promises as fs } from 'fs'
 import { join } from 'path'
 import * as yaml from 'yaml'
 import Fuse from 'fuse.js'
+import penthouse from 'penthouse'
 import { generateBadgeJson } from './utils/dataProcessor'
+
+async function generateCriticalCss() {
+  console.log('💅 Generating critical CSS...');
+  const distDir = join(process.cwd(), 'dist');
+  const nuxtDir = join(distDir, '_nuxt');
+  const htmlFile = join(distDir, 'index.html');
+  const criticalCssFile = join(process.cwd(), 'public', 'critical.css');
+
+  try {
+    const files = await fs.readdir(nuxtDir);
+    const cssFile = files.find(file => file.startsWith('entry.') && file.endsWith('.css'));
+
+    if (!cssFile) {
+      console.error('❌ No entry CSS file found for critical CSS generation.');
+      return;
+    }
+
+    const cssFilePath = join(nuxtDir, cssFile);
+
+    const criticalCss = await penthouse({
+      url: `file://${htmlFile}`,
+      css: cssFilePath,
+      width: 1300,
+      height: 900,
+    });
+
+    await fs.writeFile(criticalCssFile, criticalCss);
+    console.log('✅ Critical CSS generated successfully');
+  } catch (error) {
+    console.error('❌ Error generating critical CSS:', error);
+  }
+}
 
 async function buildSearchIndex(malwareData) {
   console.log('🔍 Building search index...');
@@ -265,6 +298,10 @@ export default defineNuxtConfig({
       const malwareData = await buildMalwareData()
       await buildSearchIndex(malwareData)
       await generateStaticSitemap()
+    },
+
+    'build:done': async () => {
+      await generateCriticalCss();
     },
 
     'ready': async () => {

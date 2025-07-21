@@ -218,6 +218,36 @@ useHead({
       content: appConfig.app.keywords
     },
 
+  ],
+  script: [
+    {
+      innerHTML: `
+        (function() {
+          try {
+            const css = localStorage.getItem('critical-css');
+            if (css) {
+              const style = document.createElement('style');
+              style.innerHTML = css;
+              document.head.appendChild(style);
+              return;
+            }
+          } catch (e) {}
+
+          fetch('/critical.css')
+            .then(res => res.text())
+            .then(css => {
+              const style = document.createElement('style');
+              style.innerHTML = css;
+              document.head.appendChild(style);
+              try {
+                localStorage.setItem('critical-css', css);
+              } catch (e) {}
+            });
+        })();
+      `,
+      type: 'text/javascript',
+      charset: 'utf-8'
+    }
   ]
 })
 </script>
