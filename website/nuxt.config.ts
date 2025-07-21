@@ -163,7 +163,6 @@ export default defineNuxtConfig({
   ssr: false,
 
   modules: [
-    '@nuxt/ui',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss'
@@ -346,7 +345,7 @@ export default defineNuxtConfig({
 
   // Performance optimizations
   experimental: {
-    payloadExtraction: false
+    payloadExtraction: true
   },
 
   compatibilityDate: '2024-11-01'
