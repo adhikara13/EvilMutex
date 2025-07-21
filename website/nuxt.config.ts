@@ -137,50 +137,6 @@ async function generateStaticSitemap() {
   }
 }
 
-async function restructureForCloudflarePages() {
-  console.log('🔄 Restructuring files for Cloudflare Pages...')
-  
-  try {
-    const distDir = join(process.cwd(), 'dist')
-    
-    // Restructure contributor/index.html to contributor.html
-    const contributorIndexPath = join(distDir, 'contributor', 'index.html')
-    const contributorHtmlPath = join(distDir, 'contributor.html')
-    
-    if (await fs.access(contributorIndexPath).then(() => true).catch(() => false)) {
-      const content = await fs.readFile(contributorIndexPath, 'utf-8')
-      await fs.writeFile(contributorHtmlPath, content)
-      await fs.rm(join(distDir, 'contributor'), { recursive: true, force: true })
-      console.log('✅ Restructured contributor/index.html → contributor.html')
-    }
-    
-    // Restructure malware pages
-    const malwareDir = join(distDir, 'malware')
-    if (await fs.access(malwareDir).then(() => true).catch(() => false)) {
-      const malwareFolders = await fs.readdir(malwareDir)
-      
-      for (const folder of malwareFolders) {
-        const folderPath = join(malwareDir, folder)
-        const indexPath = join(folderPath, 'index.html')
-        const htmlPath = join(malwareDir, `${folder}.html`)
-        
-        if (await fs.access(indexPath).then(() => true).catch(() => false)) {
-          const content = await fs.readFile(indexPath, 'utf-8')
-          await fs.writeFile(htmlPath, content)
-          await fs.rm(folderPath, { recursive: true, force: true })
-        }
-      }
-      console.log(`✅ Restructured ${malwareFolders.length} malware pages`)
-    }
-    
-    console.log('✅ File restructuring completed')
-  } catch (error) {
-    console.error('❌ Error restructuring files:', error)
-  }
-}
-
-
-
 export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: false,
@@ -222,8 +178,6 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'canonical', href: 'https://evilmutex.org' },
-        // Preload critical resources
-        { rel: 'preload', href: '/_nuxt/entry.Da3oFN-N.css', as: 'style' },
         { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
         { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
         // Preload fonts
@@ -303,14 +257,6 @@ export default defineNuxtConfig({
     viewer: false
   },
 
-
-  generate: {
-    routes: [
-      '/',
-      '/contributor'
-      // Dynamic routes are handled by nitro:config hook below
-    ]
-  },
 
   hooks: {
     // Build malware data before building
