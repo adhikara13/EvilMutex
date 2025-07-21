@@ -207,8 +207,8 @@ export default defineNuxtConfig({
         // Preload fonts
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'preload', href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap', as: 'style' },
-        { rel: 'preload', href: 'https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap', as: 'style' }
+        { rel: 'preload', href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap', as: 'style' },
+        { rel: 'preload', href: 'https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap', as: 'style' }
       ]
     }
   },
@@ -242,9 +242,44 @@ export default defineNuxtConfig({
       // Remove console logs in production
       drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : []
     },
-
+    css: {
+      postcss: {
+        plugins: [
+          require('autoprefixer'),
+          require('cssnano')({
+            preset: ['default', {
+              discardComments: { removeAll: true },
+              normalizeWhitespace: true,
+              colormin: true,
+              minifyFontValues: true,
+              minifySelectors: true
+            }]
+          })
+        ]
+      }
+    }
   },
 
+  // Tailwind CSS optimization
+  tailwindcss: {
+    config: {
+      content: [
+        './components/**/*.{js,vue,ts}',
+        './layouts/**/*.vue',
+        './pages/**/*.vue',
+        './plugins/**/*.{js,ts}',
+        './nuxt.config.{js,ts}',
+        './app.vue'
+      ],
+      theme: {
+        extend: {}
+      },
+      plugins: []
+    },
+    cssPath: '~/assets/css/main.css',
+    exposeConfig: false,
+    viewer: false
+  },
 
 
   generate: {
