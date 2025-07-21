@@ -77,67 +77,83 @@
             </div>
 
             <!-- Table Body / Cards -->
-            <div class="max-h-96 overflow-y-auto">
-              <div v-if="safeArray(filteredMalware).length === 0" class="p-4 text-center text-muted">
-                <div class="text-red-400 mb-2">[NO_DATA_FOUND]</div>
-                <div class="text-xs">No malware entries match your search criteria</div>
-              </div>
+            <DynamicScroller
+              :items="filteredMalware"
+              :min-item-size="88"
+              class="max-h-96 overflow-y-auto"
+              key-field="id"
+            >
+              <template v-slot="{ item: malware, index, active }">
+                <DynamicScrollerItem
+                  :item="malware"
+                  :active="active"
+                  :size-dependencies="[
+                    malware.malware_info.family,
+                  ]"
+                  :data-index="index"
+                >
+                  <div v-if="safeArray(filteredMalware).length === 0" class="p-4 text-center text-muted">
+                    <div class="text-red-400 mb-2">[NO_DATA_FOUND]</div>
+                    <div class="text-xs">No malware entries match your search criteria</div>
+                  </div>
 
-              <div v-for="malware in safeArray(filteredMalware)" :key="malware?.malware_info?.family || 'unknown'">
-                <!-- Card View for Mobile -->
-                <div class="md:hidden p-4 border-b border-gray-600">
-                   <div class="flex justify-between items-start">
-                    <div>
-                      <div class="font-bold text-green-400">{{ safeValue(malware?.malware_info?.family, 'Unknown') }}</div>
-                      <div class="text-muted text-xs">
-                        {{ safeArray(malware?.malware_info?.aliases).slice(0, 2).join(', ') }}
-                        <span v-if="safeArray(malware?.malware_info?.aliases).length > 2">...</span>
+                  <div>
+                    <!-- Card View for Mobile -->
+                    <div class="md:hidden p-4 border-b border-gray-600">
+                      <div class="flex justify-between items-start">
+                        <div>
+                          <div class="font-bold text-green-400">{{ safeValue(malware?.malware_info?.family, 'Unknown') }}</div>
+                          <div class="text-muted text-xs">
+                            {{ safeArray(malware?.malware_info?.aliases).slice(0, 2).join(', ') }}
+                            <span v-if="safeArray(malware?.malware_info?.aliases).length > 2">...</span>
+                          </div>
+                        </div>
+                        <span class="badge badge-red">{{ safeValue(malware?.category, 'unknown').toLowerCase() }}</span>
+                      </div>
+                      <div class="flex justify-between items-center mt-4">
+                        <div class="text-sm">
+                          <span class="text-muted">Mutexes: </span>
+                          <span class="text-warning">{{ safeArray(malware?.mutexes).length }}</span>
+                        </div>
+                        <div class="flex gap-2">
+                          <NuxtLink :to="`/malware/${(malware?.malware_info?.family || 'unknown').toLowerCase().replace(/\s+/g, '-')}/`" class="btn btn-outline text-xs">
+                            VIEW
+                          </NuxtLink>
+                          <button @click="copyMutexes(malware)" class="btn btn-outline text-xs" :disabled="!malware || !malware.mutexes">
+                            COPY
+                          </button>
+                        </div>
                       </div>
                     </div>
-                     <span class="badge badge-red">{{ safeValue(malware?.category, 'unknown').toLowerCase() }}</span>
-                   </div>
-                  <div class="flex justify-between items-center mt-4">
-                    <div class="text-sm">
-                        <span class="text-muted">Mutexes: </span>
-                        <span class="text-warning">{{ safeArray(malware?.mutexes).length }}</span>
-                    </div>
-                     <div class="flex gap-2">
-                      <NuxtLink :to="`/malware/${(malware?.malware_info?.family || 'unknown').toLowerCase().replace(/\s+/g, '-')}/`" class="btn btn-outline text-xs">
-                        VIEW
-                      </NuxtLink>
-                      <button @click="copyMutexes(malware)" class="btn btn-outline text-xs" :disabled="!malware || !malware.mutexes">
-                        COPY
-                      </button>
-                    </div>
-                  </div>
-                </div>
 
-                <!-- Table Row for Desktop -->
-                <div class="hidden md:grid grid-cols-4 gap-4 text-sm p-4 border-b border-gray-600 hover:bg-darker transition-colors">
-                  <div>
-                    <div class="font-bold text-green-400">{{ safeValue(malware?.malware_info?.family, 'Unknown') }}</div>
-                    <div class="text-muted text-xs">
-                      {{ safeArray(malware?.malware_info?.aliases).slice(0, 2).join(', ') }}
-                      <span v-if="safeArray(malware?.malware_info?.aliases).length > 2">...</span>
+                    <!-- Table Row for Desktop -->
+                    <div class="hidden md:grid grid-cols-4 gap-4 text-sm p-4 border-b border-gray-600 hover:bg-darker transition-colors">
+                      <div>
+                        <div class="font-bold text-green-400">{{ safeValue(malware?.malware_info?.family, 'Unknown') }}</div>
+                        <div class="text-muted text-xs">
+                          {{ safeArray(malware?.malware_info?.aliases).slice(0, 2).join(', ') }}
+                          <span v-if="safeArray(malware?.malware_info?.aliases).length > 2">...</span>
+                        </div>
+                      </div>
+                      <div>
+                        <span class="badge badge-red">{{ safeValue(malware?.category, 'unknown').toLowerCase() }}</span>
+                      </div>
+                      <div class="text-warning">
+                        {{ safeArray(malware?.mutexes).length }}
+                      </div>
+                      <div class="flex gap-2">
+                        <NuxtLink :to="`/malware/${(malware?.malware_info?.family || 'unknown').toLowerCase().replace(/\s+/g, '-')}/`" class="btn btn-outline text-xs">
+                          VIEW
+                        </NuxtLink>
+                        <button @click="copyMutexes(malware)" class="btn btn-outline text-xs" :disabled="!malware || !malware.mutexes">
+                          COPY
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <span class="badge badge-red">{{ safeValue(malware?.category, 'unknown').toLowerCase() }}</span>
-                  </div>
-                  <div class="text-warning">
-                    {{ safeArray(malware?.mutexes).length }}
-                  </div>
-                  <div class="flex gap-2">
-                    <NuxtLink :to="`/malware/${(malware?.malware_info?.family || 'unknown').toLowerCase().replace(/\s+/g, '-')}/`" class="btn btn-outline text-xs">
-                      VIEW
-                    </NuxtLink>
-                    <button @click="copyMutexes(malware)" class="btn btn-outline text-xs" :disabled="!malware || !malware.mutexes">
-                      COPY
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+                </DynamicScrollerItem>
+              </template>
+            </DynamicScroller>
           </div>
         </div>
 
@@ -215,7 +231,10 @@ const selectedCategory = ref(null)
 const filteredMalware = computed(() => {
   if (!malwareStore?.malwareList || !Array.isArray(malwareStore.malwareList)) return []
 
-  let filtered = malwareStore.malwareList
+  let filtered = malwareStore.malwareList.map((item, index) => ({
+    ...item,
+    id: item.malware_info?.family || `item-${index}`
+  }))
 
   if (searchQuery.value) {
     const query = searchQuery.value.toLowerCase()

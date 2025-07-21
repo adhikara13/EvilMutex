@@ -1,11 +1,3 @@
-# Handle trailing slashes for malware pages
-/malware/*/ /malware/*/index.html 200
-
-# Handle clean URLs for malware pages
-/malware/* /malware/*/index.html 200
-
-# Handle contributor page
-/contributor /contributor/index.html 200
-
-# SPA fallback for client-side routing
-/* /index.html 200 
+# This is a single-page application. All routes that are not static files
+# should be served the index.html file.
+/*    /index.html   200 
