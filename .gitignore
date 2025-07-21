@@ -237,6 +237,7 @@ website/public/sitemap.xml
 website/public/data/malware.json
 website/public/data/stats-malware.json
 website/public/data/stats-mutexes.json
+website/public/data/
 
 # Generated statistics file
 stats.json 

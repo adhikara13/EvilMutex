@@ -222,35 +222,32 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import Fuse from 'fuse.js'
 import { appConfig } from '~/config/app.config'
 
 const malwareStore = useMalwareStore()
 const searchQuery = ref('')
 const selectedCategory = ref(null)
+let fuse
 
 const filteredMalware = computed(() => {
   if (!malwareStore?.malwareList || !Array.isArray(malwareStore.malwareList)) return []
 
-  let filtered = malwareStore.malwareList.map((item, index) => ({
-    ...item,
-    id: item.malware_info?.family || `item-${index}`
-  }))
+  let results = malwareStore.malwareList;
 
-  if (searchQuery.value) {
-    const query = searchQuery.value.toLowerCase()
-    filtered = filtered.filter(malware =>
-      malware?.malware_info?.family?.toLowerCase().includes(query) ||
-      malware?.malware_info?.aliases?.some(alias => alias?.toLowerCase().includes(query)) ||
-      malware?.category?.toLowerCase().includes(query) ||
-      malware?.mutexes?.some(mutex => mutex?.name?.toLowerCase().includes(query))
-    )
+  if (searchQuery.value && fuse) {
+    const searchResults = fuse.search(searchQuery.value)
+    results = searchResults.map(result => result.item)
   }
 
   if (selectedCategory.value) {
-    filtered = filtered.filter(malware => malware?.category?.toLowerCase() === selectedCategory.value.toLowerCase())
+    results = results.filter(malware => malware?.category?.toLowerCase() === selectedCategory.value.toLowerCase())
   }
 
-  return filtered
+  return results.map((item, index) => ({
+    ...item,
+    id: item.malware_info?.family || `item-${index}`
+  }))
 })
 
 const performSearch = () => {
@@ -397,8 +394,17 @@ onMounted(async () => {
     if (malwareStore.malwareList.length === 0) {
       await malwareStore.loadMalwareData()
     }
+    
+    const response = await fetch('/data/search-index.json')
+    const searchIndex = await response.json()
+    const options = {
+      keys: ['malware_info.family', 'malware_info.aliases', 'category', 'mutexes.name'],
+      includeScore: true,
+      threshold: 0.4
+    }
+    fuse = new Fuse(malwareStore.malwareList, options, Fuse.parseIndex(searchIndex))
   } catch (error) {
-    console.error('Failed to initialize store:', error)
+    console.error('Failed to initialize store or search index:', error)
   }
 })
 

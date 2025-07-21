@@ -2,7 +2,30 @@
 import { promises as fs } from 'fs'
 import { join } from 'path'
 import * as yaml from 'yaml'
+import Fuse from 'fuse.js'
 import { generateBadgeJson } from './utils/dataProcessor'
+
+async function buildSearchIndex(malwareData) {
+  console.log('🔍 Building search index...');
+  const publicDataDir = join(process.cwd(), 'public', 'data');
+
+  try {
+    const fuseIndex = Fuse.createIndex(
+      ['malware_info.family', 'malware_info.aliases', 'category', 'mutexes.name'],
+      malwareData.malware
+    )
+
+    await fs.writeFile(
+      join(publicDataDir, 'search-index.json'),
+      JSON.stringify(fuseIndex.toJSON())
+    );
+
+    console.log('✅ Search index built successfully');
+  } catch (error) {
+    console.error('❌ Error building search index:', error);
+    throw error;
+  }
+}
 
 async function buildMalwareData() {
   console.log('🔒 Building malware data from YAML files...')
@@ -293,7 +316,8 @@ export default defineNuxtConfig({
     // Build malware data before building
     'build:before': async () => {
       console.log('🔒 Building EvilMutex - Malware Mutex Intelligence Platform...')
-      await buildMalwareData()
+      const malwareData = await buildMalwareData()
+      await buildSearchIndex(malwareData)
       await generateStaticSitemap()
     },
 
