@@ -4,7 +4,7 @@
 malware_info:
   family: "PureRAT"
   aliases:
-    - "PureRAT"
+    - "Pure RAT"
   description: "PureRAT is a remote access trojan (RAT) that provides attackers with full control over compromised systems, including file operations, process management, and data exfiltration capabilities."
   threat_actor: "Unknown"
   first_seen: "Unknown"
@@ -20,6 +20,4 @@ mutexes:
     references:
       - "https://www.esentire.com/blog/ghost-crypt-powers-purerat-with-hypnosis"
     date_added: "2025-07-22"
-    analyst: "adhikara13"
-    notes:
-      - "Mutex used by PureRAT RAT for process synchronization" 
+    analyst: "@adhikara13"
