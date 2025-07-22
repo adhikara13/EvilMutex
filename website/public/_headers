@@ -30,4 +30,22 @@
 
 # Don't cache HTML files too aggressively
 /*.html
-  Cache-Control: public, max-age=3600 
+  Cache-Control: public, max-age=3600
+
+# Serve pre-compressed Brotli assets if the browser supports it
+/*.js.br
+  Content-Type: application/javascript
+  Content-Encoding: br
+
+/*.css.br
+  Content-Type: text/css
+  Content-Encoding: br
+
+# Serve pre-compressed Gzip assets if the browser supports it
+/*.js.gz
+  Content-Type: application/javascript
+  Content-Encoding: gzip
+
+/*.css.gz
+  Content-Type: text/css
+  Content-Encoding: gzip 

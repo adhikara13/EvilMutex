@@ -5,6 +5,7 @@ import * as yaml from 'yaml'
 import Fuse from 'fuse.js'
 import penthouse from 'penthouse'
 import { generateBadgeJson } from './utils/dataProcessor'
+import compression from 'vite-plugin-compression'
 
 async function generateCriticalCss() {
   console.log('💅 Generating critical CSS...');
@@ -237,6 +238,16 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    plugins: [
+      compression({
+        algorithm: 'brotliCompress',
+        ext: '.br',
+      }),
+      compression({
+        algorithm: 'gzip',
+        ext: '.gz',
+      }),
+    ],
     server: {
       fs: {
         strict: false,
