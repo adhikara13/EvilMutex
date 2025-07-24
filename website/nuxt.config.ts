@@ -340,6 +340,37 @@ export default defineNuxtConfig({
       }
     },
 
+    // Generate SEO meta tags for each malware page
+    'pages:extend': async (pages) => {
+      try {
+        const data = await buildMalwareData()
+        data.malware.forEach(malware => {
+          const slug = malware.malware_info.family.toLowerCase().replace(/[^a-z0-9]/g, '-')
+          const pagePath = `/malware/${slug}`
+          
+          // Find the existing page and update its meta
+          const existingPage = pages.find(p => p.path === pagePath)
+          if (existingPage) {
+            existingPage.meta = {
+              ...existingPage.meta,
+              title: `${malware.malware_info.family} - EvilMutex Malware Analysis`,
+              description: `Comprehensive analysis of ${malware.malware_info.family} malware including ${malware.mutexes.length} mutex signatures for threat detection and cybersecurity research.`,
+              keywords: `${malware.malware_info.family}, malware, malware mutex, mutex, cybersecurity, threat intelligence, ${malware.primary_tags?.join(', ') || ''}, ${malware.category}`,
+              canonical: `https://evilmutex.org/malware/${slug}/`,
+              ogTitle: `${malware.malware_info.family} - EvilMutex Malware Analysis`,
+              ogDescription: `Comprehensive analysis of ${malware.malware_info.family} malware including ${malware.mutexes.length} mutex signatures for threat detection and cybersecurity research.`,
+              ogUrl: `https://evilmutex.org/malware/${slug}/`,
+              ogType: 'article',
+              twitterTitle: `${malware.malware_info.family} - EvilMutex Analysis`,
+              twitterDescription: `Analysis of ${malware.malware_info.family} malware with ${malware.mutexes.length} mutex signatures`
+            }
+          }
+        })
+      } catch (error) {
+        console.error('Error generating SEO meta tags:', error)
+      }
+    },
+
 
   },
 
