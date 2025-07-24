@@ -355,7 +355,7 @@ export default defineNuxtConfig({
     },
     // Route rules for Cloudflare Pages - generate .html files
     routeRules: {
-      '/robots.txt': { headers: { 'Content-Type': 'text/plain' } },
+      '/robots.txt': { static: true, headers: { 'Content-Type': 'text/plain' } },
       '/contributor': { prerender: true, static: true },
       '/malware/*': { prerender: true, static: true }
     }
