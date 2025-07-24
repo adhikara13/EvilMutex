@@ -256,7 +256,7 @@ export default defineNuxtConfig({
     },
     build: {
       target: 'es2020',
-      cssCodeSplit: true
+      cssCodeSplit: true,
     },
     esbuild: {
       // Remove console logs in production
