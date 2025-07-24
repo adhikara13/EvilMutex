@@ -418,7 +418,7 @@ onMounted(async () => {
 useSeoMeta({
   title: `${appConfig.app.fullName} - Malware Mutex Database`,
   description: `${appConfig.app.description} - Access comprehensive malware mutex signatures, YARA rules, and threat intelligence data.`,
-  keywords: `${appConfig.app.keywords}, malware database, mutex signatures, YARA rules, cybersecurity research, threat hunting`,
+  keywords: `${appConfig.app.keywords}, malware database, malware mutex, mutex signatures, YARA rules, cybersecurity research, threat hunting`,
   author: 'EvilMutex Team',
   ogTitle: `${appConfig.app.fullName} - Malware Mutex Database`,
   ogDescription: `${appConfig.app.description} - Access comprehensive malware mutex signatures, YARA rules, and threat intelligence data.`,
