@@ -40,7 +40,7 @@
             <NuxtLink to="/" class="interactive text-green-400 hover:text-green-300 font-mono">
               <span class="text-red-400">[</span>HOME<span class="text-red-400">]</span>
             </NuxtLink>
-            <NuxtLink to="/contributor" class="interactive text-green-400 hover:text-green-300 font-mono">
+            <NuxtLink to="/contributor/" class="interactive text-green-400 hover:text-green-300 font-mono">
               <span class="text-red-400">[</span>CONTRIBUTOR<span class="text-red-400">]</span>
             </NuxtLink>
             <a :href="appConfig.links.github.main" target="_blank" class="interactive text-green-400 hover:text-green-300 font-mono">
@@ -59,7 +59,7 @@
             <NuxtLink to="/" class="interactive text-green-400 hover:text-green-300 font-mono" @click="menuOpen = false">
               <span class="text-red-400">[</span>HOME<span class="text-red-400">]</span>
             </NuxtLink>
-            <NuxtLink to="/contributor" class="interactive text-green-400 hover:text-green-300 font-mono" @click="menuOpen = false">
+            <NuxtLink to="/contributor/" class="interactive text-green-400 hover:text-green-300 font-mono" @click="menuOpen = false">
               <span class="text-red-400">[</span>CONTRIBUTOR<span class="text-red-400">]</span>
             </NuxtLink>
             <a :href="appConfig.links.github.main" target="_blank" class="interactive text-green-400 hover:text-green-300 font-mono" @click="menuOpen = false">

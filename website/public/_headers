@@ -14,7 +14,7 @@
   Cache-Control: public, max-age=3600
   Link: <https://evilmutex.com/:splat>; rel="canonical"
 
-/contributor
+/contributor/
   X-Robots-Tag: index, follow
   Cache-Control: public, max-age=3600
   Link: <https://evilmutex.com/contributor>; rel="canonical"
