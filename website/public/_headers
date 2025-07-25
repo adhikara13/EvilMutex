@@ -6,13 +6,18 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
+/
+  Link: <https://evilmutex.com/>; rel="canonical"
+
 /malware/*
   X-Robots-Tag: index, follow
   Cache-Control: public, max-age=3600
+  Link: <https://evilmutex.com/:splat>; rel="canonical"
 
 /contributor
   X-Robots-Tag: index, follow
   Cache-Control: public, max-age=3600
+  Link: <https://evilmutex.com/contributor>; rel="canonical"
 
 /_nuxt/*
   Cache-Control: public, max-age=31536000, immutable
