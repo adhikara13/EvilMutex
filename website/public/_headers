@@ -12,7 +12,7 @@
 /malware/*
   X-Robots-Tag: index, follow
   Cache-Control: public, max-age=3600
-  Link: <https://evilmutex.com/:splat>; rel="canonical"
+  Link: <https://evilmutex.com/malware/:splat>; rel="canonical"
 
 /contributor/
   X-Robots-Tag: index, follow
