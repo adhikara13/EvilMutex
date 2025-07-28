@@ -75,12 +75,12 @@ jobs:
       - name: Generate IndexNow key file
         run: |
           echo "🔑 Generating IndexNow key file..."
-          INDEXNOW_KEY="${{ vars.INDEXNOW_KEY }}"
+          INDEXNOW_KEY="${{ secrets.INDEXNOW_KEY }}"
           
           # Create the key file in the dist directory
           echo "$INDEXNOW_KEY" > "website/dist/${INDEXNOW_KEY}.txt"
           
-          echo "✅ IndexNow key file generated: ${INDEXNOW_KEY}.txt"
+          echo "✅ IndexNow key file generated successfully"
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
@@ -94,8 +94,7 @@ jobs:
         run: |
           echo "🔄 Submitting URLs to IndexNow..."
           
-          # Use GitHub Actions variables
-          INDEXNOW_KEY="${{ vars.INDEXNOW_KEY }}"
+          INDEXNOW_KEY="${{ secrets.INDEXNOW_KEY }}"
           DOMAIN="${{ vars.DOMAIN }}"
           
           # Base URLs that always get submitted
