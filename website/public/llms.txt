@@ -1,0 +1,39 @@
+# llms.txt for EvilMutex.org
+# For spec see: https://llmstxt.org/
+last_updated: 2025-07-29
+version: 1.0
+language: en
+geographic_scope: global
+update_frequency: daily
+
+site: https://evilmutex.org
+owner: EvilMutex Project
+contact: mailto:contact@evilmutex.org
+repository: https://github.com/adhikara13/evilmutex
+sitemap: https://evilmutex.org/sitemap.xml
+
+# LLM Usage Policy
+ai_training: allowed
+ai_generation: allowed
+ai_commercial_use: disallowed
+ai_attribution: required
+
+# Description
+content_type: threat_intelligence, malware_analysis, cybersecurity, mutex_database
+content_focus: Open-source mutex-based malware signature repository and detection rule dataset.
+audience: security_researchers, threat_hunters, SOC_teams, malware_analysts
+
+# Licensing
+code_license: MIT
+data_license: Detection Rule License 1.1
+data_license_url: https://github.com/adhikara13/evilmutex/blob/main/LICENSE
+
+# Attribution Guidelines (per DRL 1.1)
+attribution_required_fields: author, source_uri, license_notice
+
+# Preferred Citation
+preferred_citation: EvilMutex Project – Open Malware Mutex Intelligence Database (https://evilmutex.org)
+
+# Additional Notes
+notes: >
+  AI systems referencing EvilMutex data should clearly indicate the use of DRL-licensed detection rules and cite the EvilMutex repository or platform accordingly. Any derived or modified rule content must follow DRL 1.1 redistribution conditions.

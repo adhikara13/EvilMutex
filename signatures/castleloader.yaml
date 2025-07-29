@@ -1,0 +1,27 @@
+# CastleLoader Mutex Intelligence
+# Analyst source file for CastleLoader-related mutex data
+
+malware_info:
+  family: "CastleLoader"
+  aliases:
+    - "Castle Loader"
+  description: "CastleLoader is a loader malware that first emerged in early 2025, designed to distribute various information stealers and remote access trojans (RATs) through Cloudflare-themed ClickFix phishing attacks and fake GitHub repositories. The malware uses PowerShell commands to download and execute secondary payloads including StealC, RedLine, NetSupport RAT, DeerStealer, HijackLoader, and SectopRAT. CastleLoader employs AutoIT scripts to load shellcode into memory and connects to C2 servers for additional payload delivery. The malware has been observed in campaigns targeting government entities and has achieved a 28.7% infection rate among victims who clicked on malicious links."
+  threat_actor: "Unknown"
+  first_seen: "2025"
+
+category: "loader"
+primary_tags:
+  - "payload_delivery"
+  - "multi_stage"
+  - "loader"
+  - "phishing"
+  - "clickfix"
+  - "powershell"
+  - "autoit"
+
+mutexes:
+  - name: '10KCnWHtIoABhkL2Cl3u'
+    references:
+      - "https://app.any.run/tasks/8483dc5f-e69d-4085-8f3f-09702fb60ef9/"
+    date_added: "2025-07-29"
+    analyst: "@adhikara13"
