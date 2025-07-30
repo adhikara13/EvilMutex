@@ -1,0 +1,20 @@
+# Fangao Loader Mutex Intelligence
+# Analyst source file for Fangao loader-related mutex data
+
+malware_info:
+  family: "Fangao"
+  aliases: ["Fangao loader"]
+  description: "Fangao is a sophisticated multi-stage loader malware associated with the SalmonSlalom threat group, targeting industrial organizations in the Asia-Pacific region. It uses complex delivery mechanisms including DLL side-loading, leverages Chinese CDN services (myqcloud) and Youdao Cloud Notes for payload storage, and employs publicly available packers for encryption. The loader is designed to bypass security solutions through dynamic C2 server changes and legitimate application functionality abuse."
+  threat_actor: ["SalmonSlalom"]
+  first_seen: "2025"
+
+category: "loader"
+primary_tags: ["loader", "multi_stage", "dll_side_loading", "cdn_abuse", "industrial_targeting", "packer_encryption"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'UniqueMutexName'
+    references:
+      - "https://ics-cert.kaspersky.ru/publications/reports/2025/03/27/operation-salmonslalom/"
+    date_added: "2025-07-30"
+    analyst: "@adhikara13" 
