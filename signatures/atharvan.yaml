@@ -1,0 +1,20 @@
+# Atharvan Backdoor Mutex Intelligence
+# Analyst source file for Atharvan backdoor-related mutex data
+
+malware_info:
+  family: "Atharvan"
+  aliases: ["AtharvanBackdoor"]
+  description: "Atharvan is a custom-developed remote access trojan (RAT) associated with the Clasiopa threat group, targeting materials research organizations in Asia. It uses a sophisticated HTTP-based C&C communication protocol with custom encryption, employs scheduled communication patterns, and includes commands for file download, arbitrary execution, and system configuration. The malware is named after a legendary Vedic sage and uses Hindi cultural references."
+  threat_actor: ["Clasiopa"]
+  first_seen: "2023"
+
+category: "backdoor"
+primary_tags: ["backdoor", "custom_encryption", "scheduled_communication", "http_c2", "materials_research_targeting"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "SAPTARISHI-ATHARVAN-101"
+    references:
+      - "https://www.security.com/threat-intelligence/clasiopa-materials-research"
+    date_added: "2025-07-30"
+    analyst: "@adhikara13" 
