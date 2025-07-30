@@ -1,0 +1,21 @@
+# Protego RAT Mutex Intelligence
+# Analyst source file for Protego RAT-related mutex data
+
+malware_info:
+  family: "Protego"
+  aliases: ["Protego RAT"]
+  description: "Protego is a sophisticated C# remote access trojan (RAT) associated with the Patchwork APT group (APT-Q-36). It is delivered through malicious LNK files disguised as PDF documents and uses Rust-based loaders with shellcode decryption. The malware establishes two-stage communication with C2 servers, collects system information including hostname, username, device UUID, and OS details, and supports extensive remote control capabilities including file operations, process management, and memory execution."
+  threat_actor: ["Patchwork", "White Elephant", "Hangover", "Dropping Elephant", "APT-Q-36"]
+  first_seen: "2025"
+
+category: "rat"
+primary_tags: ["remote_access", "csharp", "shellcode_decryption", "two_stage_communication", "file_operations", "process_management"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'kiuwqyergljkwef'
+    references:
+      - "https://www.secrss.com/articles/80795"
+      - "https://ti.qianxin.com/blog/articles/apt-q-36-impersonates-university-domain-names-to-steal-secrets-en/"
+    date_added: "2025-07-30"
+    analyst: "@adhikara13" 
