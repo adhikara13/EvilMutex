@@ -1,0 +1,20 @@
+# SpeedStealer Malware Mutex Intelligence
+# Analyst source file for SpeedStealer-related mutex data
+
+malware_info:
+  family: "SpeedStealer"
+  aliases: ["Speed"]
+  description: "SpeedStealer is a malware family designed for data theft and system compromise. It uses various techniques to steal sensitive information and maintain persistence on compromised systems."
+  threat_actor: "Unknown"
+  first_seen: "2023"
+
+category: "stealer"
+primary_tags: ["stealer", "data_theft", "persistence"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "gamcop"
+    references:
+      - "https://cacts.cn/anquanjujiao/495.htm"
+    date_added: "2025-07-30"
+    analyst: "@adhikara13" 
