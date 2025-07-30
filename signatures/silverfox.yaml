@@ -1,0 +1,20 @@
+# SilverFox RAT Mutex Intelligence
+# Analyst source file for SilverFox RAT-related mutex data
+
+malware_info:
+  family: "SilverFox"
+  aliases: ["SilverFox RAT","ValleyRAT"]
+  description: "SilverFox is a sophisticated remote access trojan (RAT) that emerged in 2022, known for its advanced process injection techniques and anti-analysis capabilities. It uses process hollowing to inject malicious code into system processes like VSSV.exe and explorer.exe, employs ALPC (Advanced Local Procedure Call) for inter-process communication, and implements multiple persistence mechanisms including service creation and scheduled tasks."
+  threat_actor: ["SilverFox","Void Arachne"]
+  first_seen: "2022"
+
+category: "rat"
+primary_tags: ["remote_access", "process_injection", "alpc_communication", "service_creation", "persistence", "anti_analysis"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\IsUserAnAdmin'
+    references:
+      - "https://www.xtcaq.com/nd.jsp?id=9361"
+    date_added: "2025-07-30"
+    analyst: "@adhikara13" 
