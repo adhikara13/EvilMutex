@@ -1,0 +1,20 @@
+# DFKRAT Backdoor Mutex Intelligence
+# Analyst source file for DFKRAT backdoor-related mutex data
+
+malware_info:
+  family: "DFKRAT"
+  aliases: ["DFKRAT backdoor"]
+  description: "DFKRAT is a sophisticated backdoor malware associated with the NGC2180 threat group, designed for cyberespionage targeting high-ranking entities. It uses multi-stage delivery mechanisms including DLL side-loading and shellcode injection, employs RC4 encryption for C&C communication, and supports interactive shell, file exfiltration, and potential additional malware download capabilities."
+  threat_actor: ["NGC2180"]
+  first_seen: "2021"
+
+category: "backdoor"
+primary_tags: ["backdoor", "cyberespionage", "dll_side_loading", "shellcode_injection", "rc4_encryption", "file_exfiltration"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'loasd6asdg6'
+    references:
+      - "https://rt-solar.ru/solar-4rays/blog/4124/"
+    date_added: "2025-01-27"
+    analyst: "@adhikara13" 

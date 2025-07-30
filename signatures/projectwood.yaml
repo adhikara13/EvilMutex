@@ -1,0 +1,20 @@
+# Project Wood Backdoor Mutex Intelligence
+# Analyst source file for Project Wood backdoor-related mutex data
+
+malware_info:
+  family: "ProjectWood"
+  aliases: ["Project Wood"]
+  description: "Project Wood is a sophisticated backdoor malware that has been evolving since 2005, associated with the Gelsemium APT group. It uses TEA encryption algorithm with variable rounds for C&C communication, employs kernel driver modules for process hiding, and implements multiple persistence mechanisms. The malware is known for its Linux variant FireWood and has been used in various operations including Operation TooHash."
+  threat_actor: ["Gelsemium"]
+  first_seen: "2005"
+
+category: "backdoor"
+primary_tags: ["backdoor", "tea_encryption", "kernel_module", "process_hiding", "persistence", "c2_communication"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'IMPROVING CLIENT Want Wood To Exit?'
+    references:
+      - "https://www.welivesecurity.com/en/eset-research/unveiling-wolfsbane-gelsemiums-linux-counterpart-to-gelsevirine/"
+    date_added: "2025-07-30"
+    analyst: "@adhikara13" 
