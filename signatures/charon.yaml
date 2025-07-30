@@ -1,0 +1,20 @@
+# CHARON Ransomware Mutex Intelligence
+# Analyst source file for CHARON ransomware-related mutex data
+
+malware_info:
+  family: "CHARON"
+  aliases: ["CHARON ransomware"]
+  description: "CHARON is a ransomware that emerged in July 2025, known for its sophisticated file encryption techniques and anti-EDR capabilities. It uses variable encryption patterns based on file size and creates a malicious service (WWC) as part of its persistence strategy. The ransomware terminates backup services and processes to prevent recovery attempts."
+  threat_actor: "Unknown"
+  first_seen: "2025-07-22"
+
+category: "ransomware"
+primary_tags: ["file_encryption", "anti_edr", "service_creation", "backup_targeting", "variable_encryption"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'OopsCharonHere'
+    references:
+      - "https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/ransom.win64.charon.thgbcbe"
+    date_added: "2025-07-30"
+    analyst: "@adhikara13" 
