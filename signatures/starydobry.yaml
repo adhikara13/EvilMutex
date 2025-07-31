@@ -1,0 +1,20 @@
+# StaryDobry Loader Mutex Intelligence
+# Analyst source file for StaryDobry loader-related mutex data
+
+malware_info:
+  family: "StaryDobry"
+  aliases: ["Stary Dobry"]
+  description: "StaryDobry is a sophisticated multi-stage loader malware that spreads through trojanized game installers on torrent sites. It uses a complex infection chain involving DLL side-loading, AES encryption, and process injection to deploy XMRig cryptocurrency miners. The malware targets gaming computers with sufficient processing power for continuous mining operations and employs DNS over HTTPS (DoH) to hide C&C communications."
+  threat_actor: "Unknown"
+  first_seen: "2024-09"
+
+category: "loader"
+primary_tags: ["loader", "cryptominer", "dll_side_loading", "torrent_spread", "process_injection", "aes_encryption"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "com_curruser_mttx"
+    references:
+      - "https://securelist.ru/starydobry-campaign-spreads-xmrig-miner-via-torrents/111841/"
+    date_added: "2025-07-30"
+    analyst: "@adhikara13" 
