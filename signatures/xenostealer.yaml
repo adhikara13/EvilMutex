@@ -1,0 +1,29 @@
+# XenoStealer Malware Mutex Intelligence
+# Analyst source file for XenoStealer-related mutex data
+
+malware_info:
+  family: "XenoStealer"
+  aliases:
+    - "Xeno Stealer"
+  description: "XenoStealer is a sophisticated information stealer malware based on an open-source framework that targets browsers, email clients, chat applications, and cryptocurrency wallets. It uses advanced obfuscation techniques including Microsoft Script Encoder and .NET Reactor to evade detection."
+  threat_actor: "Unknown"
+  first_seen: "2025"
+
+category: "stealer"
+primary_tags:
+  - "infostealer"
+  - "browser_data_theft"
+  - "cryptocurrency_theft"
+  - "email_client_theft"
+  - "chat_application_theft"
+  - "obfuscated_code"
+  - "process_injection"
+  - "persistence"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'aMdFrsHoGcGgAKUyLCoEIuoHpvwCAzaz'
+    references:
+      - "https://www.huorong.cn/document/tech/vir_report/1833"
+    date_added: "2025-07-30"
+    analyst: "@adhikara13"
