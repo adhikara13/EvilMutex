@@ -6,7 +6,7 @@ malware_info:
   aliases:
     - "BADNEWS RAT"
   description: "BADNEWS is a Remote Access Trojan (RAT) that has been used by the White Elephant APT group (also known as Patchwork or APT-C-35) in various espionage campaigns."
-  threat_actor: "White Elephant"
+  threat_actor: ["White Elephant","Patchwork"]
   first_seen: "2013"
 
 category: "RAT"
@@ -22,4 +22,9 @@ mutexes:
     references:
       - "https://www.antiy.cn/research/notice&report/research_report/20221027.html"
     date_added: "2024-08-01"
+    analyst: "@adhikara13"
+  - name: 'RfmbFv8D'
+    references:
+      - "https://rayblog.rising.com.cn/2024/08/2024%e5%b9%b47%e6%9c%88%ef%bc%9apatchwork%e7%bb%84%e7%bb%87%e9%92%88%e5%af%b9%e6%88%91%e5%9b%bd%e7%a7%91%e7%a0%94%e6%95%99%e8%82%b2%e9%a2%86%e5%9f%9f%e7%9a%84%e6%94%bb%e5%87%bb%e4%ba%8b%e4%bb%b6/"
+    date_added: "2025-07-30"
     analyst: "@adhikara13" 
