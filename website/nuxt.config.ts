@@ -380,13 +380,15 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         '/',
-        '/contributor/'
+        '/contributor/',
+        '/docs'
       ]
     },
     // Route rules for Cloudflare Pages - generate .html files
     routeRules: {
       '/robots.txt': { static: true, headers: { 'Content-Type': 'text/plain' } },
       '/contributor/': { prerender: true, static: true },
+      '/docs': { prerender: true, static: true },
       '/malware/*': { prerender: true, static: true }
     }
   },
