@@ -15,10 +15,10 @@ export const appConfig = {
       color: '#00ff00',
       fallbackColor: '#00ff00'
     },
-    amber: {
-      name: 'AMBER',
-      color: '#ffb000',
-      fallbackColor: '#ffb000'
+    ghost: {
+      name: 'GHOST',
+      color: '#ff0000',
+      fallbackColor: '#ff0000'
     },
     cyber: {
       name: 'CYBER',

@@ -1,0 +1,25 @@
+# Leprechaun Loader Mutex Intelligence
+# Analyst source file for Leprechaun loader-related mutex data
+
+malware_info:
+  family: "Leprechaun"
+  aliases:
+    - "Leprechaun Loader"
+  description: "Leprechaun is a new malware loader that has been observed in recent campaigns. It serves as an initial access tool designed to download and execute additional payloads on compromised systems."
+  threat_actor: "Unknown"
+  first_seen: "2024"
+
+category: "loader"
+primary_tags:
+  - "loader"
+  - "initial_access"
+  - "payload_delivery"
+  - "download_execute"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'LeprechaunHvnc'
+    references:
+      - "https://gurucul.com/blog/leprechaun-a-new-malware-loader/"
+    date_added: "2024-12-19"
+    analyst: "@adhikara13" 
