@@ -1,0 +1,20 @@
+# Gamarue Backdoor Mutex Intelligence
+# Analyst source file for Gamarue backdoor-related mutex data
+
+malware_info:
+  family: "Gamarue"
+  aliases: ["Andromeda", "Wauchos"]
+  description: "Gamarue, sometimes referred to as Andromeda or Wauchos, is a malware family used as part of a botnet. The variant of Gamarue we observe most frequently is a worm that spreads primarily via infected USB drives. Gamarue has been used to spread other malware, steal information, and perform other activities such as click fraud. Despite being disrupted in 2017, it continues to be prevalent and was in the top 10 threats eight times in 12 months in 2024, with new C2 infrastructure observed as of December 2024."
+  threat_actor: "Unknown"
+  first_seen: "2011"
+
+category: "backdoor"
+primary_tags: ["backdoor", "botnet", "worm", "usb_spreader", "click_fraud", "c2_communication"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "345rdxcvgt567yhjm"
+    references:
+      - "https://blog.talosintelligence.com/threat-roundup-0617-0624/"
+    date_added: "2025-08-08"
+    analyst: "@adhikara13"

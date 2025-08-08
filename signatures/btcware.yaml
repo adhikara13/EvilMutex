@@ -1,0 +1,20 @@
+# BTCWare Ransomware Mutex Intelligence
+# Analyst source file for BTCWare ransomware-related mutex data
+
+malware_info:
+  family: "BTCWare"
+  aliases: ["PayDay", "PayDay Ransomware"]
+  description: "BTCWare PayDay is a variant of BTCWare ransomware discovered by security researcher Michael Gillespie. Once infiltrated, it encrypts stored files and appends filenames with extensions like '.[developer's_email]-id-***.payday'. The ransomware opens a browser window displaying ransom demands and drops a text file ('!! RETURN FILES !!.txt'). It typically demands between $500-$1500 in Bitcoin payments. The malware uses various email addresses including variations with checkzip@india.com, payday@rape.lol, and kekin@cock.li domains."
+  threat_actor: "Unknown"
+  first_seen: "2021"
+
+category: "ransomware"
+primary_tags: ["ransomware", "file_encryption", "bitcoin_payment", "email_contact", "file_extension_change"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "PAYDAYDAYPAY"
+    references:
+      - "https://app.any.run/tasks/1d763bab-767d-4357-9905-8836c5812adc/"
+    date_added: "2025-08-08"
+    analyst: "@adhikara13"
