@@ -102,9 +102,6 @@
             <a href="/docs" class="interactive text-gray-400 hover:text-green-400 font-mono">
               <span class="text-red-400">[</span>DOCS<span class="text-red-400">]</span>
             </a>
-            <a href="/api" class="interactive text-gray-400 hover:text-green-400 font-mono">
-              <span class="text-red-400">[</span>API<span class="text-red-400">]</span>
-            </a>
           </div>
         </div>
       </div>

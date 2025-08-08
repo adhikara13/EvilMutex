@@ -1,0 +1,20 @@
+# Gryphon Ransomware Mutex Intelligence
+# Analyst source file for Gryphon ransomware-related mutex data
+
+malware_info:
+  family: "Gryphon"
+  aliases: ["BTCWare Gryphon"]
+  description: "Gryphon is a ransomware-type virus discovered by malware security researcher Leo. It's a variant of BTCWare ransomware. Once infiltrated, Gryphon encrypts stored data and appends filenames with extensions like '.[test].gryphon', '.[decr@cock.li].gryphon', and '.[bravobravo@cock.li].gryphon'. Following successful encryption, it creates a text file ('!## DECRYPT FILES ##!.txt') containing ransom demands in each folder with encrypted files. Updated variants use .crypton extensions with email addresses like gladius_rectus@aol.com and macgregor@aolonline.top."
+  threat_actor: "Unknown"
+  first_seen: "2017"
+
+category: "ransomware"
+primary_tags: ["ransomware", "file_encryption", "btcware_variant", "email_contact", "file_extension_change"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "GIVEMEBTC"
+    references:
+      - "https://app.any.run/tasks/e04d831c-a42d-4f5b-9ff0-efee309eaa59/"
+    date_added: "2025-01-27"
+    analyst: "@adhikara13"

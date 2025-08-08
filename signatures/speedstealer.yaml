@@ -15,6 +15,6 @@ primary_tags: ["stealer", "data_theft", "persistence"]
 mutexes:
   - name: "gamcop"
     references:
-      - "https://cacts.cn/anquanjujiao/495.htm"
+      - "https://cacts.cn/anquanjujiao/495.html"
     date_added: "2025-07-30"
     analyst: "@adhikara13" 
