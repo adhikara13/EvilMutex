@@ -99,7 +99,7 @@
             <a href="https://github.com/adhikara13/evilmutex" class="interactive text-gray-400 hover:text-green-400 font-mono">
               <span class="text-red-400">[</span>GITHUB<span class="text-red-400">]</span>
             </a>
-            <a href="/docs" class="interactive text-gray-400 hover:text-green-400 font-mono">
+            <a href="/docs/" class="interactive text-gray-400 hover:text-green-400 font-mono">
               <span class="text-red-400">[</span>DOCS<span class="text-red-400">]</span>
             </a>
           </div>
