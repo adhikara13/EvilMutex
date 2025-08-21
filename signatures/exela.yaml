@@ -13,7 +13,7 @@ primary_tags: ["infostealer", "credential_theft"]
 
 # Mutexes used by this malware family
 mutexes:
-  - name: "Exela | Stealer | on | Top"
+  - name: "Exela | Stealar | on top |"
     references:
       - "https://cyble.com/blog/exela-stealer-spotted-targeting-social-media-giants/"
     date_added: "2025-07-16"
