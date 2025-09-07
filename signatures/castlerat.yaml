@@ -1,0 +1,86 @@
+# CastleRAT Mutex Intelligence
+# Analyst source file for CastleRAT-related mutex data
+
+malware_info:
+  family: "CastleRAT"
+  aliases: ["PyNightshade"]
+  description: "CastleRAT is a remote access trojan (RAT) developed by TAG-150, available in both Python and C variants. The malware includes functionality for collecting system information, downloading and executing additional payloads, executing commands via CMD and PowerShell, keylogging, screen capturing, and clipboard stealing. CastleRAT uses custom binary protocol with RC4 encryption and queries ip-api.com for geolocation data. The C variant includes more advanced stealing capabilities and uses Steam Community pages for C2 dead drops. Both variants are under active development and have been observed deployed alongside CastleLoader since August 2025."
+  threat_actor: "TAG-150"
+  first_seen: "2025"
+
+category: "rat"
+primary_tags: ["remote_access_trojan", "keylogger", "screen_capture", "clipboard_stealer", "command_execution", "payload_delivery", "rc4_encryption", "steam_c2"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "BunBubunKLagfsw"
+    references:
+      - "https://www.recordedfuture.com/research/from-castleloader-to-castlerat-tag-150-advances-operations"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
+  
+  - name: "GoldVekRogerS"
+    references:
+      - "https://www.recordedfuture.com/research/from-castleloader-to-castlerat-tag-150-advances-operations"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
+  
+  - name: "Thickwick3"
+    references:
+      - "https://www.recordedfuture.com/research/from-castleloader-to-castlerat-tag-150-advances-operations"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
+  
+  - name: "BabaiMazai"
+    references:
+      - "https://www.recordedfuture.com/research/from-castleloader-to-castlerat-tag-150-advances-operations"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
+  
+  - name: "KolokolBozhii"
+    references:
+      - "https://www.recordedfuture.com/research/from-castleloader-to-castlerat-tag-150-advances-operations"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
+  
+  - name: "OaoaPupaa"
+    references:
+      - "https://www.recordedfuture.com/research/from-castleloader-to-castlerat-tag-150-advances-operations"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
+  
+  - name: "fsAiodwsfSAFuiefS"
+    references:
+      - "https://www.recordedfuture.com/research/from-castleloader-to-castlerat-tag-150-advances-operations"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
+  
+  - name: "sPEJIOGDsionsgfdUewg"
+    references:
+      - "https://www.recordedfuture.com/research/from-castleloader-to-castlerat-tag-150-advances-operations"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
+  
+  - name: "FkgfIJGgJgdiJGDGHDjMGjia"
+    references:
+      - "https://www.recordedfuture.com/research/from-castleloader-to-castlerat-tag-150-advances-operations"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
+  
+  - name: "sdgiregdsssaFWIFS"
+    references:
+      - "https://www.recordedfuture.com/research/from-castleloader-to-castlerat-tag-150-advances-operations"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
+  
+  - name: "fsAiodwsfSAFuiefS2"
+    references:
+      - "https://www.recordedfuture.com/research/from-castleloader-to-castlerat-tag-150-advances-operations"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
+  
+  - name: "XmGetzKAM8Bw8NCBTUYo5e"
+    references:
+      - "https://www.recordedfuture.com/research/from-castleloader-to-castlerat-tag-150-advances-operations"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
