@@ -1,0 +1,27 @@
+# Yokai Backdoor Mutex Intelligence
+# Analyst source file for Yokai backdoor-related mutex data
+
+malware_info:
+  family: "Yokai"
+  aliases:
+    - "Yokai Backdoor"
+  description: "Yokai is a backdoor malware associated with threat actors Hive0154 and Mustang Panda. The malware is designed to provide remote access to compromised systems and has been observed in targeted attacks. Yokai is related to the Toneshell backdoor family and represents an updated variant used by these threat groups."
+  threat_actor: "Hive0154, Mustang Panda"
+  first_seen: "2024"
+
+category: "backdoor"
+primary_tags:
+  - "remote_access"
+  - "targeted_attack"
+  - "persistence"
+  - "hive0154"
+  - "mustang_panda"
+  - "toneshell_variant"
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'k1tpddvivh74fo1et725okr1c1'
+    references:
+      - "https://www.ibm.com/think/x-force/hive0154-drops-updated-toneshell-backdoor"
+    date_added: "2024-12-30"
+    analyst: "@adhikara13"

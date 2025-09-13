@@ -21,4 +21,10 @@ mutexes:
     references:
       - "https://www.ibm.com/think/x-force/hive0154-targeting-us-philippines-pakistan-taiwan"
     date_added: "2024-07-16"
-    analyst: "@adhikara13" 
+    analyst: "@adhikara13"
+  
+  - name: 'Global\SingleCorporation12AD8B'
+    references:
+      - "https://intezer.com/blog/frankenstein-variant-of-the-toneshell-backdoor-targeting-myanmar/"
+    date_added: "2024-12-30"
+    analyst: "@adhikara13"
