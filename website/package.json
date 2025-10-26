@@ -13,7 +13,11 @@
     "analyze": "nuxt build --analyze",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "start": "nuxt dev"
+    "start": "nuxt dev",
+    "test:cf": "npm run build && wrangler pages dev dist --local",
+    "test:cf-live": "npm run build && wrangler pages dev dist",
+    "deploy:cf": "npm run build && wrangler pages deploy dist --project-name=evilmutex",
+    "test:preview": "npm run build && npm run preview"
   },
   "dependencies": {
     "@nuxt/content": "^2.13.4",
@@ -52,6 +56,7 @@
     "rimraf": "^6.0.1",
     "typescript": "^5.8.3",
     "vite-plugin-compression": "^0.5.1",
+    "wrangler": "^3.78.12",
     "yaml-lint": "^1.2.4"
   },
   "engines": {

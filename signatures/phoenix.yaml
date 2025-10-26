@@ -1,0 +1,20 @@
+# Phoenix Backdoor Mutex Intelligence
+# Analyst source file for Phoenix Backdoor-related mutex data
+
+malware_info:
+  family: "Phoenix"
+  aliases: ["Phoenix Backdoor"]
+  description: "Phoenix Backdoor is a malware family associated with the MuddyWater threat group. It is used for espionage activities and provides remote access capabilities to compromised systems. The malware is part of MuddyWater's arsenal for conducting cyber espionage operations."
+  threat_actor: "MuddyWater"
+  first_seen: "2023"
+
+category: "backdoor"
+primary_tags: ["backdoor", "espionage", "remote_access", "muddywater", "apt"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "sysprocupdate.exe"
+    references:
+      - "https://www.group-ib.com/blog/muddywater-espionage/"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
