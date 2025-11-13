@@ -1,0 +1,25 @@
+
+# HarmonyLoader Mutex Intelligence
+# Analyst source file for HarmonyLoader mutex data
+
+analyst: "Diyar Saadi"
+last_updated: "2025-11-13"
+
+malware_families:
+  - family: "HarmonyLoader"
+    description: "Loader that performs DLL injection into explorer.exe and implants Jason RAT."
+    first_seen: "2023"
+    mutex: "3d69619c9e_Mtx"
+    reference: "https://app.any.run/tasks/35d6a65e-a8db-437a-8eb4-c30118c090d4"
+    notes:
+      - "HarmonyLoader injects into explorer.exe."
+      - "It implants Jason RAT as the payload."
+
+  - family: "Jason RAT"
+    description: "Remote Access Trojan used for unauthorized access and control."
+    first_seen: "2022"
+    mutex_pattern: "jason_<uniqueid>"
+    reference: "https://app.any.run/tasks/2852bf84-8870-47b7-828e-8233e55aee54/"
+    notes:
+      - "Mutex uses a dynamic unique ID."
+      - "Commonly delivered by loaders like HarmonyLoader."
