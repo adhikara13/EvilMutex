@@ -1,0 +1,20 @@
+# UDPGangster Mutex Intelligence
+# Analyst source file for UDPGangster-related mutex data
+
+malware_info:
+  family: "UDPGangster"
+  aliases: ["UDP Gangster"]
+  description: "UDPGangster is a malware family associated with the MuddyWater threat group. It has been observed in campaigns targeting multiple countries and is used for espionage activities. The malware leverages UDP communication for command and control operations."
+  threat_actor: "MuddyWater"
+  first_seen: "2025"
+
+category: "backdoor"
+primary_tags: ["backdoor", "espionage", "udp_c2", "muddywater", "apt"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "xhxhxhxhxhxpp"
+    references:
+      - "https://www.fortinet.com/blog/threat-research/udpgangster-campaigns-target-multiple-countries"
+    date_added: "2025-12-30"
+    analyst: "@adhikara13"
