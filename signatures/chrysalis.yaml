@@ -1,0 +1,20 @@
+# Chrysalis Backdoor Mutex Intelligence
+# Analyst source file for Chrysalis Backdoor-related mutex data
+
+malware_info:
+  family: "Chrysalis Backdoor"
+  aliases: ["Chrysalis"]
+  description: "Chrysalis Backdoor is a malware family associated with the Lotus Blossom threat group. It is part of Lotus Blossom's toolkit used for espionage and remote access operations. The backdoor provides persistent access to compromised systems."
+  threat_actor: "Lotus Blossom"
+  first_seen: "2023"
+
+category: "backdoor"
+primary_tags: ["backdoor", "espionage", "remote_access", "lotus_blossom", "apt"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: 'Global\Jdhfv_1.0.1'
+    references:
+      - "https://www.rapid7.com/blog/post/tr-chrysalis-backdoor-dive-into-lotus-blossoms-toolkit/"
+    date_added: "2026-04-02"
+    analyst: "@adhikara13"
