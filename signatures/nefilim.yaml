@@ -22,4 +22,10 @@ mutexes:
     references:
       - "https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/ransom.win32.nefilim.g"
     date_added: "2024-08-01"
+    analyst: "@adhikara13"
+  
+  - name: 'Den''gi plyvut v karmany rekoy. My khodim po krayu nozha...'
+    references:
+      - "https://blog.qualys.com/vulnerabilities-threat-research/2021/05/12/nefilim-ransomware"
+    date_added: "2026-02-27"
     analyst: "@adhikara13" 
