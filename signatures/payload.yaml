@@ -1,0 +1,20 @@
+# Payload Ransomware Mutex Intelligence
+# Analyst source file for Payload Ransomware-related mutex data
+
+malware_info:
+  family: "Payload"
+  aliases: ["Payload Ransomware"]
+  description: "Payload Ransomware is a ransomware malware family. It encrypts files on compromised systems and demands payment for decryption. The malware uses a distinctive mutex for process synchronization."
+  threat_actor: "Payload"
+  first_seen: "2026"
+
+category: "ransomware"
+primary_tags: ["ransomware", "file_encryption", "data_extortion"]
+
+# Mutexes used by this malware family
+mutexes:
+  - name: "MakeAmericaGreatAgain"
+    references:
+      - "https://www.reddit.com/r/MalwareAnalysis/comments/1reut0s/new_payload_ransomware_malware_analysis/"
+    date_added: "2026-02-27"
+    analyst: "@adhikara13"
